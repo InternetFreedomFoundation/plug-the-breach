@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "develop": "gridsome develop",
+    "develop": "TAILWIND_MODE=watch gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
@@ -12,11 +12,14 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.23",
-    "gridsome-plugin-remark-prismjs-all": "^0.4.8",
-    "tailwindcss": "^3.0.23"
+    "gridsome-plugin-remark-prismjs-all": "^0.4.8"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "@tailwindcss/typography": "^0.5.2"
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "gridsome-plugin-tailwindcss2": "^3.0.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
   }
 }

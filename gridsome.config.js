@@ -47,6 +47,13 @@ module.exports = {
         include: ["/", "/blog/**"],
       },
     },
+    {
+      use: "gridsome-plugin-tailwindcss2",
+      options: {
+        tailwindConfigFile: './tailwind.config.js',
+        mainCssFile: './src/main.css',
+      }
+    },
   ],
   templates: {
     EventPage: [
@@ -82,12 +89,5 @@ module.exports = {
         ],
       ],
     },
-  },
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: postcssPlugins,
-      },
-    },
-  },
+  }
 };
