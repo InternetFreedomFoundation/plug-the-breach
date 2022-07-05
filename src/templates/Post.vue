@@ -1,18 +1,16 @@
 <template>
   <Layout>
-    <article
-      class="p-4 mx-auto prose prose-img:rounded md:prose-lg lg:prose-xl "
-    >
+    <article class="p-4 mx-auto prose prose-img:rounded md:prose-lg lg:prose-xl">
       <h1 class="py-8">{{ $page.post.title }}</h1>
       <div class="prose-strong">
-        Author: <strong>{{ $page.post.author }}</strong>
+        Author:
+        <strong>{{ $page.post.author }}</strong>
       </div>
       <div>Date Published: {{ $page.post.date_published }}</div>
       <div>Time to Read: {{ $page.post.timeToRead }} min</div>
+      <hr/>
       <div v-html="$page.post.content"></div>
     </article>
-    <hr class="m-4" />
-    <Social />
   </Layout>
 </template>
 
