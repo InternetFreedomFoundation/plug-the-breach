@@ -14,23 +14,30 @@
           </p>
         </div>
         <div
-          class="flex-row hidden justify-between md:flex w-2/5"
+          class="flex-row hidden justify-between md:flex w-1/3"
           id="header-right"
         >
           <p class="flex justify-center items-center">
-            <g-link to="/blog/intro/">About</g-link>
+            <g-link class="text-xl text-teal-700" to="/blog/intro/"
+              >About</g-link
+            >
           </p>
 
           <p class="flex justify-center items-center">
-            <g-link to="/blog/tracker-methodology">Methodology</g-link>
+            <g-link class="text-xl text-teal-700" to="/blog/tracker-methodology"
+              >Methodology</g-link
+            >
           </p>
 
-          <g-link
-            type="button"
-            class="py-4 px-6 bg-teal-700 hover:bg-teal-800 focus:ring-teal-500 focus:ring-offset-teal-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-            to="/tracker"
-            >Open Tracker</g-link
-          >
+          <div class="inline-flex rounded-md shadow">
+            <g-link
+              type="button"
+              class="py-3 px-5 bg-teal-700 hover:bg-teal-800 focus:ring-teal-500 focus:ring-offset-teal-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              to="/tracker"
+            >
+              Open Tracker
+            </g-link>
+          </div>
         </div>
       </div>
     </header>
