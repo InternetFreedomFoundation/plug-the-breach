@@ -15,12 +15,8 @@
 </template>
 
 <script>
-import Social from "~/components/Social.vue";
 export default {
   name: "Post",
-  components: {
-    Social,
-  },
   metaInfo() {
     return {
       title: this.$page.post.title,

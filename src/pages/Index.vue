@@ -45,7 +45,6 @@ query Blog {
 </page-query>
 
 <script>
-import Social from "~/components/Social.vue";
 export default {
   metaInfo: {
     title: "Home",
@@ -55,9 +54,6 @@ export default {
         content: "A Project by Internet Freedom Foundation",
       },
     ],
-  },
-  components: {
-    Social,
   },
 };
 </script>
