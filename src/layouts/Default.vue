@@ -8,7 +8,6 @@
         <div class="flex" id="header-logo">
           <p class="flex justify-center items-center">
             <g-link to="/">
-              <!-- {{ $static.metadata.siteName }} -->
               <g-image src="../assets/ptb_logo.svg"></g-image>
             </g-link>
           </p>
@@ -18,7 +17,7 @@
           id="header-right"
         >
           <p class="flex justify-center items-center">
-            <g-link class="text-xl text-teal-700" to="/blog/intro/"
+            <g-link class="text-xl text-teal-700" to="/blog/intro"
               >About</g-link
             >
           </p>
