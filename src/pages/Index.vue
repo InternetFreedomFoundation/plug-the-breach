@@ -1,8 +1,12 @@
 <template>
   <Layout>
-    <div class="overflow-hidden flex justify-between flex-col-reverse md:flex-row px-10">
+    <div
+      class="overflow-hidden flex justify-between flex-col-reverse md:flex-row px-4 sm:px-10"
+    >
       <div class="text-start md:w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-        <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+        <h2
+          class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
+        >
           <span class="block text-teal-800">Tracking</span>
           <span class="block text-teal-800">Data breaches in India</span>
         </h2>
@@ -26,7 +30,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto my-20 px-10">
+    <div class="container mx-auto my-20 px-5 sm:px-10">
       <h2 class="text-3xl font-bold text-left text-teal-900 mb-6">Articles</h2>
       <div
         class="lg:grid lg:grid-flow-row lg:grid-cols-2 sm:gap-12 lg:auto-rows-auto sm:px-14 h-full"

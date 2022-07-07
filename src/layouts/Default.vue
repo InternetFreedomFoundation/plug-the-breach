@@ -2,15 +2,13 @@
   <div class="layout">
     <header class="p-8 bg-white-100 h-107" id="header">
       <div
-        class="container mx-auto px-4 flex flex-row justify-between left-0 top-0 bg-white"
+        class="container mx-auto flex flex-row justify-between left-0 top-0 bg-white"
         id="header-inner"
       >
-        <div class="flex" id="header-logo">
-          <p class="flex justify-center items-center">
-            <g-link to="/">
-              <g-image src="../assets/ptb_logo.svg"></g-image>
-            </g-link>
-          </p>
+        <div class="flex justify-center items-center" id="header-logo">
+          <g-link to="/">
+            <g-image src="../assets/ptb_logo.svg"></g-image>
+          </g-link>
         </div>
         <div
           class="flex-row hidden justify-between md:flex w-1/3"
@@ -50,7 +48,7 @@
     <footer class="bg-gradient-to-b from-emerald-50 to-emerald-100">
       <hr class="mx-8" />
 
-      <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+      <div class="max-w-screen-xl px-8 py-16 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <g-image src="../assets/ptb_logo.svg"></g-image>
