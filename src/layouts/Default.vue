@@ -29,7 +29,7 @@
           <div class="inline-flex rounded-md shadow">
             <g-link
               type="button"
-              class="py-3 px-5 bg-teal-700 hover:bg-teal-800 focus:ring-teal-500 focus:ring-offset-teal-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               to="/tracker"
             >
               Open Tracker

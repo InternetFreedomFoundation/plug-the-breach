@@ -7,18 +7,27 @@
         <h2
           class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
         >
-          <span class="block text-teal-800">Tracking</span>
-          <span class="block text-teal-800">Data breaches in India</span>
+          <span class="block text-teal-800">Tracking data</span>
+          <span class="block text-teal-800">breaches in India</span>
         </h2>
-        <p class="text-xl mt-4 text-gray-400">
-          Plug the Breach is a project by the Internet Freedom Foundation to
-          track and analyse data breaches across India.
+        <p class="text-xl mt-4 text-teal-700">
+          Plug the Breach is a small initiative by Internet Freedom Foundation.
+          This is a small-scale pilot project meant to track occurrence of data
+          breaches across India.
         </p>
+        <div class="rounded-lg bg-emerald-100 py-3 px-3 mt-6">
+          <p class="text-lg text-teal-800 font-bold">
+            DISCLAIMER
+          </p>
+          <p class="texl-lg text-teal-700">
+            All information on this website is publicly sourced.
+          </p>
+        </div>
         <div class="lg:mt-0 lg:flex-shrink-0">
-          <div class="mt-12 inline-flex rounded-md shadow">
+          <div class="mt-6 inline-flex rounded-md shadow">
             <g-link
               type="button"
-              class="py-3 px-5 bg-teal-700 hover:bg-teal-800 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               to="/tracker"
               >Open Tracker</g-link
             >
@@ -30,7 +39,7 @@
       </div>
     </div>
 
-    <div class="container mx-auto my-20 px-5 sm:px-10">
+    <!-- <div class="container mx-auto my-20 px-5 sm:px-10">
       <h2 class="text-3xl font-bold text-left text-teal-900 mb-6">Articles</h2>
       <div
         class="lg:grid lg:grid-flow-row lg:grid-cols-2 sm:gap-12 lg:auto-rows-auto sm:px-14 h-full"
@@ -42,11 +51,9 @@
         >
           <img src="../assets/article_placeh.png" />
           <div class="p-8 h-full flex flex-col justify-between">
-            <!-- <a :href="edge.node.path"> -->
             <h2 class="text-2xl font-bold text-left text-teal-900 mb-2 h-2/5">
               {{ edge.node.title }}
             </h2>
-            <!-- </a> -->
             <p class="mb-4">
               {{ edge.node.description }}
             </p>
@@ -65,13 +72,60 @@
                 >Read More</g-link
               >
             </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
-            <!-- <a :href="edge.node.path">
-              <button class="">
-                <p>Read More</p>
-              </button>
-            </a> -->
-            <!-- <hr class="mx-8" /> -->
+    <div class="container mx-auto my-20 px-5 sm:px-10">
+      <h2 class="text-3xl font-bold text-left text-teal-900 mb-6">
+        Recent Leaks
+      </h2>
+      <div
+        class="grid grid-flow-col gap-4 overflow-x-scroll h-full overflow-y-hidden"
+      >
+        <div
+          v-for="(edge, index) in $page.posts.edges"
+          :key="edge.node.id"
+          class="flex flex-col mt-5 bg-white shadow-md rounded-md h-full min-w-max"
+        >
+          <div class="p-5 h-full flex flex-col justify-between">
+            <div class="mb-2">
+              <g-link :to="'/tracker/' + edge.node.id">
+                <h2 class="uppercase font-medium text-2xl text-teal-900">
+                  {{ edge.node.company }}
+                </h2>
+              </g-link>
+            </div>
+            <div class="flex flex-col leak-prop-container">
+              <div class="flex flex-row mt-5">
+                <g-image
+                  src="~/assets/icons/calender.svg"
+                  width="20"
+                  height="20"
+                />
+                <h3 class="leak-prop-title ml-1.5">Breach Date</h3>
+              </div>
+            </div>
+            <div class="flex flex-col leak-prop-container">
+              <div class="flex flex-row mt-5">
+                <g-image
+                  src="~/assets/icons/calender.svg"
+                  width="20"
+                  height="20"
+                />
+                <h3 class="leak-prop-title ml-1.5">Containment Date</h3>
+              </div>
+            </div>
+
+            <div class="mt-6 inline-flex rounded-md shadow">
+              <g-link
+                type="button"
+                class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
+                :to="'/tracker/' + edge.node.id"
+                >See More</g-link
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -80,17 +134,19 @@
 </template>
 
 <page-query>
-query Blog {
-  posts: allPost (sortBy: "date_published", order: DESC, filter: { published: {eq: true }}){
+query Events{
+ posts: allEventPage {
     edges {
       node {
-        id
-        title
-        description
-        tags
-        path
-        date_published
-        timeToRead
+      id
+        company
+        date
+        status
+        notes
+        attachments {
+          url
+          filename
+        }
       }
     }
   }
