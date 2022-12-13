@@ -1,6 +1,6 @@
 ---
 title: PlugTheBreach - Data Breach Tracker
-author: Tejasvi Panijar
+author: Tejasi Panijar
 published: true
 description: PlugTheBreach - An introduction to our inhouse Data Breach Tracker!
 tags: data
@@ -10,7 +10,7 @@ og_image: ./og/ogImage.png
 
 [Data breaches are on the rise around the world](https://www.ibm.com/downloads/cas/OJDVQGRY), even more dramatically during the COVID-19 pandemic. A shift to remote working has led to an increase in data breach costs as well. As organisations shift their critical functions to the cloud and dependence on the digital increases, the potential threats to our data becomes more pronounced. In that context, Internet Freedom Foundation’s upcoming initiative, PlugTheBreach, aims to cover, report and track data breaches in India to increase transparency and public awareness.
 
-The economic impact of data breaches is also tremendous. As per an [IBM Report](https://in.newsroom.ibm.com/IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic?lnk=hm), released in 2021, data breaches globally now cost companies $4.24 million per incident on average. It also reported ₹165 million as the average total cost of a data breach in the 2021 study, an increase of 17.85% from 2020. Further, the per-unit data cost increased by 6.85% to Rs 5,900. As per the aforementioned report, the average time to detect a breach went up from 230 days to 239 days, while the average time to contain a breach went down from 83 to 81 days. This indicates a significant amount of information and data loss for users.
+The economic impact of data breaches is also tremendous. As per an [IBM Report](https://in.newsroom.ibm.com/IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic?lnk=hm), released in 2021, data breaches globally now cost companies \$4.24 million per incident on average. It also reported ₹165 million as the average total cost of a data breach in the 2021 study, an increase of 17.85% from 2020. Further, the per-unit data cost increased by 6.85% to Rs 5,900. As per the aforementioned report, the average time to detect a breach went up from 230 days to 239 days, while the average time to contain a breach went down from 83 to 81 days. This indicates a significant amount of information and data loss for users.
 
 The importance of cyber security researchers is further underlined by the increase in data breaches and security incidents. Research conducted by [Micro Focus](https://www.microfocus.com/en-us/home) shows that Indian organisations have seen a 58.2% increase in the volume of cyberthreats. Moreover, February 2021 [witnessed](https://www.business-standard.com/article/technology/india-becomes-favourite-destination-for-cyber-criminals-amid-covid-19-121040501218_1.html) a mammoth 9.04 million brute force attacks, compared to 1.3 million in February 2020. The study by Micro Focus also shows that 98% of Indian organisations have a [shortage](https://www.thehansindia.com/technology/tech-news/98-of-organizations-in-india-have-no-cyber-security-staff-652591) of IT Security Personnel, in violation of applicable law. As the COVID-19 pandemic causes more aspects of modern life to go digital, the threat, and indeed incidence, of such attacks will only rise further.
 

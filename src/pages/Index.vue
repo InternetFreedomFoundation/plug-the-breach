@@ -11,9 +11,8 @@
           <span class="block text-teal-800">breaches in India</span>
         </h2>
         <p class="text-xl mt-4 text-teal-700">
-          Plug the Breach is a small initiative by Internet Freedom Foundation.
-          This is a small-scale pilot project meant to track occurrence of data
-          breaches across India.
+          Plug the Breach is an experimental initiative by Internet Freedom
+          Foundation.
         </p>
         <div class="rounded-lg bg-emerald-100 py-3 px-3 mt-6">
           <p class="text-lg text-teal-800 font-bold">
@@ -78,50 +77,64 @@
     </div> -->
 
     <div class="container mx-auto my-20 px-5 sm:px-10">
-      <h2 class="text-3xl font-bold text-left text-teal-900 mb-6">
+      <h2 class="text-3xl font-bold text-left text-teal-900 mb-10">
         Recent Leaks
       </h2>
       <div
-        class="grid grid-flow-col gap-4 overflow-x-scroll h-full overflow-y-hidden"
+        class="grid grid-flow-col gap-4 overflow-y-scroll sm:overflow-x-scroll h-80 sm:overflow-y-hidden"
       >
         <div
           v-for="(edge, index) in $page.posts.edges"
           :key="edge.node.id"
-          class="flex flex-col mt-5 bg-white shadow-md rounded-md h-full min-w-max"
+          class="flex flex-col bg-white shadow-md rounded-lg h-72 min-w-max"
         >
-          <div class="p-5 h-full flex flex-col justify-between">
-            <div class="mb-2">
-              <g-link :to="'/tracker/' + edge.node.id">
-                <h2 class="uppercase font-medium text-2xl text-teal-900">
-                  {{ edge.node.company }}
-                </h2>
-              </g-link>
-            </div>
-            <div class="flex flex-col leak-prop-container">
-              <div class="flex flex-row mt-5">
-                <g-image
-                  src="~/assets/icons/calender.svg"
-                  width="20"
-                  height="20"
-                />
-                <h3 class="leak-prop-title ml-1.5">Breach Date</h3>
+          <div class="px-6 py-5 w-72 h-full flex flex-col justify-between">
+            <div class="">
+              <div class="mb-6">
+                <g-link :to="'/tracker/' + edge.node.id">
+                  <h2 class="uppercase font-bold text-2xl text-teal-900">
+                    {{ edge.node.company }}
+                  </h2>
+                </g-link>
               </div>
-            </div>
-            <div class="flex flex-col leak-prop-container">
-              <div class="flex flex-row mt-5">
-                <g-image
-                  src="~/assets/icons/calender.svg"
-                  width="20"
-                  height="20"
-                />
-                <h3 class="leak-prop-title ml-1.5">Containment Date</h3>
+              <div>
+                <div class="flex flex-col leak-prop-container">
+                  <div class="flex flex-row">
+                    <g-image
+                      src="~/assets/icons/calender.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <h3 class="ml-1.5 text-teal-600 font-medium">
+                      Breach Date
+                    </h3>
+                  </div>
+                  <div class="flex flex-row">
+                    <h3 class="ml-0.5 mt-2">——</h3>
+                  </div>
+                </div>
+                <div class="flex flex-col leak-prop-container">
+                  <div class="flex flex-row mt-2">
+                    <g-image
+                      src="~/assets/icons/calender.svg"
+                      width="20"
+                      height="20"
+                    />
+                    <h3 class="ml-1.5 text-teal-600 font-medium">
+                      Containment Date
+                    </h3>
+                  </div>
+                  <div class="flex flex-row">
+                    <h3 class="ml-0.5 mt-2">——</h3>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="mt-6 inline-flex rounded-md shadow">
+            <div class="mt-2 inline-flex rounded-md shadow">
               <g-link
                 type="button"
-                class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
+                class="py-3 px-5 bg-teal-900 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-sm"
                 :to="'/tracker/' + edge.node.id"
                 >See More</g-link
               >

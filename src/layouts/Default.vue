@@ -50,14 +50,16 @@
 
       <div class="max-w-screen-xl px-8 py-16 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <div>
-            <g-image src="../assets/ptb_logo.svg"></g-image>
+          <div class="">
+            <!-- <g-image src="../assets/ptb_logo.svg"></g-image> -->
+            <!-- <g-image src="../assets/IFF_logo2.svg" class="h-20"></g-image> -->
+            <g-image src="../assets/IFF_Logo.png" class="w-60"></g-image>
 
             <p class="max-w-xs mt-4 text-sm text-gray-600">
               Plug The Breach is a project by Internet Freedom Foundation.
             </p>
             <div class="flex mt-8 space-x-6 text-gray-600">
-              <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+              <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Facebook</span>
                 <svg
                   class="w-6 h-6"
@@ -72,7 +74,7 @@
                   />
                 </svg>
               </a>
-              <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+              <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Instagram</span>
                 <svg
                   class="w-6 h-6"
@@ -87,7 +89,7 @@
                   />
                 </svg>
               </a>
-              <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+              <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Twitter</span>
                 <svg
                   class="w-6 h-6"
@@ -100,7 +102,7 @@
                   />
                 </svg>
               </a>
-              <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+              <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">GitHub</span>
                 <svg
                   class="w-6 h-6"
@@ -123,28 +125,28 @@
             <div>
               <p class="font-medium">Company</p>
               <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <a class="hover:opacity-75" href>About</a>
-                <a class="hover:opacity-75" href>Credits</a>
-                <a class="hover:opacity-75" href>Methodology</a>
-                <a class="hover:opacity-75" href>Source Code</a>
+                <a class="hover:opacity-75">About</a>
+                <a class="hover:opacity-75">Credits</a>
+                <a class="hover:opacity-75">Methodology</a>
+                <a class="hover:opacity-75">Source Code</a>
               </nav>
             </div>
             <div>
               <p class="font-medium">Other Projects</p>
               <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <a class="hover:opacity-75" href>1on1 Coaching</a>
-                <a class="hover:opacity-75" href>Company Review</a>
-                <a class="hover:opacity-75" href>Accounts Review</a>
-                <a class="hover:opacity-75" href>HR Consulting</a>
-                <a class="hover:opacity-75" href>SEO Optimisation</a>
+                <a class="hover:opacity-75">1on1 Coaching</a>
+                <a class="hover:opacity-75">Company Review</a>
+                <a class="hover:opacity-75">Accounts Review</a>
+                <a class="hover:opacity-75">HR Consulting</a>
+                <a class="hover:opacity-75">SEO Optimisation</a>
               </nav>
             </div>
             <div>
               <p class="font-medium">Helpful Links</p>
               <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <a class="hover:opacity-75" href>Contact</a>
-                <a class="hover:opacity-75" href>FAQs</a>
-                <a class="hover:opacity-75" href>Live Chat</a>
+                <a class="hover:opacity-75">Contact</a>
+                <a class="hover:opacity-75">FAQs</a>
+                <a class="hover:opacity-75">Live Chat</a>
               </nav>
             </div>
           </div>
