@@ -10,12 +10,12 @@
       >
         <div
           class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden mw-full h-64 mb-8 md:mb-0 p-8 md:pl-8 md:py-8"
-          v-for="edge in $page.posts.edges"
+          v-for="edge in $page.breaches.edges"
           :key="edge.node.id"
         >
           <div class="">
             <div class="mb-5">
-              <g-link :to="'/tracker/' + edge.node.id">
+              <g-link :to="'/breach/' + edge.node.id">
                 <h2 class="leak-title font-bold text-3xl text-teal-900">
                   {{ edge.node.company }}
                 </h2>
@@ -57,19 +57,13 @@
 </template>
 
 <page-query>
-query Events{
- posts: allEventPage {
+query Breaches{
+ breaches: allBreach {
     edges {
       node {
-      id
+        id
         company
-        date
-        status
-        notes
-        attachments {
-          url
-          filename
-        }
+        breachDate
       }
     }
   }

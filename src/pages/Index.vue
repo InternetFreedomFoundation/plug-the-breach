@@ -84,7 +84,7 @@
         class="grid grid-flow-col gap-4 overflow-y-scroll sm:overflow-x-scroll h-80 sm:overflow-y-hidden"
       >
         <div
-          v-for="(edge, index) in $page.posts.edges"
+          v-for="(edge, index) in $page.breaches.edges"
           :key="edge.node.id"
           class="flex flex-col bg-white shadow-md rounded-lg h-72 min-w-max"
         >
@@ -147,19 +147,13 @@
 </template>
 
 <page-query>
-query Events{
- posts: allEventPage {
+query Breaches{
+ breaches: allBreach {
     edges {
       node {
-      id
+        id
         company
-        date
-        status
-        notes
-        attachments {
-          url
-          filename
-        }
+        breachDate
       }
     }
   }
