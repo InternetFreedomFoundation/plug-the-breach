@@ -45,8 +45,8 @@
                     focus:ring-teal-500
                     focus:ring-offset-2
                     focus:ring-offset-teal-200"
-              to="/tracker"
-              >Open Tracker</g-link
+              to="/breaches"
+              >View Breaches</g-link
             >
           </div>
         </div>
@@ -207,7 +207,7 @@
                       focus:ring-teal-500
                       focus:ring-offset-2
                       focus:ring-offset-teal-200"
-                :to="'/tracker/' + edge.node.id"
+                :to="'/breach/' + edge.node.id"
                 >See More</g-link
               >
             </div>

@@ -11,19 +11,19 @@ module.exports = {
     {
       use: '@gridsome/source-airtable',
       options: {
-        // required. this is the api key for the base
-        apikey: process.env.AIRTABLE_API_KEY,
-        // required. this is the id of your base
-        baseid: process.env.AIRTABLE_BASE_ID,
+        // Required. This is the API key for the base
+        apiKey: process.env.AIRTABLE_API_KEY,
+        // Required. This is the ID of your base
+        baseId: process.env.AIRTABLE_BASE_ID,
         tables: [
           {
-            // required. this is the name or id of your chosen workspace table
-            name: 'tblciw50vaja6tegi',
-            // required. this is the graphql typename and needs to match the template name
-            typename: 'breach',
-            // optional. selects which columns to retreive, else all columns will be retrieved
+            // Required. This is the name or ID of your chosen workspace table
+            name: 'tblcIW50VAja6TEGi',
+            // Required. This is the GraphQL typename and needs to match the template name
+            typeName: 'Breach',
+            // Optional. Selects which columns to retreive, else all columns will be retrieved
             select: {},
-            // optional. generates links between entries in this table and entries in other tables
+            // Optional. Generates links between entries in this table and entries in other tables
             links: [],
           },
         ],
@@ -41,6 +41,19 @@ module.exports = {
       use: '@gridsome/plugin-sitemap',
       options: {
         include: ['/', '/blog/**'],
+      },
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        searchFields: ['company', 'description'],
+        collections: [
+          {
+            typeName: 'Breach',
+            indexName: 'breach',
+            fields: ['id', 'company', 'affectedUsersMn'],
+          },
+        ],
       },
     },
     {

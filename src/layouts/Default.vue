@@ -47,9 +47,9 @@
                     focus:ring-teal-500
                     focus:ring-offset-2
                     focus:ring-offset-teal-200"
-              to="/tracker"
+              to="/breaches"
             >
-              Open Tracker
+              View Breaches
             </g-link>
           </div>
         </div>

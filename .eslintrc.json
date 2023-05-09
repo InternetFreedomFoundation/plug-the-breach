@@ -11,7 +11,9 @@
     ],
     "overrides": [
         {
-            "files": ["*.vue"],
+            "files": [
+                "*.vue"
+            ],
             "parser": "vue-eslint-parser"
         }
     ],
@@ -24,10 +26,24 @@
     "rules": {
         "no-unused-vars": "off",
         "max-len": [
+            "off"
+        ],
+        "vue/max-len": [
             "error",
             {
                 "code": 100,
-                "ignorePattern": "d=\"([\\s\\S]*?)\""
+                "template": 100,
+                "tabWidth": 2,
+                "comments": 100,
+                "ignorePattern": "",
+                "ignoreComments": false,
+                "ignoreTrailingComments": false,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreRegExpLiterals": true,
+                "ignoreHTMLAttributeValues": true,
+                "ignoreHTMLTextContents": true
             }
         ],
         "vue/no-unused-vars": "off",

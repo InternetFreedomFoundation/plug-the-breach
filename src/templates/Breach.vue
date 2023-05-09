@@ -63,9 +63,9 @@ query ($id: ID!) {
     details
     sizeGb
     acknowledgement
-    notice
+    noticeStatement
     grievanceRedressal
-    statementMediaCoverage
+    mediaCoverage
   }
 }
 </page-query>
