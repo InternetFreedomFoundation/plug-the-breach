@@ -6,17 +6,37 @@
         All Leaks
       </h1> -->
       <div
-        class="container px-6 sm:px-2 md:grid md:grid-cols-2 lg:grid-flow-row lg:grid-cols-4 gap-4 sm:gap-6"
+        class="container
+              gap-4
+              px-6
+              sm:gap-6
+              sm:px-2
+              md:grid
+              md:grid-cols-2
+              lg:grid-flow-row
+              lg:grid-cols-4"
       >
         <div
-          class="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden mw-full h-64 mb-8 md:mb-0 p-8 md:pl-8 md:py-8"
+          class="mw-full
+                mb-8
+                flex
+                h-64
+                flex-col
+                overflow-hidden
+                rounded-lg
+                bg-white
+                p-8
+                shadow-lg
+                md:mb-0
+                md:py-8
+                md:pl-8"
           v-for="edge in $page.breaches.edges"
           :key="edge.node.id"
         >
           <div class="">
             <div class="mb-5">
               <g-link :to="'/breach/' + edge.node.id">
-                <h2 class="leak-title font-bold text-3xl text-teal-900">
+                <h2 class="leak-title text-3xl font-bold text-teal-900">
                   {{ edge.node.company }}
                 </h2>
               </g-link>
@@ -28,20 +48,20 @@
                   width="20"
                   height="20"
                 />
-                <h3 class="ml-1.5 text-teal-600 font-medium">Month Reported</h3>
+                <h3 class="ml-1.5 font-medium text-teal-600">Month Reported</h3>
               </div>
               <div class="flex flex-row">
                 <h3 class="ml-0.5 mt-2">——</h3>
               </div>
             </div>
             <div class="flex flex-col">
-              <div class="flex flex-row mt-2">
+              <div class="mt-2 flex flex-row">
                 <g-image
                   src="~/assets/icons/users.svg"
                   width="20"
                   height="20"
                 />
-                <h3 class="ml-1.5 text-teal-600 font-medium">
+                <h3 class="ml-1.5 font-medium text-teal-600">
                   Affected Users
                 </h3>
               </div>
@@ -73,11 +93,11 @@ query Breaches{
 <script>
 export default {
   metaInfo: {
-    title: "Breach tracker",
+    title: 'Breach tracker',
     meta: [
       {
-        name: "description",
-        content: "List of historical breaches",
+        name: 'description',
+        content: 'List of historical breaches',
       },
     ],
   },

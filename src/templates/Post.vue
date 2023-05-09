@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article class="p-4 mx-auto prose prose-img:rounded md:prose-lg lg:prose-xl">
+    <article class="prose mx-auto p-4 md:prose-lg lg:prose-xl prose-img:rounded">
       <h1 class="py-8">{{ $page.post.title }}</h1>
       <div class="prose-strong">
         Author:
@@ -16,51 +16,51 @@
 
 <script>
 export default {
-  name: "Post",
+  name: 'Post',
   metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: "description",
+          name: 'description',
           content: this.$page.post.description,
         },
         {
-          name: "twitter:description",
+          name: 'twitter:description',
           content: this.$page.post.description,
         },
         {
-          name: "twitter:card",
-          content: "summary_large_image",
+          name: 'twitter:card',
+          content: 'summary_large_image',
         },
         {
-          name: "twitter:title",
+          name: 'twitter:title',
           content: this.$page.post.title,
         },
         {
-          name: "twitter:creator",
-          content: "@terabytetiger",
+          name: 'twitter:creator',
+          content: '@terabytetiger',
         },
         {
-          name: "twitter:site",
-          content: "@terabytetiger",
+          name: 'twitter:site',
+          content: '@terabytetiger',
         },
         {
-          name: "og:description",
+          name: 'og:description',
           content: this.$page.post.description,
         },
         {
-          name: "og:title",
+          name: 'og:title',
           content: this.$page.post.title,
         },
         {
-          name: "og:image",
+          name: 'og:image',
           content: this.$static.metadata.baseURL + this.$page.post.og_image.src,
         },
       ],
       link: [
         {
-          rel: "canonical",
+          rel: 'canonical',
           content: this.$static.metadata.baseURL + this.$page.post.path,
         },
       ],

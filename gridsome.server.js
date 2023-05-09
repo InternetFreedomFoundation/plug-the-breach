@@ -5,9 +5,9 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function(api) {
+module.exports = function (api) {
   api.loadSource(async (store) => {
-    store.addMetadata("baseURL", "https://plugthebreach.in");
+    store.addMetadata('baseURL', 'https://plugthebreach.in');
   });
 
   api.createPages(({ createPage }) => {

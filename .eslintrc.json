@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:vue/vue3-essential",
+        "airbnb-base",
+        "plugin:tailwindcss/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["*.vue"],
+            "parser": "vue-eslint-parser"
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "max-len": [
+            "error",
+            {
+                "code": 100,
+                "ignorePattern": "d=\"([\\s\\S]*?)\""
+            }
+        ],
+        "vue/no-unused-vars": "off",
+        "vue/multi-word-component-names": "off"
+    }
+}

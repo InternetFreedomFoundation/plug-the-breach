@@ -1,5 +1,5 @@
 <template>
-  <aside class="space-x-4 mx-auto w-max my-4">
+  <aside class="mx-auto my-4 w-max space-x-4">
     <a href="https://twitter.com/internetfreedom" class="inline-block">
       <g-image
         src="~/assets/Twitter.svg"
@@ -44,6 +44,6 @@
 
 <script>
 export default {
-  name: "Social",
+  name: 'Social',
 };
 </script>

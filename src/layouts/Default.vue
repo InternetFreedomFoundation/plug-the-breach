@@ -1,26 +1,26 @@
 <template>
   <div class="layout">
-    <header class="p-8 bg-white-100 h-107" id="header">
+    <header class="bg-white-100 h-107 p-8" id="header">
       <div
-        class="container mx-auto flex flex-row justify-between left-0 top-0 bg-white"
+        class="container left-0 top-0 mx-auto flex flex-row justify-between bg-white"
         id="header-inner"
       >
-        <div class="flex justify-center items-center" id="header-logo">
+        <div class="flex items-center justify-center" id="header-logo">
           <g-link to="/">
             <g-image src="../assets/ptb_logo.svg"></g-image>
           </g-link>
         </div>
         <div
-          class="flex-row hidden justify-between md:flex w-1/3"
+          class="hidden w-1/3 flex-row justify-between md:flex"
           id="header-right"
         >
-          <p class="flex justify-center items-center">
+          <p class="flex items-center justify-center">
             <g-link class="text-xl text-teal-700" to="/blog/intro"
               >About</g-link
             >
           </p>
 
-          <p class="flex justify-center items-center">
+          <p class="flex items-center justify-center">
             <g-link class="text-xl text-teal-700" to="/blog/tracker-methodology"
               >Methodology</g-link
             >
@@ -29,7 +29,24 @@
           <div class="inline-flex rounded-md shadow">
             <g-link
               type="button"
-              class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="rounded-lg
+                    bg-teal-800
+                    px-5
+                    py-3
+                    text-center
+                    text-base
+                    font-semibold
+                    text-white
+                    shadow-md
+                    transition
+                    duration-200
+                    ease-in
+                    hover:bg-teal-900
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-teal-500
+                    focus:ring-offset-2
+                    focus:ring-offset-teal-200"
               to="/tracker"
             >
               Open Tracker
@@ -48,21 +65,21 @@
     <footer class="bg-gradient-to-b from-emerald-50 to-emerald-100">
       <hr class="mx-8" />
 
-      <div class="max-w-screen-xl px-8 py-16 mx-auto sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-screen-xl px-8 py-16 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div class="">
             <!-- <g-image src="../assets/ptb_logo.svg"></g-image> -->
             <!-- <g-image src="../assets/IFF_logo2.svg" class="h-20"></g-image> -->
             <g-image src="../assets/IFF_Logo.png" class="w-60"></g-image>
 
-            <p class="max-w-xs mt-4 text-sm text-gray-600">
+            <p class="mt-4 max-w-xs text-sm text-gray-600">
               Plug The Breach is a project by Internet Freedom Foundation.
             </p>
-            <div class="flex mt-8 space-x-6 text-gray-600">
+            <div class="mt-8 flex space-x-6 text-gray-600">
               <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Facebook</span>
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -77,7 +94,7 @@
               <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Instagram</span>
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -92,7 +109,7 @@
               <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">Twitter</span>
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -105,7 +122,7 @@
               <a class="hover:opacity-75" target="_blank" rel="noreferrer">
                 <span class="sr-only">GitHub</span>
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -120,11 +137,11 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3"
+            class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3"
           >
             <div>
               <p class="font-medium">Company</p>
-              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-500">
                 <a class="hover:opacity-75">About</a>
                 <a class="hover:opacity-75">Credits</a>
                 <a class="hover:opacity-75">Methodology</a>
@@ -133,7 +150,7 @@
             </div>
             <div>
               <p class="font-medium">Other Projects</p>
-              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-500">
                 <a class="hover:opacity-75">1on1 Coaching</a>
                 <a class="hover:opacity-75">Company Review</a>
                 <a class="hover:opacity-75">Accounts Review</a>
@@ -143,7 +160,7 @@
             </div>
             <div>
               <p class="font-medium">Helpful Links</p>
-              <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+              <nav class="mt-4 flex flex-col space-y-2 text-sm text-gray-500">
                 <a class="hover:opacity-75">Contact</a>
                 <a class="hover:opacity-75">FAQs</a>
                 <a class="hover:opacity-75">Live Chat</a>

@@ -1,32 +1,50 @@
 <template>
   <Layout>
     <div
-      class="overflow-hidden flex justify-between flex-col-reverse md:flex-row px-4 sm:px-10"
+      class="flex flex-col-reverse justify-between overflow-hidden px-4 sm:px-10 md:flex-row"
     >
-      <div class="text-start md:w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+      <div class="z-20 px-4 py-12 text-start sm:px-6 md:w-1/2 lg:px-8 lg:py-16">
         <h2
           class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
         >
           <span class="block text-teal-800">Tracking data</span>
           <span class="block text-teal-800">breaches in India</span>
         </h2>
-        <p class="text-xl mt-4 text-teal-700">
+        <p class="mt-4 text-xl text-teal-700">
           Plug the Breach is an experimental initiative by Internet Freedom
           Foundation.
         </p>
-        <div class="rounded-lg bg-emerald-100 py-3 px-3 mt-6">
-          <p class="text-lg text-teal-800 font-bold">
+        <div class="mt-6 rounded-lg bg-emerald-100 p-3">
+          <p class="text-lg font-bold text-teal-800">
             DISCLAIMER
           </p>
           <p class="texl-lg text-teal-700">
             All information on this website is publicly sourced.
           </p>
         </div>
-        <div class="lg:mt-0 lg:flex-shrink-0">
+        <div class="lg:mt-0 lg:shrink-0">
           <div class="mt-6 inline-flex rounded-md shadow">
             <g-link
               type="button"
-              class="py-3 px-5 bg-teal-800 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="w-full
+                    rounded-lg
+                    bg-teal-800
+                    px-5
+                    py-3
+                    text-center
+                    text-base
+                    font-semibold
+                    text-white
+                    shadow-md
+                    transition
+                    duration-200
+                    ease-in
+                    hover:bg-teal-900
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-teal-500
+                    focus:ring-offset-2
+                    focus:ring-offset-teal-200"
               to="/tracker"
               >Open Tracker</g-link
             >
@@ -39,18 +57,24 @@
     </div>
 
     <!-- <div class="container mx-auto my-20 px-5 sm:px-10">
-      <h2 class="text-3xl font-bold text-left text-teal-900 mb-6">Articles</h2>
+      <h2 class="mb-6 text-left text-3xl font-bold text-teal-900">Articles</h2>
       <div
-        class="lg:grid lg:grid-flow-row lg:grid-cols-2 sm:gap-12 lg:auto-rows-auto sm:px-14 h-full"
+        class="h-full
+              sm:gap-12
+              sm:px-14
+              lg:grid
+              lg:grid-flow-row
+              lg:auto-rows-auto
+              lg:grid-cols-2"
       >
         <div
           v-for="(edge, index) in $page.posts.edges"
           :key="edge.node.id"
-          class="flex flex-col mt-5 bg-white shadow-md rounded-md overflow-hidden h-full"
+          class="mt-5 flex h-full flex-col overflow-hidden rounded-md bg-white shadow-md"
         >
           <img src="../assets/article_placeh.png" />
-          <div class="p-8 h-full flex flex-col justify-between">
-            <h2 class="text-2xl font-bold text-left text-teal-900 mb-2 h-2/5">
+          <div class="flex h-full flex-col justify-between p-8">
+            <h2 class="mb-2 h-2/5 text-left text-2xl font-bold text-teal-900">
               {{ edge.node.title }}
             </h2>
             <p class="mb-4">
@@ -60,13 +84,37 @@
             <div class="inline-flex w-36">
               <g-link
                 type="button"
-                class="py-2 px-4 bg-teal-700 hover:bg-teal-800 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded hidden sm:block"
+                class="hidden
+                      w-full
+                      rounded
+                      bg-teal-700
+                      px-4
+                      py-2
+                      text-center
+                      text-base
+                      font-semibold
+                      text-white
+                      shadow-md
+                      transition
+                      duration-200
+                      ease-in
+                      hover:bg-teal-800
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-teal-500
+                      focus:ring-offset-2
+                      focus:ring-offset-teal-200
+                      sm:block"
                 :to="edge.node.path"
                 >Read More</g-link
               >
               <g-link
                 type="button"
-                class="text-teal-600 block sm:hidden underline hover:underline-offset-1"
+                class="block
+                      text-teal-600
+                      underline
+                      hover:underline-offset-1
+                      sm:hidden"
                 :to="edge.node.path"
                 >Read More</g-link
               >
@@ -77,35 +125,41 @@
     </div> -->
 
     <div class="container mx-auto my-20 px-5 sm:px-10">
-      <h2 class="text-3xl font-bold text-left text-teal-900 mb-10">
+      <h2 class="mb-10 text-left text-3xl font-bold text-teal-900">
         Recent Leaks
       </h2>
       <div
-        class="grid grid-flow-col gap-4 overflow-y-scroll sm:overflow-x-scroll h-80 sm:overflow-y-hidden"
+        class="grid
+              h-80
+              grid-flow-col
+              gap-4
+              overflow-y-scroll
+              sm:overflow-y-hidden
+              sm:overflow-x-scroll"
       >
         <div
           v-for="(edge, index) in $page.breaches.edges"
           :key="edge.node.id"
-          class="flex flex-col bg-white shadow-md rounded-lg h-72 min-w-max"
+          class="flex h-72 min-w-max flex-col rounded-lg bg-white shadow-md"
         >
-          <div class="px-6 py-5 w-72 h-full flex flex-col justify-between">
+          <div class="flex h-full w-72 flex-col justify-between px-6 py-5">
             <div class="">
               <div class="mb-6">
                 <g-link :to="'/tracker/' + edge.node.id">
-                  <h2 class="uppercase font-bold text-2xl text-teal-900">
+                  <h2 class="text-2xl font-bold uppercase text-teal-900">
                     {{ edge.node.company }}
                   </h2>
                 </g-link>
               </div>
               <div>
-                <div class="flex flex-col leak-prop-container">
+                <div class="leak-prop-container flex flex-col">
                   <div class="flex flex-row">
                     <g-image
                       src="~/assets/icons/calender.svg"
                       width="20"
                       height="20"
                     />
-                    <h3 class="ml-1.5 text-teal-600 font-medium">
+                    <h3 class="ml-1.5 font-medium text-teal-600">
                       Breach Date
                     </h3>
                   </div>
@@ -113,14 +167,14 @@
                     <h3 class="ml-0.5 mt-2">——</h3>
                   </div>
                 </div>
-                <div class="flex flex-col leak-prop-container">
-                  <div class="flex flex-row mt-2">
+                <div class="leak-prop-container flex flex-col">
+                  <div class="mt-2 flex flex-row">
                     <g-image
                       src="~/assets/icons/calender.svg"
                       width="20"
                       height="20"
                     />
-                    <h3 class="ml-1.5 text-teal-600 font-medium">
+                    <h3 class="ml-1.5 font-medium text-teal-600">
                       Containment Date
                     </h3>
                   </div>
@@ -134,7 +188,25 @@
             <div class="mt-2 inline-flex rounded-md shadow">
               <g-link
                 type="button"
-                class="py-3 px-5 bg-teal-900 hover:bg-teal-900 focus:ring-teal-500 focus:ring-offset-teal-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-sm"
+                class="w-full
+                      rounded-sm
+                      bg-teal-900
+                      px-5
+                      py-3
+                      text-center
+                      text-base
+                      font-semibold
+                      text-white
+                      shadow-md
+                      transition
+                      duration-200
+                      ease-in
+                      hover:bg-teal-900
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-teal-500
+                      focus:ring-offset-2
+                      focus:ring-offset-teal-200"
                 :to="'/tracker/' + edge.node.id"
                 >See More</g-link
               >
@@ -163,11 +235,11 @@ query Breaches{
 <script>
 export default {
   metaInfo: {
-    title: "Home",
+    title: 'Home',
     meta: [
       {
-        name: "description",
-        content: "A Project by Internet Freedom Foundation",
+        name: 'description',
+        content: 'A Project by Internet Freedom Foundation',
       },
     ],
   },
