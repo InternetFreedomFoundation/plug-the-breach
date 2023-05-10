@@ -1,12 +1,10 @@
 <template>
   <Layout>
     <div
-      class="flex flex-col-reverse justify-between overflow-hidden px-4 sm:px-10 md:flex-row"
-    >
+      class="flex flex-col-reverse justify-between overflow-hidden px-4 sm:px-10 md:flex-row">
       <div class="z-20 px-4 py-12 text-start sm:px-6 md:w-1/2 lg:px-8 lg:py-16">
         <h2
-          class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
-        >
+          class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
           <span class="block text-teal-800">Tracking data</span>
           <span class="block text-teal-800">breaches in India</span>
         </h2>
@@ -22,33 +20,36 @@
             All information on this website is publicly sourced.
           </p>
         </div>
-        <div class="lg:mt-0 lg:shrink-0">
-          <div class="mt-6 inline-flex rounded-md shadow">
-            <g-link
-              type="button"
-              class="w-full
-                    rounded-lg
-                    bg-teal-800
-                    px-5
-                    py-3
-                    text-center
-                    text-base
-                    font-semibold
-                    text-white
-                    shadow-md
-                    transition
-                    duration-200
-                    ease-in
-                    hover:bg-teal-900
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-teal-500
-                    focus:ring-offset-2
-                    focus:ring-offset-teal-200"
-              to="/breaches"
-              >View Breaches</g-link
-            >
-          </div>
+        <div class="stroke-3
+                  ring-offset
+                  my-8
+                  flex
+                  w-full
+                  justify-between
+                  rounded-full
+                  border-2
+                  border-emerald-900
+                  bg-white
+                  p-1
+                  pl-4
+                  outline-none
+                  placeholder:text-gray-300
+                  " @click="$refs.searchInput.focus()">
+          <input class="grow
+                      bg-transparent
+                      focus:outline-none" type="text" :value="searchQuery"
+            @keydown.enter="search($event.target.value)"
+            placeholder="Search a breach" ref="searchInput">
+          <button class="aspect-square
+                      rounded-full
+                      bg-emerald-900
+                      p-4
+                      text-white
+                      hover:bg-emerald-800
+                      focus:outline-none
+                      focus:ring-2" @click="search($refs.searchInput.value)">
+            <VueFeather type="search" />
+          </button>
         </div>
       </div>
       <div class="flex items-center justify-center">
@@ -128,20 +129,15 @@
       <h2 class="mb-10 text-left text-3xl font-bold text-teal-900">
         Recent Leaks
       </h2>
-      <div
-        class="grid
+      <div class="grid
               h-80
               grid-flow-col
               gap-4
               overflow-y-scroll
               sm:overflow-y-hidden
-              sm:overflow-x-scroll"
-      >
-        <div
-          v-for="(edge, index) in $page.breaches.edges"
-          :key="edge.node.id"
-          class="flex h-72 min-w-max flex-col rounded-lg bg-white shadow-md"
-        >
+              sm:overflow-x-scroll">
+        <div v-for="(edge, index) in $page.breaches.edges" :key="edge.node.id"
+          class="flex h-72 min-w-max flex-col rounded-lg bg-white shadow-md">
           <div class="flex h-full w-72 flex-col justify-between px-6 py-5">
             <div class="">
               <div class="mb-6">
@@ -154,11 +150,8 @@
               <div>
                 <div class="leak-prop-container flex flex-col">
                   <div class="flex flex-row">
-                    <g-image
-                      src="~/assets/icons/calender.svg"
-                      width="20"
-                      height="20"
-                    />
+                    <g-image src="~/assets/icons/calender.svg" width="20"
+                      height="20" />
                     <h3 class="ml-1.5 font-medium text-teal-600">
                       Breach Date
                     </h3>
@@ -169,11 +162,8 @@
                 </div>
                 <div class="leak-prop-container flex flex-col">
                   <div class="mt-2 flex flex-row">
-                    <g-image
-                      src="~/assets/icons/calender.svg"
-                      width="20"
-                      height="20"
-                    />
+                    <g-image src="~/assets/icons/calender.svg" width="20"
+                      height="20" />
                     <h3 class="ml-1.5 font-medium text-teal-600">
                       Containment Date
                     </h3>
@@ -186,9 +176,7 @@
             </div>
 
             <div class="mt-2 inline-flex rounded-md shadow">
-              <g-link
-                type="button"
-                class="w-full
+              <g-link type="button" class="w-full
                       rounded-sm
                       bg-teal-900
                       px-5
@@ -207,9 +195,7 @@
                       focus:ring-teal-500
                       focus:ring-offset-2
                       focus:ring-offset-teal-200"
-                :to="'/breach/' + edge.node.id"
-                >See More</g-link
-              >
+                :to="'/breach/' + edge.node.id">See More</g-link>
             </div>
           </div>
         </div>
@@ -242,6 +228,16 @@ export default {
         content: 'A Project by Internet Freedom Foundation',
       },
     ],
+  },
+  methods: {
+    search(query) {
+      this.$router.push({
+        path: '/breaches',
+        query: {
+          search: query,
+        },
+      });
+    },
   },
 };
 </script>
