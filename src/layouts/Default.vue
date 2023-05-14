@@ -73,6 +73,7 @@
               All data on PlugTheBreach is publicly sourced.
             </p>
           </div>
+          <DownloadDatasetButton />
         </div>
       </div>
       <div
@@ -115,9 +116,11 @@
 import {
   InstagramIcon, TwitterIcon, TelegramIcon, RedditIcon, MastodonIcon, GitHubIcon,
 } from 'vue-simple-icons';
+import DownloadDatasetButton from '~/components/DownloadDatasetButton.vue';
 
 export default {
   components: {
+    DownloadDatasetButton,
     InstagramIcon,
     TwitterIcon,
     TelegramIcon,
