@@ -1,26 +1,43 @@
 <template>
   <Layout>
-    <div class="container mx-auto py-52">
-      <div class="flex w-max flex-col justify-between py-4">
+    <div class="container mx-auto px-4 py-52 max-lg:pb-0 max-lg:pt-8 max-sm:pt-16">
+      <div class="flex w-max flex-col justify-between py-4 max-md:py-0">
+        <g-image class="max-md
+                        absolute
+                        right-48
+                        top-48
+                        -z-10
+                        w-1/4
+                        max-lg:relative
+                        max-lg:right-12
+                        max-lg:top-0
+                        max-lg:mx-auto
+                        max-lg:mb-20
+                        max-lg:w-1/3
+                        max-sm:right-4
+                        max-sm:w-1/2"
+          src="../assets/images/morphis-personal-data-protection-1020x1236.png"
+          alt="Image with several motifs of personal data protection" />
         <h1
-          class="w-max text-5xl uppercase leading-loose tracking-tight text-teal-100">
+          class="mb-4 w-max text-5xl uppercase tracking-tight text-teal-100 max-md:text-4xl max-sm:text-2xl">
           Stay on top of the breaches
         </h1>
-        <p class="w-max text-lg text-zinc-700">
-          An experimental initiative by the Internet Freedom Foundation.
+        <p class="max-sm:text-md w-max text-lg text-zinc-700 max-sm:text-sm">
+          An experimental initiative by the
+          <span class="sm:hidden">IFF</span>
+          <span class="max-sm:hidden">Internet Freedom Foundation</span>.
         </p>
       </div>
-      <g-image class="absolute right-48 top-48 -z-10 w-1/4"
-        src="../assets/images/morphis-personal-data-protection-1020x1236.png"
-        alt="Image with several motifs of personal data protection" />
       <SearchBar />
       <div id="recent-searches" class="mt-24 flex flex-col gap-10">
         <h2 class="text-xl text-white"> Recent Breaches </h2>
         <div class="grid
-                    grid-flow-col
                     grid-cols-3
-                    gap-4">
-            <g-link class="hover:shadow-3xl
+                    gap-4
+                    max-md:grid-cols-2
+                    max-sm:grid-cols-1
+                    ">
+          <g-link class="hover:shadow-3xl
                           flex
                           flex-col
                           rounded-3xl
@@ -51,36 +68,36 @@
                           active:shadow-black/50
                           active:outline-2
                           active:outline-white" v-for="breach in breachList"
-              :key="breach.id" tabindex="0" :to="'/breach/' + breach.id">
-              <div class="flex flex-col gap-8 p-6">
-                <div class="h-20 border-b border-zinc-700 ">
-                  <span class="line-clamp-2 text-2xl text-teal-400">
-                    {{ breach.company }}
-                  </span>
-                </div>
-                <div class="flex h-16 flex-col gap-4">
-                  <div class="inline-flex items-center gap-2">
-                    <Icon class="text-teal-400" type="calendar" size="12" />
-                    <span class="text-sm font-medium uppercase text-zinc-500">
-                      Breach Date
-                    </span>
-                  </div>
-                  <span class="text-xl uppercase text-white">{{ breach.breachDate
-                  }}</span>
-                </div>
-                <div class="flex h-16 flex-col gap-4">
-                  <div class="inline-flex flex-row items-center gap-2">
-                    <Icon class="text-teal-400" type="shield-off" size="12" />
-                    <span class="text-sm font-medium uppercase text-zinc-500">
-                      Affected Users
-                    </span>
-                  </div>
-                  <span class="text-xl uppercase text-white">
-                    {{ breach.affectedUsersMn }}
-                  </span>
-                </div>
+            :key="breach.id" tabindex="0" :to="'/breach/' + breach.id">
+            <div class="flex flex-col gap-8 p-6">
+              <div class="h-20 border-b border-zinc-700 ">
+                <span class="line-clamp-2 text-2xl text-teal-400">
+                  {{ breach.company }}
+                </span>
               </div>
-            </g-link>
+              <div class="flex min-h-16 flex-col gap-4">
+                <div class="inline-flex items-center gap-2">
+                  <Icon class="text-teal-400" type="calendar" size="12" />
+                  <span class="text-sm font-medium uppercase text-zinc-500">
+                    Breach Date
+                  </span>
+                </div>
+                <span class="text-xl uppercase text-white">{{ breach.breachDate
+                }}</span>
+              </div>
+              <div class="flex min-h-16 flex-col gap-4">
+                <div class="inline-flex flex-row items-center gap-2">
+                  <Icon class="text-teal-400" type="shield-off" size="12" />
+                  <span class="text-sm font-medium uppercase text-zinc-500">
+                    Affected Users
+                  </span>
+                </div>
+                <span class="text-xl uppercase text-white">
+                  {{ breach.affectedUsersMn }}
+                </span>
+              </div>
+            </div>
+          </g-link>
         </div>
       </div>
     </div>
@@ -89,7 +106,7 @@
 
 <page-query>
 query Breaches{
- breaches: allBreach(sortBy: "breachDate", order: DESC, limit: 3){
+ breaches: allBreach(sortBy: "breachDate", order: ASC, limit: 3){
     edges {
       node {
         id

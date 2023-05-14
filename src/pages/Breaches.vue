@@ -28,7 +28,7 @@
           </span>
         </h4>
       </div>
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
         <g-link class="hover:shadow-3xl
                       flex
                       flex-col
@@ -67,7 +67,7 @@
                 {{ breach.company }}
               </span>
             </div>
-            <div class="flex h-16 flex-col gap-4">
+            <div class="flex min-h-16 flex-col gap-4">
               <div class="inline-flex items-center gap-2">
                 <Icon class="text-teal-400" type="calendar" size="12" />
                 <span class="text-sm font-medium uppercase text-zinc-500">
@@ -77,7 +77,7 @@
               <span class="text-xl uppercase text-white">{{ breach.breachDate
               }}</span>
             </div>
-            <div class="flex h-16 flex-col gap-4">
+            <div class="flex min-h-16 flex-col gap-4">
               <div class="inline-flex flex-row items-center gap-2">
                 <Icon class="text-teal-400" type="shield-off" size="12" />
                 <span class="text-sm font-medium uppercase text-zinc-500">

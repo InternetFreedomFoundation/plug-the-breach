@@ -1,10 +1,10 @@
 <template>
   <div class="layout">
     <header class="container mx-auto flex flex-row items-center justify-between px-4 py-8">
-      <div class="flex flex-row items-center gap-5">
+      <div class="flex flex-row items-center gap-5 max-sm:gap-2">
         <g-link class="" to="/">
           <g-image class="w-48"
-            src="../assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg"></g-image>
+            src="~/assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg"></g-image>
         </g-link>
         <div class="rounded-sm
                     border
@@ -22,6 +22,7 @@
           to="/blog/tracker-methodology">How We Track
         </g-link>
         <g-link class="inline-flex
+                  items-center
                   gap-2
                   rounded-full
                   bg-teal-400
@@ -40,11 +41,12 @@
                   focus:shadow-lg
                   focus:shadow-teal-700
                   focus:outline-none
-                  focus:outline-2
+                  focus:outline-1
                   focus:outline-offset-0
-                  focus:outline-white" type="button" to="/breaches" tabindex="0">
-          Explore Breaches
-          <Icon class="my-auto" type="arrow-right" size="20" />
+                  focus:outline-white
+                  max-sm:p-4" type="button" to="/breaches" tabindex="0">
+          <span class="max-sm:hidden">Explore Breaches</span>
+          <Icon class="" type="arrow-right" size="20" />
         </g-link>
       </div>
     </header>
@@ -52,14 +54,15 @@
       <slot />
     </main>
     <footer class="container mx-auto flex flex-col gap-16 px-4 pb-8 pt-28">
-      <div class="flex flex-row items-center justify-between ">
+      <div class="flex flex-row items-center justify-between max-md:flex-col ">
         <a href="https://internetfreedom.in/" target="_blank">
           <g-image class="w-48" src="../assets/logos/IFF Logo_Dark BG.svg"
             alt="Internet Freedom Foundation Logo" />
         </a>
-        <div class="flex flex-col items-end gap-4">
+        <div class="flex flex-col items-end gap-4 max-md:mt-20 max-md:items-center">
           <div class="flex
                       flex-row
+                      items-center
                       gap-2
                       rounded-xl
                       border
@@ -68,7 +71,7 @@
                       p-2
                       font-light
                       text-teal-300">
-            <Icon class="my-auto" type="info" size="20" />
+            <Icon class="" type="info" size="20" />
             <p class="text-sm">
               All data on PlugTheBreach is publicly sourced.
             </p>
@@ -77,7 +80,7 @@
         </div>
       </div>
       <div
-        class="flex flex-row justify-between border-t border-zinc-800 fill-zinc-500 pt-8 text-gray-500">
+        class="flex flex-row justify-between border-t border-zinc-800 fill-zinc-500 pt-8 text-gray-500 max-md:flex-col max-md:items-center max-md:gap-8">
         <div class="flex gap-8">
           <a class="transition duration-200 ease-in hover:fill-white hover:text-white"
             href="https://www.instagram.com/internetfreedom.in/" target="_blank" rel="noreferrer">
