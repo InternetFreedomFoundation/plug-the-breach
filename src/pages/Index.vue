@@ -20,37 +20,6 @@
             All information on this website is publicly sourced.
           </p>
         </div>
-        <div class="stroke-3
-                  ring-offset
-                  my-8
-                  flex
-                  w-full
-                  justify-between
-                  rounded-full
-                  border-2
-                  border-emerald-900
-                  bg-white
-                  p-1
-                  pl-4
-                  outline-none
-                  placeholder:text-gray-300
-                  " @click="$refs.searchInput.focus()">
-          <input class="grow
-                      bg-transparent
-                      focus:outline-none" type="text" :value="searchQuery"
-            @keydown.enter="search($event.target.value)"
-            placeholder="Search a breach" ref="searchInput">
-          <button class="aspect-square
-                      rounded-full
-                      bg-emerald-900
-                      p-4
-                      text-white
-                      hover:bg-emerald-800
-                      focus:outline-none
-                      focus:ring-2" @click="search($refs.searchInput.value)">
-            <VueFeather type="search" />
-          </button>
-        </div>
       </div>
       <div class="flex items-center justify-center">
         <g-image src="~/assets/graphic1.png" width="400" />
@@ -153,6 +122,7 @@
                     <g-image src="~/assets/icons/calender.svg" width="20"
                       height="20" />
                     <h3 class="ml-1.5 font-medium text-teal-600">
+      <SearchBar />
                       Breach Date
                     </h3>
                   </div>
@@ -219,6 +189,9 @@ query Breaches{
 </page-query>
 
 <script>
+import SearchBar from '~/components/SearchBar.vue';
+import { formatBreachList, mapEdgesToNodes } from '~/utils/utils.js';
+
 export default {
   metaInfo: {
     title: 'Home',
@@ -229,14 +202,12 @@ export default {
       },
     ],
   },
-  methods: {
-    search(query) {
-      this.$router.push({
-        path: '/breaches',
-        query: {
-          search: query,
-        },
-      });
+  components: {
+    SearchBar,
+  },
+  computed: {
+    breachList() {
+      return formatBreachList(mapEdgesToNodes(this.$page.breaches.edges));
     },
   },
 };
