@@ -8,5 +8,7 @@ require('./main.css'); // Import Tailwind CSS
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout);
-  Vue.component('Icon', VueFeather);
+  if (typeof document !== 'undefined') {
+    Vue.component('Icon', VueFeather);
+  }
 }
