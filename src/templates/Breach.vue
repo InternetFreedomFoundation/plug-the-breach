@@ -2,8 +2,7 @@
   <Layout>
     <main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div class="sm:text-left lg:text-left">
-        <p
-          class="py-4
+        <p class="py-4
                 text-4xl
                 font-extrabold
                 leading-10
@@ -17,8 +16,7 @@
           Breach Size: {{ $page.breach.affectedUsersMn }} Million Users
         </p>
         <div class="mt-3 sm:ml-3 sm:mt-0">
-          <g-link
-            class="focus:shadow-outline-emerald
+          <g-link class="focus:shadow-outline-emerald
                   flex
                   w-full
                   items-center
@@ -42,8 +40,7 @@
                   focus:outline-none
                   md:px-10
                   md:py-4
-                  md:text-lg"
-            to="/tracker">
+                  md:text-lg" to="/tracker">
             All Sites
           </g-link>
         </div>
@@ -72,14 +69,16 @@ query ($id: ID!) {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Breach tracker',
-    meta: [
-      {
-        name: 'description',
-        content: 'List of historical breaches',
-      },
-    ],
+  metaInfo() {
+    return {
+      title: `${this.$page.breach.company} Breach`,
+      meta: [
+        {
+          name: 'description',
+          content: 'An experimental crowdsourced tracker of data breaches by the Internet Freedom Foundation.',
+        },
+      ],
+    };
   },
 };
 </script>

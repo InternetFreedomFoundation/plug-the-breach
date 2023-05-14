@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article class="prose mx-auto p-4 md:prose-lg lg:prose-xl prose-img:rounded">
+    <article class="prose md:prose-lg lg:prose-xl prose-img:rounded container mx-auto p-4 text-zinc-300">
       <h1 class="py-8">{{ $page.post.title }}</h1>
       <div class="prose-strong">
         Author:

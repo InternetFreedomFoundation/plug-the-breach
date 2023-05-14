@@ -5,8 +5,13 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Plug The Breach',
+  siteName: 'PlugTheBreach',
+  siteDescription: 'An experimental crowdsourced tracker of data breaches by the Internet Freedom Foundation.',
   siteUrl: 'https://staging.internetfreedom.in',
+  icon: {
+    favicon: './src/assets/favicon.png',
+  },
+  titleTemplate: 'PlugTheBreach - %s',
   plugins: [
     {
       use: '@gridsome/source-airtable',
@@ -51,7 +56,7 @@ module.exports = {
           {
             typeName: 'Breach',
             indexName: 'breach',
-            fields: ['id', 'company', 'affectedUsersMn'],
+            fields: ['id', 'company', 'breachDate', 'affectedUsersMn'],
           },
         ],
       },

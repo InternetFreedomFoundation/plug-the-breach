@@ -3,24 +3,93 @@
     <div class="container mx-auto px-4">
       <SearchBar />
       <div class="my-8">
-        <h4 v-if="searchQuery && searchResults.length > 0">Showing search results for {{ searchQuery }}</h4>
-        <h4 v-else-if="searchQuery && searchResults.length == 0">Oops! We couldn't find anything for "{{ searchQuery }}". Showing all breaches.</h4>
+        <h4 class="text-sm text-zinc-500">
+          <span v-if="!searchQuery && $page.breaches.edges.length">
+            Showing all <span class="font-bold text-zinc-400">{{
+              $page.breaches.edges.length }}</span>
+            breaches.
+          </span>
+          <span v-else-if="searchQuery && searchList.length > 0">
+            Showing <span class="font-bold text-zinc-400">{{ searchList.length }}
+            </span> breach
+            results for <span class="font-bold text-zinc-400">"{{ searchQuery
+            }}"</span>.
+          </span>
+          <span v-else-if="searchQuery && searchList.length === 0">
+            No results found for <span class="font-bold text-zinc-400">"{{
+              searchQuery }}"</span>. Showing all <span
+              class="font-bold text-zinc-400">{{ $page.breaches.edges.length
+              }}</span>
+            breaches.
+          </span>
+          <span v-else>
+            Looks like our database is currently unreachable. This is serious
+            breach of your love and trust. We are working to fix it!
+          </span>
+        </h4>
       </div>
-      <div class="grid grid-cols-4 gap-4">
-        <div class="pb-100
-                  flex
-                  aspect-video
-                  flex-col
-                  rounded-2xl
-                  bg-white
-                  p-8
-                  ring-emerald-900
-                  drop-shadow-sm
-                  hover:ring-2 " v-for="breach in breachList" :key="breach.id">
-          <g-link :to="'/breach/' + breach.id">
-            <h2 class="text-xl text-emerald-900"> {{ breach.company }} </h2>
-          </g-link>
-        </div>
+      <div class="grid grid-cols-3 gap-4">
+        <g-link class="hover:shadow-3xl
+                      flex
+                      flex-col
+                      rounded-3xl
+                      bg-gradient-to-br
+                      from-transparent
+                    to-white/5
+                      shadow-xl
+                    shadow-black/25
+                      outline-none
+                      outline-1
+                      outline-offset-0
+                    outline-zinc-700
+                      backdrop-blur-xl
+                      transition
+                      duration-200
+                      ease-in
+                    hover:from-white/5
+                    hover:to-white/10
+                      hover:outline-2
+                    hover:outline-zinc-600
+                      focus:from-transparent
+                    focus:to-white/5
+                    focus:shadow-black/50
+                      focus:outline-2
+                    focus:outline-white
+                    active:from-white/5
+                    active:to-white/10
+                    active:shadow-black/50
+                      active:outline-2
+                    active:outline-white" v-for="breach in breachList"
+          :key="breach.id" tabindex="0" :to="'/breach/' + breach.id">
+          <div class="flex flex-col gap-8 p-6">
+            <div class="h-20 border-b border-zinc-700 ">
+              <span class="line-clamp-2 text-2xl text-teal-400">
+                {{ breach.company }}
+              </span>
+            </div>
+            <div class="flex h-16 flex-col gap-4">
+              <div class="inline-flex items-center gap-2">
+                <Icon class="text-teal-400" type="calendar" size="12" />
+                <span class="text-sm font-medium uppercase text-zinc-500">
+                  Breach Date
+                </span>
+              </div>
+              <span class="text-xl uppercase text-white">{{ breach.breachDate
+              }}</span>
+            </div>
+            <div class="flex h-16 flex-col gap-4">
+              <div class="inline-flex flex-row items-center gap-2">
+                <Icon class="text-teal-400" type="shield-off" size="12" />
+                <span class="text-sm font-medium uppercase text-zinc-500">
+                  Affected Users
+                </span>
+              </div>
+              <span class="text-xl uppercase text-white">
+                {{ breach.affectedUsersMn }}
+              </span>
+            </div>
+          </div>
+        </g-link>
       </div>
     </div>
   </Layout>
@@ -47,11 +116,11 @@ import { formatBreachList, mapEdgesToNodes } from '~/utils/utils.js';
 
 export default {
   metaInfo: {
-    title: 'PlugTheBreach',
+    title: 'Breaches',
     meta: [
       {
         name: 'description',
-        content: 'An experimental initiative by the Internet Freedom Foundation to track data breaches in India.',
+        content: 'An experimental crowdsourced tracker of data breaches by the Internet Freedom Foundation.',
       },
     ],
   },

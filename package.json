@@ -18,7 +18,8 @@
     "gridsome": "^0.7.23",
     "gridsome-plugin-flexsearch": "^2.0.2",
     "gridsome-plugin-remark-prismjs-all": "^0.4.8",
-    "vue-feather": "^1.1.1"
+    "vue-feather": "^1.1.1",
+    "vue-simple-icons": "^7.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
