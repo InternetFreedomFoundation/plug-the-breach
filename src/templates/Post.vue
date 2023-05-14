@@ -1,16 +1,78 @@
 <template>
   <Layout>
-    <article class="prose md:prose-lg lg:prose-xl prose-img:rounded container mx-auto p-4 text-zinc-300">
-      <h1 class="py-8">{{ $page.post.title }}</h1>
-      <div class="prose-strong">
-        Author:
-        <strong>{{ $page.post.author }}</strong>
-      </div>
-      <div>Date Published: {{ $page.post.date_published }}</div>
-      <div>Time to Read: {{ $page.post.timeToRead }} min</div>
-      <hr/>
-      <div v-html="$page.post.content"></div>
-    </article>
+    <div class="container mx-auto p-4">
+      <article class="prose
+                      prose-zinc
+                      mt-40
+                      max-w-none
+                      dark:prose-invert
+                      prose-headings:font-normal
+                      prose-headings:text-teal-400
+                      prose-h1:uppercase
+                      prose-h1:text-teal-100
+                      prose-a:font-normal
+                      prose-a:text-teal-400
+                      prose-a:no-underline
+                      prose-img:rounded-3xl">
+        <h1>{{ $page.post.title }}</h1>
+        <div class="flex flex-row gap-4 max-sm:flex-col">
+          <div class="flex
+                      w-max
+                      flex-row
+                      items-center
+                      gap-2
+                      rounded-full
+                      border
+                      border-white/10
+                      bg-white/5
+                      px-4
+                      py-2
+                      text-sm
+                      font-light
+                      text-white">
+            <Icon class="text-teal-400" type="pen-tool" size="12" />
+            {{ $page.post.author }}
+          </div>
+          <div class="flex
+                      w-max
+                      flex-row
+                      items-center
+                      gap-2
+                      rounded-full
+                      border
+                      border-white/10
+                      bg-white/5
+                      px-4
+                      py-2
+                      text-sm
+                      font-light
+                      text-white">
+            <Icon class="text-teal-400" type="calendar" size="12" />
+            {{ $page.post.date_published }}
+          </div>
+          <div class="flex
+                      w-max
+                      flex-row
+                      items-center
+                      gap-2
+                      rounded-full
+                      border
+                      border-white/10
+                      bg-white/5
+                      px-4
+                      py-2
+                      text-sm
+                      font-light
+                      text-white">
+            <Icon class="text-teal-400" type="clock" size="12" />
+            {{ $page.post.timeToRead }}
+            Minutes
+          </div>
+        </div>
+        <hr />
+        <div v-html="$page.post.content"></div>
+      </article>
+    </div>
   </Layout>
 </template>
 

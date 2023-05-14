@@ -15,6 +15,10 @@ module.exports = {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif'],
       },
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
     },
   },
+  plugins: [require('@tailwindcss/typography')],
 };

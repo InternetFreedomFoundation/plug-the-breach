@@ -18,8 +18,8 @@
       </div>
       <div class="flex flex-row items-center justify-between gap-8" id="header-right">
         <g-link
-          class="text-md text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white"
-          to="/blog/tracker-methodology">How We Track
+          class="text-md text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white max-md:hidden"
+          to="/blog/how-we-track">How We Track
         </g-link>
         <g-link class="inline-flex
                   items-center
