@@ -1,27 +1,47 @@
-export function formatDate(dateStr) {
-  let breachDate;
-  if (!dateStr) return 'Unconfirmed';
-
-  const [day, month, year] = dateStr.split('/');
-  const date = new Date(year, month - 1, day);
+function formatDate(date) {
+  const [day, month, year] = date.split('/');
+  const dateObject = new Date(year, month - 1, day);
   const options = { day: 'numeric', month: 'long', year: 'numeric' };
-  const formattedDate = date.toLocaleDateString('en-IN', options);
-  return formattedDate;
+  return dateObject.toLocaleDateString('en-IN', options);
 }
 
-export function formatUserCountInMillions(userCount) {
-  if (!userCount) return 'Unconfirmed';
-  if (userCount <= 1) return `${userCount} Million`;
-  return `${userCount} Millions`;
+function getDomainName(url) {
+  return url.match(/^(?:https?:\/\/)?(?:www\.)?([^:\/\n?]+)/i)[1];
+}
+
+function formatDetails(str) {
+  // Split the input string into an array of sentences using commas as the delimiter.
+  const sentences = str.split(',');
+
+  // Convert each sentence to sentence case and add bullet points and line breaks.
+  const bulletPoints = sentences.map((sentence) => {
+    // Capitalize the first letter of the sentence.
+    const sentenceCase = sentence.trim().replace(/^\w/, (c) => c.toUpperCase());
+
+    // Add a bullet point and line break to the sentence.
+    return `• ${sentenceCase}<br>`;
+  });
+
+  // Combine all of the sentences into a single string.
+  const formattedString = bulletPoints.join('');
+
+  // Return the formatted string.
+  return formattedString;
+}
+
+export function formatBreach(breach) {
+  return {
+    ...breach,
+    breachDate: breach.breachDate ? formatDate(breach.breachDate) : 'UNCONFIRMED',
+    affectedUsersMn: breach.affectedUsersMn ? `${breach.affectedUsersMn} Million` : 'UNCONFIRMED',
+    details: breach.details ? formatDetails(breach.details) : 'UNAVAILABLE',
+    acknowledgement: breach.acknowledgement ? breach.acknowledgement : 'UNCONFIRMED',
+    mediaCoverage: breach.mediaCoverage ? getDomainName(breach.mediaCoverage) : 'UNAVAILABLE',
+  };
 }
 
 export function formatBreachList(breaches) {
-  return breaches.map((breach) => ({
-    id: breach.id,
-    company: breach.company,
-    breachDate: formatDate(breach.breachDate),
-    affectedUsersMn: formatUserCountInMillions(breach.affectedUsersMn),
-  }));
+  return breaches.map((breach) => formatBreach(breach));
 }
 
 /**
