@@ -1,8 +1,36 @@
 function formatDate(date) {
-  const [day, month, year] = date.split('/');
-  const dateObject = new Date(year, month - 1, day);
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
-  return dateObject.toLocaleDateString('en-IN', options);
+  let day;
+  let month;
+  let year;
+
+  const dateParts = date.split('/');
+  if (dateParts.length === 3) {
+    day = parseInt(dateParts[0], 10);
+    month = parseInt(dateParts[1], 10);
+    year = parseInt(dateParts[2], 10);
+  } else if (dateParts.length === 2) {
+    month = parseInt(dateParts[0], 10);
+    year = parseInt(dateParts[1], 10);
+  } else {
+    year = parseInt(dateParts, 10);
+  }
+
+  if (day && month && year) {
+    const dateObject = new Date(year, month - 1, day);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    return dateObject.toLocaleDateString('en-IN', options);
+  }
+  if (month && year) {
+    const dateObject = new Date(year, month - 1);
+    const options = { month: 'long', year: 'numeric' };
+    return dateObject.toLocaleDateString('en-IN', options);
+  }
+  if (year) {
+    const dateObject = new Date(year, 0);
+    const options = { year: 'numeric' };
+    return dateObject.toLocaleDateString('en-IN', options);
+  }
+  return 'Invalid date';
 }
 
 function getDomainName(url) {
