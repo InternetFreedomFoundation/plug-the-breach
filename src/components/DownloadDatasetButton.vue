@@ -53,7 +53,7 @@ export default {
   name: 'DownloadDatasetButton',
   methods: {
     downloadDataset() {
-      const data = this.$page.breaches.edges.map((edge) => ({
+      const data = this.$static.breaches.edges.map((edge) => ({
         Company: edge.node.company,
         'Breach Date': edge.node.breachDate,
         'Affected Users (in Million)': edge.node.affectedUsersMn,
