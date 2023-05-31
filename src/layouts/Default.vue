@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="">
     <header class="container mx-auto flex flex-row items-center justify-between px-4 py-8">
       <div class="flex flex-row items-center gap-5 max-sm:gap-2">
         <g-link class="" to="/">
@@ -18,7 +18,7 @@
       </div>
       <div class="flex flex-row items-center justify-between gap-8" id="header-right">
         <g-link
-          class="text-md text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white max-md:hidden"
+          class="text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white max-md:hidden"
           to="/blog/how-we-track">How We Track
         </g-link>
         <g-link class="inline-flex
@@ -107,7 +107,7 @@
             <GitHubIcon class="" size="20"/>
           </a>
         </div>
-        <nav class="text-md flex flex-row gap-8">
+        <nav class="flex flex-row gap-8">
           <a class="transition duration-200 ease-in">Credits</a>
         </nav>
       </div>

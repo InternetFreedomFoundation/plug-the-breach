@@ -18,6 +18,9 @@ module.exports = {
       minHeight: (theme) => ({
         ...theme('spacing'),
       }),
+      boxShadow: {
+        '3xl': '0 35px 60px 0 rgba(0, 0, 0, 0.3)',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

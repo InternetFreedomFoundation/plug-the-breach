@@ -22,7 +22,7 @@
           class="mb-4 w-max text-5xl uppercase tracking-tight text-teal-100 max-md:text-4xl max-sm:text-2xl">
           Stay on top of the breaches
         </h1>
-        <p class="max-sm:text-md w-max text-lg text-zinc-700 max-sm:text-sm">
+        <p class="w-max text-lg text-zinc-500 max-sm:text-sm">
           An experimental initiative by the
           <span class="sm:hidden">IFF</span>
           <span class="max-sm:hidden">Internet Freedom Foundation</span>.
@@ -37,8 +37,7 @@
                     max-md:grid-cols-2
                     max-sm:grid-cols-1
                     ">
-          <g-link class="hover:shadow-3xl
-                          flex
+          <g-link class="flex
                           flex-col
                           rounded-3xl
                           bg-gradient-to-br
@@ -56,6 +55,7 @@
                           ease-in
                           hover:from-white/5
                           hover:to-white/10
+                          hover:shadow-3xl
                           hover:outline-2
                           hover:outline-zinc-600
                           focus:from-transparent

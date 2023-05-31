@@ -29,37 +29,37 @@
         </h4>
       </div>
       <div class="grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
-        <g-link class="hover:shadow-3xl
-                      flex
+        <g-link class="flex
                       flex-col
                       rounded-3xl
                       bg-gradient-to-br
                       from-transparent
-                    to-white/5
+                      to-white/5
                       shadow-xl
-                    shadow-black/25
+                      shadow-black/25
                       outline-none
                       outline-1
                       outline-offset-0
-                    outline-zinc-700
+                      outline-zinc-700
                       backdrop-blur-xl
                       transition
                       duration-200
                       ease-in
-                    hover:from-white/5
-                    hover:to-white/10
+                      hover:from-white/5
+                      hover:to-white/10
+                      hover:shadow-3xl
                       hover:outline-2
-                    hover:outline-zinc-600
+                      hover:outline-zinc-600
                       focus:from-transparent
-                    focus:to-white/5
-                    focus:shadow-black/50
+                      focus:to-white/5
+                      focus:shadow-black/50
                       focus:outline-2
-                    focus:outline-white
-                    active:from-white/5
-                    active:to-white/10
-                    active:shadow-black/50
+                      focus:outline-white
+                      active:from-white/5
+                      active:to-white/10
+                      active:shadow-black/50
                       active:outline-2
-                    active:outline-white" v-for="breach in breachList"
+                      active:outline-white" v-for="breach in breachList"
           :key="breach.id" tabindex="0" :to="'/breach/' + breach.id">
           <div class="flex flex-col gap-8 p-6">
             <div class="h-20 border-b border-zinc-700 ">

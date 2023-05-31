@@ -4,6 +4,10 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const tailwind = require('tailwindcss');
+
+const postcssPlugins = [tailwind()];
+
 module.exports = {
   siteName: 'PlugTheBreach',
   siteDescription: 'An experimental crowdsourced tracker of data breaches by the Internet Freedom Foundation.',
@@ -102,6 +106,13 @@ module.exports = {
           },
         ],
       ],
+    },
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
     },
   },
 };
