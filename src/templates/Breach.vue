@@ -68,8 +68,42 @@
           </div>
           <div class="flex flex-col gap-4">
             <div class="inline-flex flex-row items-center gap-2">
+              <Icon class="text-teal-400" type="file-text" size="12" />
+              <span class="text-sm font-medium uppercase text-zinc-500">
+                Notice/Statement
+              </span>
+              <Tooltip>
+                <Icon class="text-white" type="help-circle" size="12" />
+                <template #popper>
+                  Indicates if the affected entity has issued an official statement acknowledging a data breach and providing relevant details.
+                </template>
+              </Tooltip>
+            </div>
+            <span class="text-xl uppercase text-white">
+              {{ breach.noticeStatement }}
+            </span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="inline-flex flex-row items-center gap-2">
+              <Icon class="text-teal-400" type="bell" size="12" />
+              <span class="text-sm font-medium uppercase text-zinc-500">
+                Grievance Redressal
+              </span>
+              <Tooltip>
+                <Icon class="text-white" type="help-circle" size="12" />
+                <template #popper>
+                  Indicates if the affected entity has contacted the affected user and/or disclosed the actions/steps planned to provide redressal.
+                </template>
+              </Tooltip>
+            </div>
+            <span class="text-xl uppercase text-white">
+              {{ breach.grievanceRedressal }}
+            </span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="inline-flex flex-row items-center gap-2">
               <Icon class="text-teal-400" type="tv" size="12" />
-              <span class="upp text-sm font-medium uppercase text-zinc-500">
+              <span class="text-sm font-medium uppercase text-zinc-500">
                 Media Coverage
               </span>
             </div>
@@ -93,6 +127,8 @@ query ($id: ID!) {
     affectedUsersMn
     details
     acknowledgement
+    noticeStatement
+    grievanceRedressal
     mediaCoverage
   }
 }
@@ -100,6 +136,7 @@ query ($id: ID!) {
 
 <script>
 import { formatBreach } from '~/utils/utils.js';
+import Tooltip from '~/components/Tooltip.vue';
 
 export default {
   metaInfo() {
@@ -112,6 +149,9 @@ export default {
         },
       ],
     };
+  },
+  components: {
+    Tooltip,
   },
   computed: {
     breach() {

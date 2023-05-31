@@ -16,6 +16,13 @@ export default function (Vue, { router, head, isClient }) {
         $extend: 'dropdown',
         distance: '24',
       },
+      'default-tooltip': {
+        $extend: 'tooltip',
+        placement: 'bottom',
+        triggers: ['click', 'hover', 'focus', 'touch'],
+        autoHide: true,
+        distance: '6',
+      },
     },
   });
   if (typeof document !== 'undefined') {
