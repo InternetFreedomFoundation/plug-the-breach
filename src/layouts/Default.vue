@@ -3,8 +3,9 @@
     <header class="container mx-auto flex flex-row items-center justify-between px-4 py-8">
       <div class="flex flex-row items-center gap-5 max-sm:gap-2">
         <g-link class="" to="/">
-          <g-image class="w-48"
-            src="~/assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg"></g-image>
+          <g-image class="h-12 w-48"
+            src="~/assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg" immediate="true"
+          />
         </g-link>
         <div class="rounded-sm
                     border
@@ -44,7 +45,8 @@
                   focus:outline-1
                   focus:outline-offset-0
                   focus:outline-white
-                  max-sm:p-4" type="button" to="/breaches" tabindex="0">
+                  max-sm:p-4" type="button" to="/breaches" tabindex="0"
+                  v-if="isRouteNotBreaches">
           <span class="max-sm:hidden">Explore Breaches</span>
           <Icon class="" type="arrow-right" size="20" />
         </g-link>
@@ -130,6 +132,11 @@ export default {
     RedditIcon,
     MastodonIcon,
     GitHubIcon,
+  },
+  computed: {
+    isRouteNotBreaches() {
+      return this.$route.path !== '/breaches';
+    },
   },
 };
 </script>
