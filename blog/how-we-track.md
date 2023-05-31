@@ -22,8 +22,6 @@ During phase 1 of the project, we will rely solely on publicly available reports
 
 Phase 2 of the project, we will create a website called "PlugTheBreach" which will make the tracker publicly available. Work on phase 1 will continue simultaneously as the breaches will be updated and populated on the tracker in the back-end.
 
-![alt_text](./og/ogImage.png "image_tooltip")
-
 ## Why this initiative?
 
 The key problem here, and indeed, something that is part of the _raison d'etre_ of this project, is the lack of transparency, which results in a near complete lack of information. In most cases, companies fail to even acknowledge these breaches. A data breach exposes confidential, sensitive and protected information to unauthorised persons. As a result of these breaches, data of Indian users is available to any third party
