@@ -10,7 +10,7 @@ export default {
 
 <style>
 .v-popper--theme-default-dropdown .v-popper__wrapper {
-  margin: 0 2rem 0 2rem;
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 .v-popper--theme-default-dropdown .v-popper__inner {
