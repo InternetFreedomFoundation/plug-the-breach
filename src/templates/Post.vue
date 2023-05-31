@@ -10,9 +10,11 @@
                       prose-headings:text-teal-400
                       prose-h1:uppercase
                       prose-h1:text-teal-100
+                      prose-p:text-lg
                       prose-a:font-normal
                       prose-a:text-teal-400
                       prose-a:no-underline
+                      prose-li:text-lg
                       prose-img:rounded-3xl">
         <h1>{{ $page.post.title }}</h1>
         <div class="flex flex-row gap-4 max-sm:flex-col">
