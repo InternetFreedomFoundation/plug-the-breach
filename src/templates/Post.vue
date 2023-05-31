@@ -119,7 +119,7 @@ export default {
         },
         {
           name: 'og:image',
-          content: this.$static.metadata.baseURL + this.$page.post.og_image.src,
+          content: this.$static.metadata.baseURL + this.$page.post.og_image,
         },
       ],
       link: [
