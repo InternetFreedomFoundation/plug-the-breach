@@ -1,9 +1,6 @@
 <template>
   <form class="relative" name="search" @submit.prevent="search">
-    <input class="stroke-3
-                  ring-offset
-                  z-10
-                  my-8
+    <input class="z-10
                   flex
                   w-full
                   grow
@@ -24,8 +21,7 @@
                   hover:outline-teal-200
                   focus:outline-none
                   focus:outline-offset-0
-                  focus:outline-white
-                  max-sm:my-8" placeholder="Search a breach"
+                  focus:outline-white" placeholder="Search for a breach"
       type="search" v-model="inputValue">
     <button class="absolute
                   right-2

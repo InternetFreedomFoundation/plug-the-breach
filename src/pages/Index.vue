@@ -1,9 +1,8 @@
 <template>
   <Layout>
-    <div class="container mx-auto px-4 py-52 max-lg:pb-0 max-lg:pt-8 max-sm:pt-16">
+    <div class="container mx-auto px-4 pb-40 pt-52 max-lg:pb-0 max-lg:pt-8 max-sm:pt-16">
       <div class="flex w-max flex-col justify-between py-4 max-md:py-0">
-        <g-image class="max-md
-                        absolute
+        <g-image class="absolute
                         right-48
                         top-48
                         -z-10
@@ -28,7 +27,7 @@
           <span class="max-sm:hidden">Internet Freedom Foundation</span>.
         </p>
       </div>
-      <SearchBar />
+      <SearchBar class="mt-16 max-md:mt-8 max-sm:mt-7"/>
       <div id="recent-searches" class="mt-24 flex flex-col gap-10">
         <h2 class="text-xl text-white"> Recent Breaches </h2>
         <div class="grid
@@ -106,7 +105,7 @@
 
 <page-query>
 query Breaches{
- breaches: allBreach(sortBy: "breachDate", order: ASC, limit: 3){
+ breaches: allBreach {
     edges {
       node {
         id
@@ -138,7 +137,7 @@ export default {
   },
   computed: {
     breachList() {
-      return formatBreachList(mapEdgesToNodes(this.$page.breaches.edges));
+      return formatBreachList(mapEdgesToNodes(this.$page.breaches.edges), 'breachDate', 'desc', 3);
     },
   },
 };

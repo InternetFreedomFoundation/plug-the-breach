@@ -15,25 +15,34 @@ function formatDate(date) {
     year = parseInt(dateParts, 10);
   }
 
+  let dateObject;
+  let dateString;
+
   if (day && month && year) {
-    const dateObject = new Date(year, month - 1, day);
+    dateObject = new Date(year, month - 1, day);
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    return dateObject.toLocaleDateString('en-IN', options);
-  }
-  if (month && year) {
-    const dateObject = new Date(year, month - 1);
+    dateString = dateObject.toLocaleDateString('en-IN', options);
+  } else if (month && year) {
+    dateObject = new Date(year, month - 1);
     const options = { month: 'long', year: 'numeric' };
-    return dateObject.toLocaleDateString('en-IN', options);
-  }
-  if (year) {
-    const dateObject = new Date(year, 0);
+    dateString = dateObject.toLocaleDateString('en-IN', options);
+  } else if (year) {
+    dateObject = new Date(year, 0);
     const options = { year: 'numeric' };
-    return dateObject.toLocaleDateString('en-IN', options);
+    dateString = dateObject.toLocaleDateString('en-IN', options);
+  } else {
+    dateObject = null;
+    dateString = 'Invalid date';
   }
-  return 'Invalid date';
+
+  return {
+    dateString,
+    dateObject,
+  };
 }
 
 function getDomainName(url) {
+  // eslint-disable-next-line no-useless-escape
   return url.match(/^(?:https?:\/\/)?(?:www\.)?([^:\/\n?]+)/i)[1];
 }
 
@@ -60,16 +69,56 @@ function formatDetails(str) {
 export function formatBreach(breach) {
   return {
     ...breach,
-    breachDate: breach.breachDate ? formatDate(breach.breachDate) : 'UNCONFIRMED',
-    affectedUsersMn: breach.affectedUsersMn ? `${breach.affectedUsersMn} Million` : 'UNCONFIRMED',
-    details: breach.details ? formatDetails(breach.details) : 'UNAVAILABLE',
-    acknowledgement: breach.acknowledgement ? breach.acknowledgement : 'UNCONFIRMED',
-    mediaCoverage: breach.mediaCoverage ? getDomainName(breach.mediaCoverage) : 'UNAVAILABLE',
+    company: breach.company ? breach.company : 'UNAVAILABLE',
+    breachDate: breach.breachDate ? formatDate(breach.breachDate).dateString : 'NOT DISCLOSED',
+    affectedUsersMn: breach.affectedUsersMn ? `${breach.affectedUsersMn} Million` : 'NOT DISCLOSED',
+    details: breach.details ? formatDetails(breach.details) : 'NOT DISCLOSED',
+    acknowledgement: breach.acknowledgement ? breach.acknowledgement : 'NOT DISCLOSED',
+    noticeStatement: breach.noticeStatement ? breach.noticeStatement : 'NOT DISCLOSED',
+    grievanceRedressal: breach.grievanceRedressal ? breach.grievanceRedressal : 'NOT DISCLOSED',
+    mediaCoverage: breach.mediaCoverage ? getDomainName(breach.mediaCoverage) : 'NOT DISCLOSED',
   };
 }
 
-export function formatBreachList(breaches) {
-  return breaches.map((breach) => formatBreach(breach));
+export function formatBreachList(breaches, sortKey = 'breachDate', sortOrder = 'desc', limit = Infinity) {
+  const sortedBreaches = [...breaches];
+
+  switch (sortKey) {
+    case 'company':
+      sortedBreaches.sort((a, b) => {
+        const companyA = a.company ? a.company.toLowerCase() : '';
+        const companyB = b.company ? b.company.toLowerCase() : '';
+
+        if (sortOrder === 'asc') return companyA.localeCompare(companyB);
+        if (sortOrder === 'desc') return companyB.localeCompare(companyA);
+        return companyA.localeCompare(companyB);
+      });
+      break;
+
+    case 'breachDate':
+      sortedBreaches.sort((a, b) => {
+        const breachDateA = a.breachDate ? formatDate(a.breachDate).dateObject : null;
+        const breachDateB = b.breachDate ? formatDate(b.breachDate).dateObject : null;
+
+        if (!breachDateA && !breachDateB) return 0;
+        if (!breachDateA) return 1;
+        if (!breachDateB) return -1;
+
+        if (sortOrder === 'asc') return breachDateA - breachDateB;
+        if (sortOrder === 'desc') return breachDateB - breachDateA;
+        return breachDateA - breachDateB;
+      });
+      break;
+
+    default:
+      break;
+  }
+
+  if (limit !== Infinity) {
+    return sortedBreaches.slice(0, limit).map((breach) => formatBreach(breach));
+  }
+
+  return sortedBreaches.map((breach) => formatBreach(breach));
 }
 
 /**

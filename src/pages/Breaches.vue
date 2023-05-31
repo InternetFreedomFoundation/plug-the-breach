@@ -1,7 +1,64 @@
 <template>
   <Layout>
     <div class="container mx-auto px-4">
-      <SearchBar />
+      <div class="mt-24 flex flex-row items-center gap-4">
+        <SearchBar class="flex-1"/>
+        <Dropdown>
+          <button class="inline-flex
+                        aspect-square
+                        h-min
+                        items-center
+                        rounded-full
+                        bg-teal-400
+                        p-4
+                        text-zinc-950
+                        shadow-md
+                        shadow-teal-700
+                        transition
+                        duration-200
+                        ease-in
+                        hover:bg-teal-200
+                        hover:shadow-xl
+                        hover:shadow-teal-700
+                        focus:bg-teal-400
+                        focus:shadow-teal-700
+                        focus:outline-none
+                        focus:outline-2
+                        focus:outline-offset-0
+                        focus:outline-white" type="submit">
+            <Icon type="sliders" />
+          </button>
+          <template #popper>
+            <div class="mb-4 text-zinc-500">SortTheBreaches</div>
+            <div class="flex flex-col justify-start gap-4">
+              <button class="inline-flex items-center gap-2"
+                :class="{'text-teal-500': sortKey === 'company' && sortOrder === 'asc'}"
+                @click="sort('company', 'asc')">
+                  <Icon type="arrow-up" size="16" />
+                  Name
+              </button>
+              <button class="inline-flex items-center gap-2"
+                :class="{ 'text-teal-500': sortKey === 'company' && sortOrder === 'desc' }"
+                @click="sort('company', 'desc')">
+                  <Icon type="arrow-down" size="16" />
+                  Name
+              </button>
+              <button class="inline-flex items-center gap-2"
+                :class="{ 'text-teal-500': sortKey === 'breachDate' && sortOrder === 'asc' }"
+                @click="sort('breachDate', 'asc')" >
+                  <Icon type="arrow-up" size="16" />
+                  Breach Date
+              </button>
+              <button class="inline-flex items-center gap-2"
+                :class="{ 'text-teal-500': sortKey === 'breachDate' && sortOrder === 'desc' }"
+                @click="sort('breachDate', 'desc')">
+                  <Icon type="arrow-down" size="16" />
+                  Breach Date
+              </button>
+            </div>
+          </template>
+        </Dropdown>
+      </div>
       <div class="my-8">
         <h4 class="text-sm text-zinc-500">
           <span v-if="!searchQuery && $page.breaches.edges.length">
@@ -113,6 +170,7 @@ query Breaches{
 <script>
 import SearchBar from '~/components/SearchBar.vue';
 import { formatBreachList, mapEdgesToNodes } from '~/utils/utils.js';
+import Dropdown from '~/components/Dropdown.vue';
 
 export default {
   metaInfo: {
@@ -126,10 +184,13 @@ export default {
   },
   components: {
     SearchBar,
+    Dropdown,
   },
   data() {
     return {
       searchQuery: '',
+      sortKey: 'breachDate',
+      sortOrder: 'desc',
     };
   },
   mounted() {
@@ -144,10 +205,36 @@ export default {
       return this.$search.search({ query: this.$route.query.search, limit: 5 });
     },
     breachList() {
-      if (this.searchList.length > 0) return formatBreachList(mapEdgesToNodes(this.searchList));
-      return formatBreachList(mapEdgesToNodes(this.$page.breaches.edges));
+      if (this.searchList.length > 0) {
+        return formatBreachList(
+          mapEdgesToNodes(this.searchList),
+          this.sortKey,
+          this.sortOrder,
+        );
+      }
+      return (
+        formatBreachList(
+          mapEdgesToNodes(this.$page.breaches.edges, this.$page.sort, this.$page.order),
+          this.sortKey,
+          this.sortOrder,
+        )
+      );
+    },
+  },
+  methods: {
+    sort(sortKey, sortOrder) {
+      this.sortKey = sortKey;
+      this.sortOrder = sortOrder;
     },
   },
 };
 
 </script>
+
+<style>
+  button[data-popper-shown] {
+    background-color: #2dd4bf;
+    box-shadow: 0 0 0 3px rgba(59, 130, 184, 0.5);
+    outline: 2px solid white;
+  }
+</style>
