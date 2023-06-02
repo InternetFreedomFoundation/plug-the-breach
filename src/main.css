@@ -166,4 +166,12 @@ body {
       /*!*/
       /*!*/
     );
+  --tw-gradient-from-position: var(--empty,
+      /*!*/
+      /*!*/
+    );
+  --tw-gradient-to-position: var(--empty,
+      /*!*/
+      /*!*/
+    );
 }
