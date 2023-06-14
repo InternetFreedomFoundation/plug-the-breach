@@ -4,7 +4,7 @@
       <div class="flex flex-row items-center gap-5 max-sm:gap-2">
         <g-link class="" to="/">
           <g-image class="h-12 w-48"
-            src="~/assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg" immediate="true"
+            src="~/assets/logos/PlugTheBreach Logo_Wordmark_Dark BG.svg" immediate
           />
         </g-link>
         <div class="rounded-sm
@@ -20,7 +20,7 @@
       <div class="flex flex-row items-center justify-between gap-8" id="header-right">
         <g-link
           class="text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white max-md:hidden"
-          to="/blog/how-we-track">How We Track
+          to="/blog/about-the-initiative" v-if="isRouteNot('/blog/about-the-initiative')">About The Initiative
         </g-link>
         <g-link class="inline-flex
                   items-center
@@ -46,7 +46,7 @@
                   focus:outline-offset-0
                   focus:outline-white
                   max-sm:p-4" type="button" to="/breaches" tabindex="0"
-                  v-if="isRouteNotBreaches">
+                  v-if="isRouteNot('/breaches')">
           <span class="max-sm:hidden">Explore Breaches</span>
           <Icon class="" type="arrow-right" size="20" />
         </g-link>
@@ -110,7 +110,11 @@
           </a>
         </div>
         <nav class="flex flex-row gap-8">
-          <a class="transition duration-200 ease-in">Credits</a>
+          <g-link
+            class="text-teal-400 transition duration-200 ease-in hover:text-teal-200 focus:text-white max-md:mt-4"
+            to="/blog/about-the-initiative">
+            About The Initiative
+          </g-link>
         </nav>
       </div>
     </footer>
@@ -133,9 +137,9 @@ export default {
     MastodonIcon,
     GitHubIcon,
   },
-  computed: {
-    isRouteNotBreaches() {
-      return this.$route.path !== '/breaches';
+  methods: {
+    isRouteNot(route) {
+      return this.$route.path !== route;
     },
   },
 };

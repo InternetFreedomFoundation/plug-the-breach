@@ -1,8 +1,9 @@
 <template>
   <Layout>
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto px-4">
       <article class="prose
                       prose-zinc
+                      -mb-24
                       mt-40
                       max-w-none
                       dark:prose-invert
@@ -17,60 +18,6 @@
                       prose-li:text-lg
                       prose-img:rounded-3xl">
         <h1>{{ $page.post.title }}</h1>
-        <div class="flex flex-row gap-4 max-sm:flex-col">
-          <div class="flex
-                      w-max
-                      flex-row
-                      items-center
-                      gap-2
-                      rounded-full
-                      border
-                      border-white/10
-                      bg-white/5
-                      px-4
-                      py-2
-                      text-sm
-                      font-light
-                      text-white">
-            <Icon class="text-teal-400" type="pen-tool" size="12" />
-            {{ $page.post.author }}
-          </div>
-          <div class="flex
-                      w-max
-                      flex-row
-                      items-center
-                      gap-2
-                      rounded-full
-                      border
-                      border-white/10
-                      bg-white/5
-                      px-4
-                      py-2
-                      text-sm
-                      font-light
-                      text-white">
-            <Icon class="text-teal-400" type="calendar" size="12" />
-            {{ $page.post.date_published }}
-          </div>
-          <div class="flex
-                      w-max
-                      flex-row
-                      items-center
-                      gap-2
-                      rounded-full
-                      border
-                      border-white/10
-                      bg-white/5
-                      px-4
-                      py-2
-                      text-sm
-                      font-light
-                      text-white">
-            <Icon class="text-teal-400" type="clock" size="12" />
-            {{ $page.post.timeToRead }}
-            Minutes
-          </div>
-        </div>
         <hr />
         <div v-html="$page.post.content"></div>
       </article>

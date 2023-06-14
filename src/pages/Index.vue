@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto px-4 pb-40 pt-52 max-lg:pb-0 max-lg:pt-8 max-sm:pt-16">
+    <div class="container mx-auto overflow-x-clip px-4 pb-40 pt-52 max-lg:pb-0 max-lg:pt-8 max-sm:pt-16">
       <div class="flex w-max flex-col justify-between py-4 max-md:py-0">
         <g-image class="absolute
                         right-48
@@ -19,7 +19,7 @@
           alt="Image with several motifs of personal data protection" />
         <h1
           class="mb-4 w-max text-5xl uppercase tracking-tight text-teal-100 max-md:text-4xl max-sm:text-2xl">
-          Stay on top of the breaches
+          Stay on top of breaches
         </h1>
         <p class="w-max text-lg text-zinc-500 max-sm:text-sm">
           An experimental initiative by the
