@@ -39,6 +39,8 @@ query Breaches{
         affectedUsersMn
         details
         acknowledgement
+        noticeStatement
+        grievanceRedressal
         mediaCoverage
       }
     }
@@ -59,6 +61,8 @@ export default {
         'Affected Users (in Million)': edge.node.affectedUsersMn,
         Details: edge.node.details,
         Acknowledgement: edge.node.acknowledgement,
+        'Notice/Statement': edge.node.noticeStatement,
+        'Grievance Redressal': edge.node.grievanceRedressal,
         'Media Coverage': edge.node.mediaCoverage,
       }));
       const csv = Papa.unparse(data);
