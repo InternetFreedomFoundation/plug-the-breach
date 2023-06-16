@@ -50,11 +50,11 @@ export default {
         },
         {
           name: 'twitter:creator',
-          content: '@terabytetiger',
+          content: '@internetfreedom',
         },
         {
           name: 'twitter:site',
-          content: '@terabytetiger',
+          content: '@internetfreedom',
         },
         {
           name: 'og:description',
