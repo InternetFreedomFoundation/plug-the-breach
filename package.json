@@ -14,12 +14,14 @@
     "redirects": "node scripts/generate-redirects.mjs"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.6",
-    "@astrojs/sitemap": "^3.6.0",
-    "@tailwindcss/vite": "^4.1.16",
-    "astro": "^5.16.2",
-    "tailwindcss": "^4.1.16",
-    "typescript": "^5.9.3"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/cloudflare": "^14.2.4",
+    "@astrojs/mdx": "7.0.8",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "7.2.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.125.0"
   }
 }

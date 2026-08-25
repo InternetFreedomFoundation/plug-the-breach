@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import cloudflare from '@astrojs/cloudflare';
 
 /**
  * Send links that leave the site to a new tab. Applied to markdown-rendered
@@ -31,4 +32,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  adapter: cloudflare()
 });
