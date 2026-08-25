@@ -1,44 +1,22 @@
 {
-  "name": "plug_the_breach",
+  "name": "plug-the-breach",
+  "type": "module",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "TAILWIND_MODE=watch gridsome develop",
-    "explore": "gridsome explore",
-    "lint": "eslint ./src",
-    "lint:debug": "eslint ./src --debug",
-    "lint:fix": "eslint ./src --fix"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "redirects": "node scripts/generate-redirects.mjs"
   },
   "dependencies": {
-    "@gridsome/plugin-sitemap": "^0.4.0",
-    "@gridsome/source-airtable": "^0.2.0",
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.4",
-    "feather-icons": "^4.29.0",
-    "floating-vue": "^1.0.0-beta.19",
-    "gridsome": "^0.7.23",
-    "gridsome-plugin-flexsearch": "^2.0.2",
-    "gridsome-plugin-remark-prismjs-all": "^0.4.8",
-    "papaparse": "^5.4.1",
-    "vue-feather": "^1.1.1",
-    "vue-simple-icons": "^7.5.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^8.40.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-tailwindcss": "^3.11.0",
-    "eslint-plugin-vue": "^9.11.1",
-    "gridsome-plugin-tailwindcss2": "^3.0.1",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4",
-    "vue-eslint-parser": "^9.2.1"
-  },
-  "overrides": {
-    "gridsome": {
-      "sharp": "0.29.3"
-    }
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.16",
+    "astro": "^5.16.2",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
   }
 }

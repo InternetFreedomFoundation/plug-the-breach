@@ -1,8 +1,7 @@
-*.log
-.cache
+node_modules/
+dist/
+.astro/
 .DS_Store
-src/.temp
-node_modules
-dist
 .env
-.env.*
+.env.production
+npm-debug.log*
