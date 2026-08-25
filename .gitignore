@@ -5,3 +5,4 @@ dist/
 .env
 .env.production
 npm-debug.log*
+.wrangler/
