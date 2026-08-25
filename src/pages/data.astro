@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+import { allBreaches, summarise } from '../lib/breaches';
+
+const breaches = await allBreaches();
+const stats = summarise(breaches);
+
+const fields: [string, string][] = [
+  ['slug', 'Stable record identifier, also the URL of the record page.'],
+  ['org', 'Organisation or system that held the data.'],
+  ['date', 'ISO 8601 at the precision we can source: YYYY, YYYY-MM or YYYY-MM-DD. Null when never reported.'],
+  ['affectedMn', 'People affected, in millions, as reported. Null when no figure was reported.'],
+  ['acknowledged', 'One of yes, partial, no, denied, unknown.'],
+  ['exposed', 'List of the categories of data exposed.'],
+  ['statement', 'What the organisation said publicly, if anything.'],
+  ['redressal', 'What was offered to affected people, if anything.'],
+  ['note', 'Context: how the breach happened, who claimed it, disputed figures.'],
+  ['sources', 'List of URLs to published reporting.'],
+  ['legacyId', 'Airtable record ID from the original tracker, kept so old links resolve.'],
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'PlugTheBreach data breach dataset',
+  description: `A cited record of ${stats.total} data breaches affecting people in India, covering ${stats.earliest} to ${stats.latest}, including the scale of each incident and whether the organisation acknowledged it.`,
+  url: 'https://plugthebreach.in/data/',
+  temporalCoverage: `${stats.earliest}/${stats.latest}`,
+  spatialCoverage: { '@type': 'Place', name: 'India' },
+  keywords: ['data breach', 'India', 'privacy', 'transparency', 'cybersecurity'],
+  isAccessibleForFree: true,
+  creator: {
+    '@type': 'Organization',
+    name: 'Internet Freedom Foundation',
+    url: 'https://internetfreedom.in/',
+  },
+  distribution: [
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'application/json',
+      contentUrl: 'https://plugthebreach.in/breaches.json',
+    },
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'text/csv',
+      contentUrl: 'https://plugthebreach.in/breaches.csv',
+    },
+  ],
+};
+---
+
+<Base
+  title="Data"
+  description="Download the full PlugTheBreach dataset as JSON or CSV, and read the field definitions."
+  jsonLd={jsonLd}
+>
+  <h1 class="font-display text-2xl tracking-tight">The dataset</h1>
+  <p class="mt-3 max-w-prose text-[0.97rem] leading-relaxed text-muted">
+    All {stats.total} records, covering {stats.earliest}–{stats.latest}, are available as a
+    single file. It is the same file the site is built from, so there is no separate export
+    step and nothing can drift out of sync. Use it freely, with attribution to the Internet
+    Freedom Foundation.
+  </p>
+
+  <div class="mt-7 flex flex-wrap gap-3">
+    <a
+      href="/breaches.json"
+      class="border border-line-strong px-4 py-2 text-[0.95rem] hover:border-fg"
+      download
+    >
+      Download JSON
+    </a>
+    <a
+      href="/breaches.csv"
+      class="border border-line-strong px-4 py-2 text-[0.95rem] hover:border-fg"
+      download
+    >
+      Download CSV
+    </a>
+  </div>
+
+  <section class="mt-12 max-w-prose">
+    <h2 class="font-display text-lg">Fields</h2>
+    <dl class="mt-4 border-t border-line">
+      {
+        fields.map(([name, description]) => (
+          <div class="grid gap-x-6 gap-y-1 border-b border-line py-3.5 sm:grid-cols-[9rem_1fr]">
+            <dt class="font-mono text-[0.85rem] text-fg">{name}</dt>
+            <dd class="text-[0.92rem] leading-relaxed text-muted">{description}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="mt-12 max-w-prose">
+    <h2 class="font-display text-lg">Caveats worth reading</h2>
+    <ul class="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted">
+      <li class="flex gap-2.5">
+        <span aria-hidden="true" class="text-faint">—</span>
+        <span>
+          {stats.undated} records have no reliable date. They sort last rather than being
+          assigned a guess.
+        </span>
+      </li>
+      <li class="flex gap-2.5">
+        <span aria-hidden="true" class="text-faint">—</span>
+        <span>
+          Scale figures come from whoever reported them, often the attacker. Several are
+          disputed by the organisation involved; the dispute is recorded in
+          <code class="font-mono text-[0.85rem]">statement</code>.
+        </span>
+      </li>
+      <li class="flex gap-2.5">
+        <span aria-hidden="true" class="text-faint">—</span>
+        <span>
+          Totals cannot be summed into "people affected in India". The same person appears
+          in many breaches, and some records cover global services.
+        </span>
+      </li>
+      <li class="flex gap-2.5">
+        <span aria-hidden="true" class="text-faint">—</span>
+        <span>
+          Absence from this list is not evidence that an organisation was never breached.
+          It usually means nobody reported it.
+        </span>
+      </li>
+    </ul>
+  </section>
+</Base>

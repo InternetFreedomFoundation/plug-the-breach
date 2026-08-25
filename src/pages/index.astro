@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import BreachList from '../components/BreachList.astro';
+import { allBreaches, formatTotalMn, summarise } from '../lib/breaches';
+
+const breaches = await allBreaches();
+const stats = summarise(breaches);
+const latest = breaches.slice(0, 8);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'PlugTheBreach',
+  url: 'https://plugthebreach.in/',
+  description:
+    'A public record of data breaches affecting people in India, maintained by the Internet Freedom Foundation.',
+  inLanguage: 'en-IN',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Internet Freedom Foundation',
+    url: 'https://internetfreedom.in/',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://plugthebreach.in/breaches?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Base
+  title="PlugTheBreach — a public record of data breaches in India"
+  bare={true}
+  jsonLd={jsonLd}
+>
+  <section class="max-w-2xl">
+    <h1 class="font-display text-[1.75rem] leading-tight tracking-tight sm:text-[2.15rem]">
+      A public record of data breaches affecting people in India.
+    </h1>
+    <p class="mt-5 text-[1.02rem] leading-relaxed text-muted">
+      When an organisation loses your data, you are usually the last to hear about it —
+      if you hear at all. PlugTheBreach tracks those incidents in one place, with a
+      citation for every claim and an explicit note on whether the organisation ever
+      admitted what happened.
+    </p>
+    <p class="mt-4 text-[0.95rem] text-muted">
+      An initiative of the Internet Freedom Foundation.
+    </p>
+  </section>
+
+  <section class="mt-10 border-y border-line py-5">
+    <dl class="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
+      <div>
+        <dt class="text-[0.78rem] uppercase tracking-wide text-faint">Incidents</dt>
+        <dd class="tnum mt-1 font-display text-2xl">{stats.total}</dd>
+      </div>
+      <div>
+        <dt class="text-[0.78rem] uppercase tracking-wide text-faint">Period</dt>
+        <dd class="tnum mt-1 font-display text-2xl">
+          {stats.earliest}–{stats.latest}
+        </dd>
+      </div>
+      <div>
+        <dt class="text-[0.78rem] uppercase tracking-wide text-faint">
+          Reported reach
+        </dt>
+        <dd class="tnum mt-1 font-display text-2xl">
+          {formatTotalMn(stats.disclosedScale)}
+        </dd>
+      </div>
+      <div>
+        <dt class="text-[0.78rem] uppercase tracking-wide text-faint">
+          Never acknowledged
+        </dt>
+        <dd class="tnum mt-1 font-display text-2xl text-accent">
+          {stats.unacknowledged}
+        </dd>
+      </div>
+    </dl>
+    <p class="mt-4 max-w-prose text-[0.82rem] leading-relaxed text-faint">
+      Reach counts only the incidents where a figure was ever reported, and reported
+      figures are frequently disputed. It cannot be read as a headcount — the same person
+      appears in many breaches. "Never acknowledged" covers incidents the organisation
+      denied, ignored, or has yet to respond to.
+    </p>
+  </section>
+
+  <section class="mt-12">
+    <div class="flex items-baseline justify-between gap-4">
+      <h2 class="font-display text-lg">Most recent</h2>
+      <a href="/breaches" class="text-sm text-muted underline underline-offset-[4px] hover:text-fg">
+        All {stats.total} records
+      </a>
+    </div>
+    <div class="mt-4">
+      <BreachList breaches={latest} />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import BreachList from '../components/BreachList.astro';
+import { allBreaches, year } from '../lib/breaches';
+
+const breaches = await allBreaches();
+const years = [...new Set(breaches.map((b) => year(b.date)).filter(Boolean))].sort().reverse();
+---
+
+<Base
+  title="Breaches"
+  description="Every data breach recorded by PlugTheBreach, searchable and sortable."
+>
+  <h1 class="font-display text-2xl tracking-tight">Breaches</h1>
+  <p class="mt-2 max-w-prose text-[0.95rem] text-muted">
+    {breaches.length} records, newest first. Search matches the organisation name and the
+    kinds of data exposed.
+  </p>
+
+  <div class="mt-7 flex flex-col gap-3">
+    <div class="flex flex-col gap-3 sm:flex-row">
+      <label class="flex-1">
+        <span class="sr-only">Search breaches</span>
+        <input
+          id="q"
+          type="search"
+          autocomplete="off"
+          placeholder="Search organisation or exposed data…"
+          class="w-full border border-line bg-surface px-3 py-2 text-[0.95rem] transition-colors placeholder:text-faint hover:border-line-strong focus:border-fg"
+        />
+      </label>
+      <div class="flex gap-3">
+        {
+          [
+            { id: 'year', label: 'Year', options: [
+              { value: '', label: 'All years' },
+              ...years.map((y) => ({ value: y as string, label: y as string })),
+              { value: 'unknown', label: 'Undated' },
+            ] },
+            { id: 'sort', label: 'Sort', options: [
+              { value: 'date-desc', label: 'Newest' },
+              { value: 'date-asc', label: 'Oldest' },
+              { value: 'scale-desc', label: 'Largest' },
+              { value: 'org-asc', label: 'A–Z' },
+            ] },
+          ].map((field) => (
+            <label class="relative flex-1 sm:flex-none">
+              <span class="sr-only">{field.label}</span>
+              <select
+                id={field.id}
+                class="w-full appearance-none border border-line bg-surface py-2 pl-3 pr-9 text-[0.9rem] text-fg transition-colors hover:border-line-strong focus:border-fg sm:w-auto"
+              >
+                {field.options.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+              </select>
+              <span
+                aria-hidden="true"
+                class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-faint"
+              >
+                <svg width="11" height="7" viewBox="0 0 11 7" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M1 1l4.5 4.5L10 1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </label>
+          ))
+        }
+      </div>
+    </div>
+
+    <fieldset class="flex flex-wrap items-center gap-2">
+      <legend class="sr-only">Filter by acknowledgement status</legend>
+      <span class="mr-1 text-[0.82rem] text-faint">Status</span>
+      {
+        [
+          ['', 'Any'],
+          ['yes', 'Acknowledged'],
+          ['partial', 'Partly'],
+          ['no', 'Not acknowledged'],
+          ['denied', 'Denied'],
+          ['unknown', 'Unverified'],
+        ].map(([value, label]) => (
+          <label
+            class="cursor-pointer border border-line px-2.5 py-1 text-[0.85rem] text-muted transition-colors hover:border-line-strong hover:text-fg has-[:checked]:border-fg has-[:checked]:text-fg has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2"
+          >
+            <input type="radio" name="ack" value={value} checked={value === ''} class="sr-only" />
+            {label}
+          </label>
+        ))
+      }
+    </fieldset>
+  </div>
+
+  <p id="count" class="mt-6 text-[0.85rem] text-faint" aria-live="polite"></p>
+
+  <div class="mt-2">
+    <BreachList breaches={breaches} filterable={true} />
+  </div>
+
+  <p id="empty" class="hidden py-10 text-center text-muted">
+    No records match those filters.
+  </p>
+</Base>
+
+<script>
+  const listEl = document.getElementById('breach-list');
+
+  if (listEl instanceof HTMLUListElement) {
+    const list = listEl;
+    const rows = Array.from(list.children) as HTMLLIElement[];
+    const q = document.getElementById('q') as HTMLInputElement;
+    const yearSelect = document.getElementById('year') as HTMLSelectElement;
+    const sortSelect = document.getElementById('sort') as HTMLSelectElement;
+    const count = document.getElementById('count') as HTMLParagraphElement;
+    const empty = document.getElementById('empty') as HTMLParagraphElement;
+    const total = rows.length;
+
+    const dateOf = (row: HTMLLIElement) => row.dataset.date || '';
+    const scaleOf = (row: HTMLLIElement) => Number(row.dataset.scale ?? -1);
+
+    // Undated records must sink to the bottom of a date sort in both directions,
+    // so they get a sentinel that loses either comparison.
+    const comparators: Record<string, (a: HTMLLIElement, b: HTMLLIElement) => number> = {
+      'date-desc': (a, b) => (dateOf(b) || '0').localeCompare(dateOf(a) || '0'),
+      'date-asc': (a, b) => (dateOf(a) || '9').localeCompare(dateOf(b) || '9'),
+      'scale-desc': (a, b) => scaleOf(b) - scaleOf(a),
+      'org-asc': (a, b) => (a.dataset.org ?? '').localeCompare(b.dataset.org ?? ''),
+    };
+
+    const apply = () => {
+      const term = q.value.trim().toLowerCase();
+      const yr = yearSelect.value;
+      const ack =
+        (document.querySelector('input[name="ack"]:checked') as HTMLInputElement | null)
+          ?.value ?? '';
+
+      let shown = 0;
+      for (const row of rows) {
+        const haystack = `${row.dataset.org ?? ''} ${row.dataset.exposed ?? ''}`;
+        const visible =
+          (!term || haystack.includes(term)) &&
+          (!yr || row.dataset.year === yr) &&
+          (!ack || row.dataset.ack === ack);
+        row.hidden = !visible;
+        if (visible) shown++;
+      }
+
+      for (const row of [...rows].sort(comparators[sortSelect.value])) {
+        list.appendChild(row);
+      }
+
+      count.textContent =
+        shown === total ? `${total} records` : `${shown} of ${total} records`;
+      empty.classList.toggle('hidden', shown > 0);
+    };
+
+    q.addEventListener('input', apply);
+    yearSelect.addEventListener('change', apply);
+    sortSelect.addEventListener('change', apply);
+    for (const radio of document.querySelectorAll('input[name="ack"]')) {
+      radio.addEventListener('change', apply);
+    }
+
+    // Support deep links such as /breaches?q=aadhaar
+    const initial = new URLSearchParams(location.search).get('q');
+    if (initial) q.value = initial;
+    apply();
+  }
+</script>
