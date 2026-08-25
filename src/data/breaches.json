@@ -445,7 +445,7 @@
     "statement": "\"We want to confirm that Angel One's customer data is secure, and there has been no new data leak incident. The current issue pertains to an incident that occurred in April 2023, which was promptly reported to the relevant authorities. We assure you that this incident has no impact on client securities, funds, or credentials, and all client accounts remain secure,\"",
     "redressal": "",
     "sources": [
-      "https://economictimes.indiatimes.com/tech/technology/personal-data-of-almost-8-million-angel-one-customers-leaked-online/articleshow/111612380.cms?from=mdr "
+      "https://economictimes.indiatimes.com/tech/technology/personal-data-of-almost-8-million-angel-one-customers-leaked-online/articleshow/111612380.cms"
     ],
     "note": ""
   },
@@ -531,7 +531,7 @@
     "statement": "The application does not contain confidential data or financial information. It includes some information on inquiries made by public made by the public and calls to ‘Dial 100’.",
     "redressal": "",
     "sources": [
-      "https://timesofindia.indiatimes.com/city/hyderabad/telangana-police-book-case-after-hawkeye-data-breach-on-hackers-forum/articleshow/110683120.cms "
+      "https://timesofindia.indiatimes.com/city/hyderabad/telangana-police-book-case-after-hawkeye-data-breach-on-hackers-forum/articleshow/110683120.cms"
     ],
     "note": ""
   },
@@ -573,7 +573,7 @@
     "statement": "On preliminary enquiry, it is learnt that the password has been compromised in admin account. The admin account has limited rights like creation of id for users, queries search, and details of front end can only be viewed.",
     "redressal": "",
     "sources": [
-      "https://www.newindianexpress.com/states/tamil-nadu/2024/May/05/tamil-nadu-polices-face-recognition-portal-hacked-fir-personal-information-up-for-sale?ref=static.internetfreedom.in"
+      "https://www.newindianexpress.com/states/tamil-nadu/2024/May/05/tamil-nadu-polices-face-recognition-portal-hacked-fir-personal-information-up-for-sale"
     ],
     "note": ""
   },
@@ -608,7 +608,7 @@
     "statement": "Cert-in taking appropriate action",
     "redressal": "",
     "sources": [
-      "https://www.business-standard.com/india-news/govt-pension-portal-for-defence-personnel-sparsh-suffers-data-breach-124011000128_1.html "
+      "https://www.business-standard.com/india-news/govt-pension-portal-for-defence-personnel-sparsh-suffers-data-breach-124011000128_1.html"
     ],
     "note": ""
   },
@@ -632,7 +632,7 @@
     "statement": "Yes: https://techcrunch.com/2024/01/11/hyundai-motor-india-data-exposed/",
     "redressal": "",
     "sources": [
-      "https://techcrunch.com/2024/01/11/hyundai-motor-india-data-exposed/ "
+      "https://techcrunch.com/2024/01/11/hyundai-motor-india-data-exposed/"
     ],
     "note": ""
   },
@@ -655,7 +655,7 @@
     "statement": "",
     "redressal": "",
     "sources": [
-      "https://www.hackread.com/indian-isp-hathway-data-breach-user-data-kyc-leak/ "
+      "https://www.hackread.com/indian-isp-hathway-data-breach-user-data-kyc-leak/"
     ],
     "note": ""
   },
@@ -1065,7 +1065,7 @@
     "statement": "NPCI released a statement acknowledging the possible ransomware attack and temporarily halted all retail payment services at the affected banks.",
     "redressal": "“NPCI connectivity with C-Edge Technologies Ltd has been re-established following a security review by an independent forensic auditing firm. The investigation confirms that the impacted systems have been isolated by C-Edge to contain the potential spread of the ransomware.",
     "sources": [
-      "https://www.thehindu.com/sci-tech/technology/customers-at-several-small-sized-banks-affected-as-tech-provider-c-edge-suffers-ransomware-attack/article68470198.ece#:~:text=NPCI%20temporarily%20closed%20all%20retail,Hindu%20on%20condition%20of%20anonymity "
+      "https://www.thehindu.com/sci-tech/technology/customers-at-several-small-sized-banks-affected-as-tech-provider-c-edge-suffers-ransomware-attack/article68470198.ece"
     ],
     "note": ""
   },
@@ -1095,7 +1095,7 @@
     "statement": "",
     "redressal": "",
     "sources": [
-      "https://economictimes.indiatimes.com/tech/startups/travel-booking-website-cleartrip-announces-data-breach-in-internal-systems/articleshow/92957783.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst"
+      "https://economictimes.indiatimes.com/tech/startups/travel-booking-website-cleartrip-announces-data-breach-in-internal-systems/articleshow/92957783.cms"
     ],
     "note": ""
   },
@@ -1127,7 +1127,7 @@
     "statement": "",
     "redressal": "",
     "sources": [
-      "https://www.bloomberg.com/news/articles/2022-03-07/samsung-says-hackers-breached-company-data-galaxy-source-code  "
+      "https://www.bloomberg.com/news/articles/2022-03-07/samsung-says-hackers-breached-company-data-galaxy-source-code"
     ],
     "note": ""
   },
@@ -1166,7 +1166,7 @@
     "statement": "",
     "redressal": "",
     "sources": [
-      "https://economictimes.indiatimes.com/tech/technology/nvidia-data-breach-exposes-data-of-71000-employees-report/articleshow/90008978.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst"
+      "https://economictimes.indiatimes.com/tech/technology/nvidia-data-breach-exposes-data-of-71000-employees-report/articleshow/90008978.cms"
     ],
     "note": ""
   },
@@ -1578,7 +1578,7 @@
     "statement": "",
     "redressal": "",
     "sources": [
-      "https://www.thequint.com/coronavirus/faq/juspay-data-breach-faq-have-my-card-details-leaked-what-happens-now#read-more"
+      "https://www.thequint.com/coronavirus/faq/juspay-data-breach-faq-have-my-card-details-leaked-what-happens-now"
     ],
     "note": ""
   },
@@ -1789,7 +1789,7 @@
     "statement": "ICICI spokesperson shared that the glitch was due to “erroneously mapped” data of 17,000 new credit cards in their digital channels.",
     "redressal": "ICICI blocked 17,000 affected credit cards and issued new ones to the customers",
     "sources": [
-      "https://www.livemint.com/companies/news/icici-bank-imobile-glitch-online-portal-raises-alert-netizen-says-sensitive-card-information-visible-11714022513098.html "
+      "https://www.livemint.com/companies/news/icici-bank-imobile-glitch-online-portal-raises-alert-netizen-says-sensitive-card-information-visible-11714022513098.html"
     ],
     "note": ""
   },
@@ -1808,7 +1808,7 @@
     "statement": "Cert-in taking appropriate action",
     "redressal": "",
     "sources": [
-      "https://economictimes.indiatimes.com/tech/technology/epfo-pmo-data-breach-centre-says-aware-of-reports-cert-in-looking-into-details/articleshow/107870171.cms?from=mdr"
+      "https://economictimes.indiatimes.com/tech/technology/epfo-pmo-data-breach-centre-says-aware-of-reports-cert-in-looking-into-details/articleshow/107870171.cms"
     ],
     "note": ""
   },
@@ -1858,7 +1858,7 @@
     "statement": "\"There has been an ongoing report alleging that Airtel customer data has been compromised. This is nothing short of a desperate attempt to tarnish Airtel’s reputation by vested interests. We have done a thorough investigation and can confirm that there has been no breach whatsoever from Airtel systems.\"",
     "redressal": "",
     "sources": [
-      "https://www.deccanherald.com/technology/airtel-rubbishes-allegations-of-data-breach-says-user-data-of-customers-safe-3093904 "
+      "https://www.deccanherald.com/technology/airtel-rubbishes-allegations-of-data-breach-says-user-data-of-customers-safe-3093904"
     ],
     "note": ""
   },
@@ -1936,7 +1936,7 @@
     "statement": "Dropbox found no evidence suggesting access to the “contents of customers’ accounts (i.e. their documents or agreements), or their payment information” and have clarified that the “incident was isolated to Dropbox Sign infrastructure, and did not impact any other Dropbox products”.",
     "redressal": "The Dropbox security team has “reset users’ passwords, logged users out of any devices they had connected to Dropbox Sign, and is coordinating the rotation of all API keys and OAuth tokens”. They state that they have reported this event to “data protection regulators and law enforcement” and are “in the process of reaching out to all users impacted by this incident who need to take action, with step-by-step instructions on how to further protect their data”.",
     "sources": [
-      "https://sign.dropbox.com/blog/a-recent-security-incident-involving-dropbox-sign "
+      "https://sign.dropbox.com/blog/a-recent-security-incident-involving-dropbox-sign"
     ],
     "note": ""
   },
@@ -2046,7 +2046,7 @@
     "statement": "Cert-in taking appropriate action",
     "redressal": "",
     "sources": [
-      "https://thecyberexpress.com/sparsh-portal-data-leak-exposes-sensitive-info/#google_vignette"
+      "https://thecyberexpress.com/sparsh-portal-data-leak-exposes-sensitive-info/"
     ],
     "note": ""
   },
