@@ -2,9 +2,6 @@
   "name": "plug-the-breach",
   "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=20.3.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
