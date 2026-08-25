@@ -1,14 +1,10 @@
 {
-	"$schema": "./node_modules/wrangler/config-schema.json",
-	"compatibility_date": "2026-08-25",
-	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "plug-the-breach",
-	"main": "@astrojs/cloudflare/entrypoints/server",
-	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS"
-	},
-	"observability": {
-		"enabled": true
-	}
+  "name": "plug-the-breach",
+  "compatibility_date": "2026-08-25",
+  "assets": {
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
 }
