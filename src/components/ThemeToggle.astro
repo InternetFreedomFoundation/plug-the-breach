@@ -1,0 +1,106 @@
+---
+// Two-state toggle. The resolved theme is set in Base.astro before first paint;
+// this only flips it and remembers the choice.
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="text-muted hover:text-fg"
+  aria-live="polite"
+  title="Switch between light and dark"
+>
+  <span class="sr-only">Switch colour theme</span>
+  <span class="relative block h-[17px] w-[17px]">
+    <svg
+      class="theme-icon theme-sun absolute inset-0"
+      aria-hidden="true"
+      width="17"
+      height="17"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+    >
+      <circle cx="12" cy="12" r="4.2"></circle>
+      <path
+        d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"
+      ></path>
+    </svg>
+    <svg
+      class="theme-icon theme-moon absolute inset-0"
+      aria-hidden="true"
+      width="17"
+      height="17"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+    >
+      <path d="M20 13.4A8 8 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4Z"></path>
+    </svg>
+  </span>
+</button>
+
+<style>
+  /* Both icons are stacked; the inactive one rotates out rather than vanishing. */
+  .theme-icon {
+    transition:
+      opacity 200ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :root[data-theme='dark'] .theme-sun {
+    opacity: 0;
+    transform: rotate(-70deg) scale(0.6);
+  }
+
+  :root:not([data-theme='dark']) .theme-moon {
+    opacity: 0;
+    transform: rotate(70deg) scale(0.6);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-icon {
+      transition: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    var root = document.documentElement;
+    var timer;
+
+    function label() {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      button.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+    }
+    label();
+
+    button.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+      // Arm the transition for this change only, then disarm it so ordinary
+      // colour changes (and any later navigation) stay instant.
+      root.classList.add('theme-switching');
+      root.setAttribute('data-theme', next);
+
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        root.classList.remove('theme-switching');
+      }, 300);
+
+      try {
+        localStorage.setItem('ptb-theme', next);
+      } catch (e) {
+        /* storage can throw in private mode; the toggle still works for this page */
+      }
+      label();
+    });
+  })();
+</script>

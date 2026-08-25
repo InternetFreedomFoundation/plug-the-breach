@@ -1,0 +1,51 @@
+---
+import AckTag from './AckTag.astro';
+import { formatAffected, formatDate, year, type Breach } from '../lib/breaches';
+
+interface Props {
+  breaches: Breach[];
+  /** Adds the data-* hooks the /breaches page filters and sorts on. */
+  filterable?: boolean;
+}
+const { breaches, filterable = false } = Astro.props;
+---
+
+<ul class="border-t border-line" id={filterable ? 'breach-list' : undefined}>
+  {
+    breaches.map((breach) => (
+      <li
+        class="border-b border-line"
+        data-org={filterable ? breach.org.toLowerCase() : undefined}
+        data-exposed={filterable ? breach.exposed.join(' ').toLowerCase() : undefined}
+        data-year={filterable ? (year(breach.date) ?? 'unknown') : undefined}
+        data-ack={filterable ? breach.acknowledged : undefined}
+        data-scale={filterable ? String(breach.affectedMn ?? -1) : undefined}
+        data-date={filterable ? (breach.date ?? '') : undefined}
+      >
+        <a
+          href={`/breach/${breach.slug}`}
+          class="grid gap-y-0.5 px-2 py-3.5 hover:bg-surface sm:grid-cols-[7.5rem_1fr_8rem_9.5rem] sm:items-baseline sm:gap-x-4 sm:gap-y-0"
+        >
+          <span class="font-display text-[1.02rem] leading-snug sm:order-2">
+            {breach.org}
+          </span>
+          {/* On phones this is one wrapped meta line; from `sm` up the wrapper
+              dissolves and the parts become table-like columns. */}
+          <span class="flex flex-wrap items-baseline gap-x-2 text-[0.82rem] text-muted sm:contents">
+            <span class="tnum sm:order-1 sm:text-[0.85rem] sm:whitespace-nowrap">
+              {formatDate(breach.date)}
+            </span>
+            <span aria-hidden="true" class="text-faint sm:hidden">·</span>
+            <span class="tnum sm:order-3 sm:text-right">
+              {formatAffected(breach.affectedMn)}
+            </span>
+            <span aria-hidden="true" class="text-faint sm:hidden">·</span>
+            <span class="sm:order-4 sm:text-right">
+              <AckTag value={breach.acknowledged} />
+            </span>
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
