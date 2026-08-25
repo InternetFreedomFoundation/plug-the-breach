@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "Launch localhost on Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "url": "http://localhost:8080/",
+      "skipFiles": [
+        "${workspaceFolder}/app/node_modules/**"
+      ],
+      "pathMappings": [
+        {
+          "url": "webpack:///src",
+          "path": "${workspaceFolder}/src"
+        },
+        {
+          "url": "webpack:///SearchBar.vue",
+          "path": "${workspaceFolder}/src/components/SearchBar.vue"
+        },
+        {
+          "url": "webpack:///",
+          "path": "${workspaceFolder}/app/src/components/"
+        }
+      ]
+    }
+  ]
+}

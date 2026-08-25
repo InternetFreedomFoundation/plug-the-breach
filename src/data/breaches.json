@@ -1,0 +1,2165 @@
+[
+  {
+    "slug": "bank-of-baroda-2026",
+    "org": "Bank of Baroda",
+    "date": "2026-07-28",
+    "affectedMn": null,
+    "exposed": [
+      "Customer identification documents",
+      "Aadhaar numbers",
+      "Names",
+      "Loan records",
+      "Internal audit files",
+      "Corporate banking records",
+      "Internal emails"
+    ],
+    "acknowledged": "partial",
+    "statement": "The bank said it \"detected and contained the incident immediately\" and that \"core banking systems were not accessed or affected\". It did not confirm the attacker's claim that roughly 1 TB of customer data was exfiltrated, nor how many customers were affected.",
+    "redressal": "An investigation was opened. No customer notification or redressal process was disclosed publicly.",
+    "sources": [
+      "https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident"
+    ],
+    "note": "Traced to a compromised employee email account. A threat actor using the alias \"leak-king-F\" advertised the data on darknet marketplaces; the authenticity of the sample could not be independently verified.",
+    "legacyId": null
+  },
+  {
+    "slug": "tata-electronics-2026",
+    "org": "Tata Electronics",
+    "date": "2026-06-12",
+    "affectedMn": null,
+    "exposed": [
+      "Apple and Tesla schematics",
+      "Technical and mechanical drawings",
+      "Full passport scans of employees",
+      "Manufacturing and quality inspection records",
+      "Internal emails",
+      "Multi-year event logs",
+      "Documents marked proprietary and confidential"
+    ],
+    "acknowledged": "yes",
+    "statement": "Tata Electronics confirmed the incident to Reuters and BleepingComputer on 22 June 2026 and said the breach caused no disruption to its operations. It did not say whether employees whose passport scans were exposed had been notified.",
+    "redressal": "No public notification or redressal process for affected employees was disclosed.",
+    "sources": [
+      "https://www.techrepublic.com/article/news-apac-india-tata-electronics-data-leak/",
+      "https://cybernews.com/security/tata-electronics-breach-apple-tesla-secret-files/"
+    ],
+    "note": "The World Leaks ransomware group posted 204,341 files totalling 630.4 GB on its dark web leak site. Researcher Rajshekhar Rajaharia found 181 Apple-related files, including a 52-page iPhone circuit board quality standard, plus Tesla manufacturing specifications. This is a separate incident from the Reliance Group/Kudankulam leak, also claimed by World Leaks in the same month.",
+    "legacyId": null
+  },
+  {
+    "slug": "reliance-group-kudankulam-2026",
+    "org": "Reliance Group (Kudankulam plant records)",
+    "date": "2026-06-11",
+    "affectedMn": null,
+    "exposed": [
+      "Purported facility blueprints",
+      "Supplier details",
+      "Meeting records",
+      "Inspection logs",
+      "Equipment reviews",
+      "Insurance policies"
+    ],
+    "acknowledged": "partial",
+    "statement": "Reliance Group acknowledged \"a partial breach of its data\" and said the government had been informed, but did not disclose what data was affected. The Nuclear Power Corporation of India said the exposed information \"does not relate to any nuclear safety or nuclear security-related systems\" and covers only common service facilities.",
+    "redressal": "CERT-In opened an investigation.",
+    "sources": [
+      "https://www.aljazeera.com/news/2026/7/16/data-breach-reportedly-targets-indias-kudankulam-nuclear-power-plant"
+    ],
+    "note": "Roughly 19,000 files (14.3 GB) were posted on the dark web by the World Leaks ransomware group. The data came from a server hosted by third-party provider Yotta, not from plant control systems.",
+    "legacyId": null
+  },
+  {
+    "slug": "parle-agro-2026",
+    "org": "Parle Agro",
+    "date": "2026-05-16",
+    "affectedMn": null,
+    "exposed": [
+      "Personally identifiable information"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianbreaches.com/"
+    ],
+    "note": "Claimed by a threat actor using the alias \"Lamashtu\". Not independently verified; the company has not publicly responded.",
+    "legacyId": null
+  },
+  {
+    "slug": "guidely-2026",
+    "org": "Guidely",
+    "date": "2026-05-11",
+    "affectedMn": 1.5,
+    "exposed": [
+      "Personally identifiable information"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianbreaches.com/"
+    ],
+    "note": "Claimed by a threat actor using the alias \"BigBrother\" against the exam-preparation platform. Not independently verified.",
+    "legacyId": null
+  },
+  {
+    "slug": "bls-international-2026",
+    "org": "BLS International",
+    "date": "2026-05-09",
+    "affectedMn": 29,
+    "exposed": [
+      "Passport data",
+      "Visa application records",
+      "Personal identifiers"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianbreaches.com/"
+    ],
+    "note": "Claimed by a threat actor using the alias \"Scatt3r\". BLS International handles visa, passport and consular processing for several governments. The claim has not been independently verified and the company has not publicly responded.",
+    "legacyId": null
+  },
+  {
+    "slug": "punjab-national-bank-2026",
+    "org": "Punjab National Bank",
+    "date": "2026-05-05",
+    "affectedMn": 0.1,
+    "exposed": [
+      "Banking information"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianbreaches.com/"
+    ],
+    "note": "Claimed by a threat actor using the alias \"momo78\". Not independently verified; the bank has not publicly responded.",
+    "legacyId": null
+  },
+  {
+    "slug": "reliance-jio-infocomm-2026",
+    "org": "Reliance Jio Infocomm",
+    "date": "2026-04-21",
+    "affectedMn": null,
+    "exposed": [
+      "Internal finance, HR and quality records",
+      "Document control files",
+      "User data directories"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianbreaches.com/",
+      "https://dailydarkweb.net/reliance-jio-infocomm-hit-by-alleged-trading-data-breach/"
+    ],
+    "note": "A threat actor using the alias \"MDGhost\" claimed roughly 103 GB of records and published screenshots of an internal file structure. Not independently verified; Jio has not publicly responded.",
+    "legacyId": null
+  },
+  {
+    "slug": "cognizant-2026",
+    "org": "Cognizant",
+    "date": "2026-04-21",
+    "affectedMn": null,
+    "exposed": [
+      "Personal information"
+    ],
+    "acknowledged": "yes",
+    "statement": "Cognizant notified customers that a breach occurring around 21 April 2026 may have exposed personal information.",
+    "redressal": "Affected customers were notified directly.",
+    "sources": [
+      "https://www.thehansindia.com/tech/cognizant-data-breach-may-have-exposed-personal-information-1112328"
+    ],
+    "note": "",
+    "legacyId": null
+  },
+  {
+    "slug": "tcs-2026",
+    "org": "Tata Consultancy Services (TCS)",
+    "date": "2026",
+    "affectedMn": null,
+    "exposed": [
+      "Basic employee information"
+    ],
+    "acknowledged": "partial",
+    "statement": "In a BSE filing, TCS said it had received threat-intelligence alerts about possible exposure of employee data, that the information \"appears to be\" more than four years old and limited to basic employee details, and that there was no indication customer data, customer systems or its own operational systems were impacted. It said it found no credible evidence of a system breach.",
+    "redressal": "TCS has not said whether it will notify affected employees or law enforcement, nor clarified whether the data came from an earlier undisclosed incident.",
+    "sources": [
+      "https://www.deccanherald.com/business/tcs-gets-alerts-of-alleged-exposure-of-employee-data-says-customer-data-not-impacted-4105777",
+      "https://www.crnasia.com/india/news/2026/tcs-says-leaked-employee-data-appears-to-be-over-four-years-old"
+    ],
+    "note": "Followed a BreachForums listing by an entity identified as \"TheHatman\", who claimed to have pulled the data from TCS's Azure tenant using compromised credentials.",
+    "legacyId": null
+  },
+  {
+    "slug": "tata-motors-2025",
+    "org": "Tata Motors",
+    "date": "2025-10-28",
+    "affectedMn": null,
+    "exposed": [
+      "Customer names",
+      "Mailing addresses",
+      "PAN (tax ID) numbers",
+      "Hundreds of thousands of invoices",
+      "MySQL database backups",
+      "Fleet telematics data",
+      "Internal financial and dealer performance reports"
+    ],
+    "acknowledged": "yes",
+    "statement": "Tata Motors' communications head said: \"We can confirm that the reported flaws and vulnerabilities were thoroughly reviewed... and were promptly and fully addressed.\" The company did not say whether affected customers were notified.",
+    "redressal": "The flaws were fixed. No customer notification was disclosed.",
+    "sources": [
+      "https://techcrunch.com/2025/10/28/tata-motors-confirms-it-fixed-security-flaws-that-exposed-company-and-customer-data"
+    ],
+    "note": "Security researcher Eaton Zveare found hardcoded AWS keys on Tata Motors' public-facing E-Dukaan and FleetEdge sites, exposing over 70 TB of data. Reported via CERT-In in August 2023; remediation ran into January 2024 and was only made public in October 2025.",
+    "legacyId": null
+  },
+  {
+    "slug": "netcore-cloud-2025",
+    "org": "Netcore Cloud",
+    "date": "2025-10",
+    "affectedMn": null,
+    "exposed": [
+      "Email addresses",
+      "Message subjects and mail logs",
+      "Banking and healthcare notifications",
+      "Partial account numbers",
+      "IP addresses",
+      "SMTP configuration data",
+      "Records marked confidential"
+    ],
+    "acknowledged": "partial",
+    "statement": "The database was restricted from public access the same day a responsible disclosure notice was sent. How long it had been exposed, and whether anyone else accessed it, remains unknown.",
+    "redressal": "The database was secured. No notification to affected end users was disclosed.",
+    "sources": [
+      "https://www.websiteplanet.com/news/netcore-cloud-breach-report/",
+      "https://hackread.com/misconfigured-netcorecloud-server-40-billion-records/"
+    ],
+    "note": "Researcher Jeremiah Fowler found roughly 40 billion records across 13.4 TB in an unencrypted, unauthenticated database. Mumbai-based Netcore Cloud says its platform is used by more than 6,500 brands, so the exposure spans many downstream companies' customers.",
+    "legacyId": null
+  },
+  {
+    "slug": "nupay-2025",
+    "org": "NuPay",
+    "date": "2025-09-25",
+    "affectedMn": null,
+    "exposed": [
+      "Bank account numbers",
+      "Transaction amounts",
+      "Contact details",
+      "Signed NACH mandate forms"
+    ],
+    "acknowledged": "yes",
+    "statement": "NuPay's co-founder and COO confirmed the company \"addressed a configuration gap in an Amazon S3 storage bucket\", but claimed most files were \"dummy or test files\" — a characterisation researchers at UpGuard disputed.",
+    "redressal": "The storage bucket was secured. No notification to affected account holders was disclosed.",
+    "sources": [
+      "https://techcrunch.com/2025/09/25/thousands-of-indian-bank-transfer-records-found-online/"
+    ],
+    "note": "About 273,000 bank transfer documents spanning at least 38 banks and financial institutions were left publicly readable in an unsecured S3 bucket.",
+    "legacyId": null
+  },
+  {
+    "slug": "bwssb-2025",
+    "org": "Bangalore Water Supply and Sewerage Board (BWSSB)",
+    "date": "2025-04-10",
+    "affectedMn": 0.29,
+    "exposed": [
+      "Aadhaar numbers",
+      "PAN details",
+      "Phone numbers",
+      "Full addresses",
+      "Email IDs",
+      "Payment records"
+    ],
+    "acknowledged": "partial",
+    "statement": "BWSSB's public account of the incident did not match independent findings by researchers, according to follow-up reporting.",
+    "redressal": "An FIR was registered with the Central CEN police following a complaint by BWSSB.",
+    "sources": [
+      "https://www.deccanherald.com/india/karnataka/bengaluru/bengaluru-breach-exposes-29-lakh-bwssb-customers-data-3515125"
+    ],
+    "note": "Roughly 2.9 lakh records from the water connection application portal were listed for sale on BreachForums for about $500. CloudSEK traced the cause to database credentials exposed in a publicly accessible .env file.",
+    "legacyId": null
+  },
+  {
+    "slug": "angel-one-2025",
+    "org": "Angel One",
+    "date": "2025-02-27",
+    "affectedMn": null,
+    "exposed": [
+      "Client information held in the company's AWS account"
+    ],
+    "acknowledged": "yes",
+    "statement": "Angel One said: \"We have verified that this breach does not have any impact on clients' securities, funds and credentials; and all our client accounts remain secure.\" It did not disclose how the breach occurred or how many clients were affected.",
+    "redressal": "AWS and application credentials were rotated and external forensic experts were engaged.",
+    "sources": [
+      "https://www.securityweek.com/indian-stock-broker-angel-one-discloses-data-breach/"
+    ],
+    "note": "Discovered on 27 February 2025 via a dark-web monitoring alert and disclosed on 3 March 2025. Separate from the July 2024 incident already listed.",
+    "legacyId": null
+  },
+  {
+    "slug": "niva-bupa-2025",
+    "org": "Niva Bupa Health Insurance",
+    "date": "2025-02-24",
+    "affectedMn": null,
+    "exposed": [
+      "Customer data (extent undisclosed)"
+    ],
+    "acknowledged": "partial",
+    "statement": "Niva Bupa disclosed that it had received communication from an anonymous sender claiming to hold its customer data.",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/markets/news/here-s-why-niva-bupa-share-slipped-5-in-trade-on-february-24-details-125022400493_1.html"
+    ],
+    "note": "The company's shares fell as much as 4.6% on the day of disclosure. The scope of the data held by the sender was not confirmed.",
+    "legacyId": null
+  },
+  {
+    "slug": "indian-cctv-systems-2025",
+    "org": "Indian CCTV systems (hospitals and private premises)",
+    "date": "2025",
+    "affectedMn": null,
+    "exposed": [
+      "Private CCTV footage",
+      "Footage from a maternity hospital",
+      "Camera credentials"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "A criminal investigation was opened and reported on in detail.",
+    "sources": [
+      "https://timesofindia.indiatimes.com/city/rajkot/admin123-opened-50000-cameras-how-brute-force-bots-breached-cctvs-obscene-clips-sold-for-rs-7004000-steps-to-prevent-it/articleshow/125074956.cms"
+    ],
+    "note": "An investigation found roughly 50,000 cameras accessible via brute-forced default credentials such as \"admin123\". Tens of thousands of private clips, including from a maternity hospital, were extracted and sold for Rs 700-4,000.",
+    "legacyId": null
+  },
+  {
+    "slug": "icici-bank-vendor-portal-2025",
+    "org": "ICICI Bank (third-party vendor portal)",
+    "date": "2025",
+    "affectedMn": null,
+    "exposed": [
+      "Harvested vendor credentials"
+    ],
+    "acknowledged": "unknown",
+    "statement": "ICICI Bank did not confirm the scope of the incident or the attacker's claim.",
+    "redressal": "",
+    "sources": [
+      "https://eventussecurity.com/"
+    ],
+    "note": "The Bashe ransomware group claimed credential harvesting through a compromised third-party vendor access point. The claim has not been independently verified and remains unconfirmed by the bank.",
+    "legacyId": null
+  },
+  {
+    "slug": "salarpuria-sattva-group-2025",
+    "org": "Salarpuria Sattva Group",
+    "date": "2025",
+    "affectedMn": null,
+    "exposed": [
+      "Corporate data (extent unconfirmed)"
+    ],
+    "acknowledged": "unknown",
+    "statement": "The company has not issued a comprehensive public disclosure.",
+    "redressal": "",
+    "sources": [
+      "https://eventussecurity.com/"
+    ],
+    "note": "One of India's largest real estate developers appeared on a ransomware group's dark web leak site. Scope and authenticity remain unconfirmed.",
+    "legacyId": null
+  },
+  {
+    "slug": "durex-india-2024",
+    "legacyId": "recUXO70nUZtJsGkt",
+    "org": "Durex India",
+    "date": "2024-08-28",
+    "affectedMn": null,
+    "exposed": [
+      "Personal details of customers including names",
+      "Phone numbers",
+      "Email addresses",
+      "Shipping addresses",
+      "The products ordered",
+      "The amount paid were available online"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/addresses-phone-numbers-and-names-of-durex-india-customers-may-have-been-leaked-online-2592300-2024-09-02"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "star-health-allied-insurance-2024",
+    "legacyId": "recEJH1a9aJOvgvZq",
+    "org": "Star Health & Allied Insurance",
+    "date": "2024-08-20",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "Addresses",
+      "Tax details",
+      "Copies of ID cards",
+      "Test results",
+      "Medical diagnoses of customers"
+    ],
+    "acknowledged": "yes",
+    "statement": "Star Health acknowledged the breach and said that its initial assessment showed \"no widespread compromise\" and that \"sensitive customer data remains secure.\"",
+    "redressal": "Star Health has taken legal action against Telegram and a hacker who allegedly leaked sensitive customer data via chatbots on the instant messaging platform.",
+    "sources": [
+      "https://www.reuters.com/technology/cybersecurity/hacker-uses-telegram-chatbots-leak-data-top-indian-insurer-star-health-2024-09-20/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "wazirx-2024",
+    "legacyId": "rechLwnUFtAHFEqge",
+    "org": "WazirX",
+    "date": "2024-07-18",
+    "affectedMn": 4.2,
+    "exposed": [],
+    "acknowledged": "yes",
+    "statement": "“The cyberattack stemmed from a discrepancy between the data displayed on Liminal's interface and the transaction's actual contents. During the cyberattack, there was a mismatch between the information displayed on Liminal’s interface and what was actually signed. We suspect the payload was replaced to transfer wallet control to an attacker,”",
+    "redressal": "\"WazirX registered users will receive an email with detailed instructions and a link to WazirX, where they can select their preferred option. Please ensure you complete this poll to have your choice recorded.\"",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/technology/wazirx-suffers-security-breach-cybersecurity-firm-pegs-hack-at-234-9-million/articleshow/111831916.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "angel-one-2024",
+    "legacyId": "recVOzzRFia2wWC7k",
+    "org": "Angel One",
+    "date": "2024-07-13",
+    "affectedMn": 7.9,
+    "exposed": [
+      "Customers’ names",
+      "Addresses",
+      "Contact numbers",
+      "Bank account details"
+    ],
+    "acknowledged": "yes",
+    "statement": "\"We want to confirm that Angel One's customer data is secure, and there has been no new data leak incident. The current issue pertains to an incident that occurred in April 2023, which was promptly reported to the relevant authorities. We assure you that this incident has no impact on client securities, funds, or credentials, and all client accounts remain secure,\"",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/technology/personal-data-of-almost-8-million-angel-one-customers-leaked-online/articleshow/111612380.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "emigrate-portal-2024",
+    "legacyId": "rec8DLii47l9j6XYj",
+    "org": "eMigrate Portal",
+    "date": "2024-06-26",
+    "affectedMn": 0.2,
+    "exposed": [
+      "Full names",
+      "Email addresses",
+      "Phone numbers",
+      "Dates of birth",
+      "Mailing addresses",
+      "Passport details"
+    ],
+    "acknowledged": "no",
+    "statement": "CERT-In stated that it was “in [the] process of taking appropriate action with the concerned authority.”",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2024/06/26/hacker-claims-data-breach-of-indias-emigrate-labor-portal/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "tscop-app-telangana-police-network-2024",
+    "legacyId": "rec7umt3RfZfTMlbx",
+    "org": "TSCOP App - Telangana Police Network",
+    "date": "2024-06-07",
+    "affectedMn": null,
+    "exposed": [
+      "Offender records",
+      "Police gun licences",
+      "Police officer names",
+      "Designations",
+      "Pictures",
+      "Police station affiliations"
+    ],
+    "acknowledged": "yes",
+    "statement": "A senior official of the Technical Services wing asserted that no financial data has been leaked and that most of the information related to patrolling and monitoring on the TSCOP was not extremely sensitive data and could have been accessed via RTI.",
+    "redressal": "“We are doing a vulnerability assessment and penetration test (VAPT) and have initiated checks on all platforms where there is a user interface”",
+    "sources": [
+      "https://www.newindianexpress.com/states/telangana/2024/Jun/09/tech-lapse-possible-in-tscop-data-leak-police"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "telangana-police-sms-service-2024",
+    "legacyId": "recJsB3NpWtI5Optj",
+    "org": "Telangana police SMS service",
+    "date": "2024-06-07",
+    "affectedMn": null,
+    "exposed": [
+      "Police alerts and important notices",
+      "Which included police personnel’s personal data and contact information"
+    ],
+    "acknowledged": "yes",
+    "statement": "A senior official of the Technical Services wing said that such messages (under the state SMS service)need approval from the TRAI, which will not sanction permits if it is not through official communication and that all of this is being done by miscreants to create a cheap sensation.",
+    "redressal": "“We are doing a vulnerability assessment and penetration test (VAPT) and have initiated checks on all platforms where there is a user interface”",
+    "sources": [
+      "https://www.newindianexpress.com/states/telangana/2024/Jun/09/tech-lapse-possible-in-tscop-data-leak-police"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "hawkeye-telangana-police-network-2024",
+    "legacyId": "recIqjAy7OoBGRiqF",
+    "org": "HawkEye - Telangana Police Network",
+    "date": "2024-05-29",
+    "affectedMn": null,
+    "exposed": [
+      "Emails and phone numbers",
+      "1.30 lakh SOS records",
+      "70",
+      "000 incident reports",
+      "20",
+      "000 travel detail records",
+      "In some instances",
+      "Location coordinates"
+    ],
+    "acknowledged": "partial",
+    "statement": "The application does not contain confidential data or financial information. It includes some information on inquiries made by public made by the public and calls to ‘Dial 100’.",
+    "redressal": "",
+    "sources": [
+      "https://timesofindia.indiatimes.com/city/hyderabad/telangana-police-book-case-after-hawkeye-data-breach-on-hackers-forum/articleshow/110683120.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "bsnl-2024",
+    "legacyId": "rec9TOxclD3hLJeRU",
+    "org": "BSNL",
+    "date": "2024-05-20",
+    "affectedMn": null,
+    "exposed": [
+      "International Mobile Subscriber Identity (IMSI) numbers",
+      "SIM card details",
+      "Home location register data and critical security keys"
+    ],
+    "acknowledged": "yes",
+    "statement": "CERT-In said it was \"in [the] process of taking appropriate action with the concerned authority.\"",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/companies/news/bsnl-data-breach-exposes-278-gb-of-sensitive-telecom-info-twice-in-6-mts-124062600314_1.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "tamil-nadu-police-facial-recognition-portal-2024",
+    "legacyId": "rec93ijzBdQptGeNK",
+    "org": "Tamil Nadu Police Facial Recognition Portal",
+    "date": "2024-05-04",
+    "affectedMn": null,
+    "exposed": [
+      "1.2 million lines of data including names of police officers",
+      "Phone numbers",
+      "FIR details; 55",
+      "000 lines of data regarding details of police officials",
+      "Including IPS officers",
+      "A second file with 8.9 lakh lines of FIR data and another with 2",
+      "700 lines of data on police stations"
+    ],
+    "acknowledged": "yes",
+    "statement": "On preliminary enquiry, it is learnt that the password has been compromised in admin account. The admin account has limited rights like creation of id for users, queries search, and details of front end can only be viewed.",
+    "redressal": "",
+    "sources": [
+      "https://www.newindianexpress.com/states/tamil-nadu/2024/May/05/tamil-nadu-polices-face-recognition-portal-hacked-fir-personal-information-up-for-sale"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "motilal-oswal-2024",
+    "legacyId": "rec1eTKvltub11H6v",
+    "org": "Motilal Oswal",
+    "date": "2024-02",
+    "affectedMn": 6,
+    "exposed": [],
+    "acknowledged": "yes",
+    "statement": "Cert-in taking appropriate action",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/companies/news/no-impact-on-business-operations-motilal-oswal-financial-on-data-breach-124021901020_1.html"
+    ],
+    "note": "The LockBit ransomware group claimed compromise of the brokerage and theft of confidential information."
+  },
+  {
+    "slug": "system-for-pension-administration-raksha-sparsh-portal-2024",
+    "legacyId": "rec68qsYdxniiSSqD",
+    "org": "System for Pension Administration Raksha (SPARSH) portal",
+    "date": "2024-01",
+    "affectedMn": null,
+    "exposed": [
+      "Usernames",
+      "Passwords",
+      "URLs",
+      "Pension Numbers"
+    ],
+    "acknowledged": "yes",
+    "statement": "Cert-in taking appropriate action",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/india-news/govt-pension-portal-for-defence-personnel-sparsh-suffers-data-breach-124011000128_1.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "hyundai-motor-india-2023",
+    "legacyId": "reckvXKYpb1jtpfiY",
+    "org": "Hyundai Motor India",
+    "date": "2023-12-29",
+    "affectedMn": null,
+    "exposed": [
+      "The bug disclosed registered owner's name",
+      "Mailing address",
+      "Email address",
+      "Phone number of Hyundai Motor India customers who have serviced their vehicles at any of the company’s authorized service stations across India. The bug also disclosed vehicle details",
+      "Including the registration number",
+      "Color",
+      "Engine number",
+      "Mileage covered"
+    ],
+    "acknowledged": "yes",
+    "statement": "Yes: https://techcrunch.com/2024/01/11/hyundai-motor-india-data-exposed/",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2024/01/11/hyundai-motor-india-data-exposed/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "hathway-2023",
+    "legacyId": "rec6EU3Iioe8B0dUn",
+    "org": "Hathway",
+    "date": "2023-12",
+    "affectedMn": 4,
+    "exposed": [
+      "Full names",
+      "Email addresses",
+      "Phone numbers",
+      "Home addresses",
+      "Customer registration forms",
+      "Copies of Adhaar cards with the forms",
+      "Various other personal information including KYC data"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.hackread.com/indian-isp-hathway-data-breach-user-data-kyc-leak/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "redcliffe-labs-2023",
+    "org": "Redcliffe Labs",
+    "date": "2023-12",
+    "affectedMn": 12.3,
+    "exposed": [
+      "Medical diagnostic scans",
+      "Test results",
+      "Patient names",
+      "Doctor names",
+      "Whether the sample was collected at home or a facility",
+      "Mobile app development files"
+    ],
+    "acknowledged": "denied",
+    "statement": "The company denied the breach in reporting at the time, though it secured the database the same day it was notified.",
+    "redressal": "The exposed database was secured immediately after disclosure.",
+    "sources": [
+      "https://www.websiteplanet.com/news/redcliffe-breach-report/",
+      "https://www.bankinfosecurity.com/12m-patient-medical-records-other-data-found-exposed-on-web-a-23391"
+    ],
+    "note": "Researcher Jeremiah Fowler found a 7 TB database with over 12.3 million records left online with no password protection.",
+    "legacyId": null
+  },
+  {
+    "slug": "taj-hotels-group-2023",
+    "legacyId": "rec2FAt1pFr0uPUVd",
+    "org": "Taj Hotels group",
+    "date": "2023-11-05",
+    "affectedMn": 1.5,
+    "exposed": [
+      "Addresses",
+      "Membership IDs",
+      "Mobile numbers and other personal identifiable information (PII)"
+    ],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/technology/taj-hotels-data-breach-may-have-exposed-1-5-million-source/articleshow/105439086.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "icmr-indian-citizen-dataset-2023",
+    "org": "ICMR / Indian citizen dataset",
+    "date": "2023-10-09",
+    "affectedMn": 815,
+    "exposed": [
+      "Full unmasked Aadhaar numbers",
+      "Passport numbers",
+      "Names",
+      "Age and gender",
+      "Addresses, district and PIN code",
+      "Phone numbers"
+    ],
+    "acknowledged": "no",
+    "statement": "The government did not confirm the source of the dataset. Reporting linked the records to COVID-19 test data held by the Indian Council of Medical Research.",
+    "redressal": "Delhi Police arrested four men for advertising leaked data of Indian citizens. Initial investigation suggested they were resellers rather than the original source of the leak.",
+    "sources": [
+      "https://theprint.in/india/delhi-police-arrest-4-for-advertising-personal-data-of-81-cr-indians-probe-role-in-icmr-leak/1890942/",
+      "https://www.thenewsminute.com/news/icmr-data-breach-exposes-details-of-815-crore-indians-what-you-need-to-know"
+    ],
+    "note": "A threat actor using the handle \"pwn0001\" listed 815 million records on BreachForums for $80,000. Reported as the largest breach of Indian personal data on record. The origin was never officially confirmed.",
+    "legacyId": null
+  },
+  {
+    "slug": "sbi-2023",
+    "legacyId": "recHENr7z7WpKsJx2",
+    "org": "SBI",
+    "date": "2023-07-11",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Addresses",
+      "Contact numbers",
+      "PAN numbers",
+      "Account numbers",
+      "Photo IDs"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businesstoday.in/technology/news/story/12000-sbi-employees-sensitive-data-leaked-on-telegram-channels-389239-2023-07-11"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "turtlemint-2023",
+    "legacyId": "recUE3ClrLKFy92I6",
+    "org": "Turtlemint",
+    "date": "2023-07-11",
+    "affectedMn": null,
+    "exposed": [
+      "Car insurance data",
+      "Insurance policies",
+      "Email ids",
+      "Policy numbers",
+      "Names",
+      "Car details"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.forbesindia.com/article/take-one-big-story-of-the-day/from-kotak-lifes-insurance-and-idfc-first-bank-to-state-bank-of-india-and-turtlemint-bfsi-is-under-cyberattack/86633/1"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "kotak-mahindra-life-insurance-2023",
+    "legacyId": "reciuAWlx1p3GKNX1",
+    "org": "Kotak Mahindra Life Insurance",
+    "date": "2023-07-04",
+    "affectedMn": null,
+    "exposed": [
+      "Unique registration numbers (URN)",
+      "SAP login credentials",
+      "PhonePe records of customers",
+      "Data of financial partners and customers such as Capital Small Finance Bank",
+      "Hero FinCorp",
+      "Ummeed Housing Finance"
+    ],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.forbesindia.com/article/take-one-big-story-of-the-day/from-kotak-lifes-insurance-and-idfc-first-bank-to-state-bank-of-india-and-turtlemint-bfsi-is-under-cyberattack/86633/1"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "zivame-2023",
+    "legacyId": "recQJG6tD2TaNov19",
+    "org": "Zivame",
+    "date": "2023-05",
+    "affectedMn": 1.5,
+    "exposed": [
+      "Name",
+      "Email",
+      "Phone numbers",
+      "Addresses"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/story/zivame-data-breach-leak-personal-info-indian-women-2382614-2023-05-22"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "idfc-first-bank-2023",
+    "legacyId": "recFt4eqF52Hy4EGf",
+    "org": "IDFC First Bank",
+    "date": "2023-04",
+    "affectedMn": null,
+    "exposed": [
+      "Mobile numbers",
+      "Email addresses",
+      "Employee names",
+      "Employee date of joining",
+      "Designation",
+      "Username",
+      "Corporate ID"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.forbesindia.com/article/take-one-big-story-of-the-day/from-kotak-lifes-insurance-and-idfc-first-bank-to-state-bank-of-india-and-turtlemint-bfsi-is-under-cyberattack/86633/1"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "rentomojo-2023",
+    "legacyId": "recPUrA9facFol5zC",
+    "org": "RentoMojo",
+    "date": "2023-04",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/rentomojo-confirms-data-breach-attackers-accessed-identifiable-customer-information-2362942-2023-04-21"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "hdb-financial-services-2023",
+    "legacyId": "recDtaJHP1HlE0ndH",
+    "org": "HDB Financial Services",
+    "date": "2023-03-07",
+    "affectedMn": null,
+    "exposed": [
+      "Customer information"
+    ],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.reuters.com/world/india/indias-hdb-financial-services-flags-data-breach-service-provider-2023-03-07/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "railyatri-2023",
+    "legacyId": "rec1XRBiqPp1knjFq",
+    "org": "RailYatri",
+    "date": "2023-02-16",
+    "affectedMn": 310,
+    "exposed": [
+      "Mobile numbers",
+      "Names",
+      "Date of birth",
+      "Address etc"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.hindustantimes.com/cities/mumbai-news/railyatri-user-data-up-for-sale-on-dark-web-101676836961703.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "pokerbaazi-2023",
+    "legacyId": "recutttCcOhRSEFhg",
+    "org": "PokerBaazi",
+    "date": "2023-02",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/business/news/indias-pokerbaazi-suffers-security-lapse-users-data-exposed-researcher/articleshow/97857100.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "aditya-birla-fashion-and-retail-ltd-2023",
+    "legacyId": "recurUN9Ib5QJTjmb",
+    "org": "Aditya Birla Fashion and Retail Ltd.",
+    "date": "2023-01",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "Addresses",
+      "Dates of birth",
+      "Order histories",
+      "Credit card details",
+      "Passwords stored as Message-Digest algorithm 5 hashes ( MD5)",
+      "Employee details",
+      "Salary details",
+      "Religion and Marital status"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://inc42.com/buzz/aditya-birla-fashion-retail-faces-major-700-gb-5-4-mn-user-data-breach/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "railyatri-2022",
+    "legacyId": "recKW2jhvbT7I4v6M",
+    "org": "RailYatri",
+    "date": "2022-12",
+    "affectedMn": null,
+    "exposed": [
+      "Mobile numbers",
+      "Names",
+      "Date of birth",
+      "Address etc"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/article/current-affairs/data-of-30-million-railway-users-compromised-personal-details-on-dark-web-122122801012_1.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "whatsapp-2022",
+    "legacyId": "recqQePV5yVUEO0KG",
+    "org": "Whatsapp",
+    "date": "2022-11-28",
+    "affectedMn": null,
+    "exposed": [
+      "Mobile numbers",
+      "Names"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/data-of-500-million-whatsapp-users-leaked-online-here-is-what-we-know-2302313-2022-11-27"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "aiims-2022",
+    "legacyId": "recCAexBts5b7jotl",
+    "org": "AIIMS",
+    "date": "2022-11-23",
+    "affectedMn": 30,
+    "exposed": [
+      "Names",
+      "Addresses",
+      "Aadhaar numbers",
+      "PAN",
+      "Medical history"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.telegraphindia.com/india/aiims-unprecented-data-breach-sparks-fears-hackers-could-misuse-information/cid/1901550"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "akasa-airline-2022",
+    "legacyId": "rechBb5gzNGIM7ele",
+    "org": "Akasa airline",
+    "date": "2022-08-25",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Gender",
+      "Email addresses",
+      "Phone numbers"
+    ],
+    "acknowledged": "yes",
+    "statement": "https://www.akasaair.com/en/news-room/akasa-press-releases/important-update-from-akasa-air",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/india/story/akasa-airlines-data-breach-passengers-personal-information-leaked-1993723-2022-08-29"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "employees-provident-fund-organisation-2022",
+    "legacyId": "recDwzf3usl31wHzV",
+    "org": "Employees' Provident Fund Organisation",
+    "date": "2022-08-02",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Addresses",
+      "Universal Account Numbers (UANs)",
+      "Bank account number and IFSC code",
+      "Aadhaar card numbers",
+      "Employment details",
+      "Income slabs",
+      "Marital status",
+      "Guardians’ names and personal information",
+      "Etc"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://telecom.economictimes.indiatimes.com/news/over-280m-records-comprising-uans-bank-account-info-and-pii-leaked-online/93337111"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "vodafone-idea-2022",
+    "legacyId": "recpIBABsY9WBINAI",
+    "org": "Vodafone Idea",
+    "date": "2022-08",
+    "affectedMn": null,
+    "exposed": [
+      "Call logs",
+      "SMS sent",
+      "Customer details"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianexpress.com/article/technology/technology-others/vodafone-idea-user-data-breached-claims-cyber-security-firm-telco-says-no-8118322/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "c-edge-technologies-ltd-2022",
+    "legacyId": "reclpRZiVaKkJrrX8",
+    "org": "C-Edge Technologies Ltd.",
+    "date": "2022-07-31",
+    "affectedMn": null,
+    "exposed": [
+      "Nearly 200 co-operative banks and RRBs across India associated with the service provider",
+      "C-Edge Technologies",
+      "Were affected"
+    ],
+    "acknowledged": "yes",
+    "statement": "NPCI released a statement acknowledging the possible ransomware attack and temporarily halted all retail payment services at the affected banks.",
+    "redressal": "“NPCI connectivity with C-Edge Technologies Ltd has been re-established following a security review by an independent forensic auditing firm. The investigation confirms that the impacted systems have been isolated by C-Edge to contain the potential spread of the ransomware.",
+    "sources": [
+      "https://www.thehindu.com/sci-tech/technology/customers-at-several-small-sized-banks-affected-as-tech-provider-c-edge-suffers-ransomware-attack/article68470198.ece"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "policybazaar-2022",
+    "legacyId": "reccLkVKLbWkEomLx",
+    "org": "PolicyBazaar",
+    "date": "2022-07-19",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://timesofindia.indiatimes.com/business/india-business/policybazaar-data-breach-exposed-pvt-info-report/articleshow/93489064.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "cleartrip-2022",
+    "legacyId": "recGgKPR6yXy1TZzn",
+    "org": "Cleartrip",
+    "date": "2022-07-18",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/startups/travel-booking-website-cleartrip-announces-data-breach-in-internal-systems/articleshow/92957783.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "oil-india-2022",
+    "legacyId": "rec2Wdb3K2hRiMKCN",
+    "org": "OIL India",
+    "date": "2022-04",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "Filed FIR",
+    "sources": [
+      "https://theprint.in/india/biggest-cyberattack-in-recent-years-hits-oil-india-hq-hackers-demand-rs-60-crore-in-bitcoin/914792/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "samsung-2022",
+    "legacyId": "recS81mUUr2fnVmO7",
+    "org": "Samsung",
+    "date": "2022-03-07",
+    "affectedMn": null,
+    "exposed": [
+      "Internal company data (algorithms for Samsung smartphone biometric authentication and bootloader source code to bypass some operating system controls)"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2022-03-07/samsung-says-hackers-breached-company-data-galaxy-source-code"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "central-industrial-security-force-2022",
+    "legacyId": "recClRGuBKHtbeb8A",
+    "org": "Central Industrial Security Force",
+    "date": "2022-03-06",
+    "affectedMn": null,
+    "exposed": [
+      "Internal documents",
+      "Officer health records",
+      "Web addresses of PDF documents on CISF’s network",
+      "Many of which relate to personnel files and health records",
+      "Contain personally identifiable information on CISF officers"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2022/03/18/india-cisf-security-data-exposed/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "nvidia-2022",
+    "legacyId": "recCUL8Kn1FgNGEhe",
+    "org": "NVIDIA",
+    "date": "2022-02-23",
+    "affectedMn": 0.071,
+    "exposed": [
+      "Email addresses",
+      "Hashes"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/technology/nvidia-data-breach-exposes-data-of-71000-employees-report/articleshow/90008978.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "cdsl-2021",
+    "legacyId": "recUeq38RsGvLhxIy",
+    "org": "CDSL",
+    "date": "2021-10-19",
+    "affectedMn": 43.9,
+    "exposed": [
+      "Sensitive personal and financial data - Investors' names",
+      "Phone number",
+      "Email address",
+      "PAN",
+      "Income range",
+      "Father's name",
+      "Date of birth",
+      "Etc"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://theprint.in/tech/data-breach-at-indias-biggest-demat-depository-exposed-4-39-cr-investors-e-security-firm/757806/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "acer-2021",
+    "legacyId": "reckAMrwOcuzyG3a6",
+    "org": "Acer",
+    "date": "2021-10-14",
+    "affectedMn": null,
+    "exposed": [
+      "Individual customer information",
+      "Corporate customer data",
+      "Information of sensitive accounts",
+      "Financial data"
+    ],
+    "acknowledged": "yes",
+    "statement": "Informed CERT-In",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/acer-s-after-sales-service-systems-hacked-data-affecting-millions-of-customers-stolen-1865292-2021-10-15"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "coinmarketcap-2021",
+    "legacyId": "rechcnrnjmmkUbBmQ",
+    "org": "CoinMarketCap",
+    "date": "2021-10-12",
+    "affectedMn": 3.1,
+    "exposed": [
+      "Email address"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.coindesk.com/business/2021/10/25/over-3-million-coinmarketcap-email-addresses-leaked-to-dark-web/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "pine-labs-2021",
+    "legacyId": "rectSb5G6F7emXGPx",
+    "org": "Pine Labs",
+    "date": "2021-08-10",
+    "affectedMn": null,
+    "exposed": [
+      "Service and private agreements",
+      "Invoices of Pine Labs with various financial institutions and Indian banks",
+      "Names",
+      "Departments",
+      "Email addresses of several Pine Labs employees"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.thehindubusinessline.com/info-tech/data-breach-at-pine-labs-exposes-500000-records/article35962296.ece"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "byju-s-2021",
+    "legacyId": "recXQMQ8bVwKNOz6x",
+    "org": "BYJU'S",
+    "date": "2021-06-14",
+    "affectedMn": null,
+    "exposed": [
+      "Student names",
+      "Classes",
+      "Email addresses",
+      "Phone numbers of parents and teachers",
+      "Log chats between parents and staff",
+      "Teacher's comments on their students"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2021/06/29/india-startup-byju-student-data/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "upstox-2021",
+    "legacyId": "recwGLygRmEXGA9A0",
+    "org": "Upstox",
+    "date": "2021-04-11",
+    "affectedMn": 2.5,
+    "exposed": [
+      "Aadhaar",
+      "PAN",
+      "Bank account numbers",
+      "Phone numbers",
+      "Email addresses"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.thehindubusinessline.com/markets/stock-markets/upstox-data-breach-a-wake-up-call-for-market-intermediaries/article34337829.ece"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "jubilant-good-work-limited-dominos-2021",
+    "legacyId": "recyuOcqkcM5OXPOU",
+    "org": "Jubilant Good work Limited (Dominos)",
+    "date": "2021-03-25",
+    "affectedMn": 180,
+    "exposed": [
+      "Delivery address",
+      "Names",
+      "Phone number",
+      "Email address",
+      "Precise latitude and longitude coordinates of the address",
+      "Total number of transactions",
+      "Total amount spent on transactions in rupees"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.thehindubusinessline.com/companies/have-hired-global-forensic-agency-to-investigate-data-breach-at-dominos-pizza-jubilant-foodworks/article34647317.ece"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "air-india-2021",
+    "legacyId": "recDUEnkpHAJgkg89",
+    "org": "Air India",
+    "date": "2021-02-25",
+    "affectedMn": 4.5,
+    "exposed": [
+      "Name",
+      "Date of birth",
+      "Contact information",
+      "Passport information",
+      "Ticket info",
+      "Frequent flyer data",
+      "Credit card data"
+    ],
+    "acknowledged": "yes",
+    "statement": "yes",
+    "redressal": "",
+    "sources": [
+      "https://www.reuters.com/world/india/air-india-says-februarys-data-breach-affected-45-mln-passengers-2021-05-21/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "mobikwik-2021",
+    "legacyId": "recUsvazGngplDcKy",
+    "org": "MobiKwik",
+    "date": "2021-02-24",
+    "affectedMn": 3.5,
+    "exposed": [
+      "KYC documents",
+      "Aadhaar cards",
+      "Credit and debit card data",
+      "Phone numbers",
+      "Email addresses",
+      "Passwords",
+      "Geo data",
+      "Etc"
+    ],
+    "acknowledged": "denied",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/mobikwik-data-breach-said-to-be-largest-kyc-leak-personal-data-of-3-5-million-users-up-for-sale-on-dark-web-1784957-2021-03-30"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "zee5-2021",
+    "legacyId": "recqJM475AERdnJ4b",
+    "org": "ZEE5",
+    "date": "2021-02-23",
+    "affectedMn": 9,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "Email addresses",
+      "Usernames"
+    ],
+    "acknowledged": "denied",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/advertising/ad-tech/news/zee5-denies-recent-data-breach-claims/articleshow/81344102.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "wedmegood-2021",
+    "legacyId": "reciGVK8mdwGkEUNB",
+    "org": "WedMeGood",
+    "date": "2021-01-06",
+    "affectedMn": 1.3,
+    "exposed": [
+      "Name",
+      "Email",
+      "Hashed password",
+      "Other sensitive personal information"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/tech/news/data-of-over-10-million-users-up-for-sale-as-clickindia-chqbook-and-wedmegood-reportedly-hacked/articleshow/80135638.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "clickindia-2021",
+    "legacyId": "recmE21YMTUuHzYuS",
+    "org": "ClickIndia",
+    "date": "2021-01-06",
+    "affectedMn": 8,
+    "exposed": [
+      "Name",
+      "Email addresses",
+      "Phone numbers",
+      "Other personal details"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/tech/news/data-of-over-10-million-users-up-for-sale-as-clickindia-chqbook-and-wedmegood-reportedly-hacked/articleshow/80135638.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "chqbook-2021",
+    "legacyId": "reczlg3luqYDixUDO",
+    "org": "ChqBook",
+    "date": "2021-01-06",
+    "affectedMn": 1,
+    "exposed": [
+      "Name",
+      "Email addresses",
+      "Phone numbers",
+      "Address",
+      "Other personal details"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/tech/news/data-of-over-10-million-users-up-for-sale-as-clickindia-chqbook-and-wedmegood-reportedly-hacked/articleshow/80135638.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "facebook-2021",
+    "legacyId": "recBzyeKNIniKxxhA",
+    "org": "Facebook",
+    "date": "2021-01",
+    "affectedMn": 533,
+    "exposed": [
+      "Phone numbers"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/tech/news/533-million-facebook-users-phone-numbers-and-personal-data-have-been-leaked-online/articleshow/81889315.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "big-basket-2020",
+    "legacyId": "recKat8rAvbGUafum",
+    "org": "Big Basket",
+    "date": "2020-10-30",
+    "affectedMn": 20,
+    "exposed": [
+      "Names",
+      "Email addresses",
+      "Password hashes",
+      "Phone numbers",
+      "Addresses",
+      "Date of birth",
+      "Location",
+      "IP addresses of login"
+    ],
+    "acknowledged": "yes",
+    "statement": "Bengaluru cyber crime cell",
+    "redressal": "",
+    "sources": [
+      "https://www.businessinsider.in/tech/news/big-basket-data-breach-email-ids-phone-numbers-home-addresses-of-two-crore-indians-allegedly-leaked-on-the-web/articleshow/82255857.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "dr-reddys-laboratories-2020",
+    "legacyId": "recHLgxXDZE707A4a",
+    "org": "Dr. Reddy’s Laboratories",
+    "date": "2020-10-22",
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.businesstoday.in/latest/corporate/story/breaking-news-data-breach-dr-reddys-shuts-down-all-offices-276508-2020-10-22"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "bharat-matrimony-2020",
+    "legacyId": "recCaanoGY30Cn4qK",
+    "org": "Bharat Matrimony",
+    "date": "2020-10-15",
+    "affectedMn": null,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "User IDs",
+      "Date and time of account creation"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/internet/personal-data-of-bharatmatriony-users-breached-says-security-firm-cyble-inc/articleshow/78687130.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "halidrams-2020",
+    "legacyId": "recinzWmI17FG7uXo",
+    "org": "Halidrams",
+    "date": "2020-10-12",
+    "affectedMn": null,
+    "exposed": [
+      "Financial and Employee information",
+      "Data on payroll",
+      "Retail sales",
+      "Purchases",
+      "Inventory of the company"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://timesofindia.indiatimes.com/city/noida/haldirams-hit-by-ransomware-attack-hackers-asked-for-7-5l/articleshow/78712465.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "narendramodi-in-2020",
+    "legacyId": "recO5s4CGRud9uY0M",
+    "org": "narendramodi.in",
+    "date": "2020-09-03",
+    "affectedMn": 0.57,
+    "exposed": [
+      "Contact information",
+      "Email addresses",
+      "Details of over two lakh people who have donated through the website to various funds"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.indiatoday.in/technology/news/story/donor-data-from-narendramodi-in-stolen-cyber-security-firm-says-it-is-on-sale-on-dark-web-1732571-2020-10-17"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "juspay-2020",
+    "legacyId": "recodJHZYWrxugQ7A",
+    "org": "Juspay",
+    "date": "2020-08-18",
+    "affectedMn": 100,
+    "exposed": [
+      "Email addresses",
+      "Names",
+      "Phone numbers",
+      "Debit and credit card data"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.thequint.com/coronavirus/faq/juspay-data-breach-faq-have-my-card-details-leaked-what-happens-now"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "railyatri-2020",
+    "legacyId": "recsJducXxozLIEAD",
+    "org": "RailYatri",
+    "date": "2020-08-10",
+    "affectedMn": 0.7,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "Addresses",
+      "Email addresses",
+      "Ticket booking details",
+      "UPI Ids",
+      "GPS location",
+      "Partial info on debit and credit card numbers"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianexpress.com/article/technology/tech-news-technology/7-lakh-railyatri-user-data-leaked-personal-payment-details-6570326/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "edureka-2020",
+    "legacyId": "recCywvyQVITCNtJE",
+    "org": "Edureka",
+    "date": "2020-08-01",
+    "affectedMn": 2,
+    "exposed": [
+      "Email addresses",
+      "Names",
+      "Phone numbers"
+    ],
+    "acknowledged": "partial",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.thehindubusinessline.com/info-tech/data-breach-at-e-learning-platform-edureka/article32733488.ece"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "unacademy-2020",
+    "org": "Unacademy",
+    "date": "2020-05",
+    "affectedMn": 11,
+    "exposed": [
+      "Account and email information",
+      "Usernames",
+      "Hashed passwords"
+    ],
+    "acknowledged": "partial",
+    "statement": "Unacademy acknowledged a compromise of email-related account data but disputed the scale reported by researchers.",
+    "redressal": "",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Data_breaches_in_India"
+    ],
+    "note": "Reported figures ranged from roughly 11 million to 20 million accounts; the company contested the higher estimates.",
+    "legacyId": null
+  },
+  {
+    "slug": "skolaro-2020",
+    "legacyId": "rec0V3D2zcw6LrVSu",
+    "org": "Skolaro",
+    "date": "2020-03",
+    "affectedMn": 5,
+    "exposed": [
+      "Usernames",
+      "Passwords",
+      "Age",
+      "Blood group",
+      "Religion",
+      "Address",
+      "Admission number",
+      "School name",
+      "Date of birth",
+      "Grades",
+      "Profile image",
+      "Medical history of some students"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://inc42.com/buzz/exclusive-edtech-startup-leaks-data-of-over-50k-indian-children/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "justdial-2019",
+    "org": "Justdial",
+    "date": "2019-04",
+    "affectedMn": 100,
+    "exposed": [
+      "Names",
+      "Phone numbers",
+      "Email addresses",
+      "Addresses",
+      "Occupations"
+    ],
+    "acknowledged": "denied",
+    "statement": "Justdial disputed parts of the reporting on the exposure.",
+    "redressal": "",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Data_breaches_in_India"
+    ],
+    "note": "An unprotected API endpoint returned user records for anyone who queried it, with no authentication required. Frequently cited as a textbook case of broken access control on a public API.",
+    "legacyId": null
+  },
+  {
+    "slug": "truecaller-2019",
+    "legacyId": "recQfTyvunOgzPJQ1",
+    "org": "Truecaller",
+    "date": "2019",
+    "affectedMn": 47.5,
+    "exposed": [
+      "Phone number",
+      "Name",
+      "Gender",
+      "City",
+      "Email addresses",
+      "Facebook account",
+      "Telco info"
+    ],
+    "acknowledged": "denied",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://tech.hindustantimes.com/tech/news/truecaller-data-of-4-75-crore-indian-users-leaked-on-dark-web-report-71590562580077.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "zomato-2017",
+    "org": "Zomato",
+    "date": "2017-05",
+    "affectedMn": 17,
+    "exposed": [
+      "Names",
+      "Email addresses",
+      "Hashed passwords"
+    ],
+    "acknowledged": "yes",
+    "statement": "Zomato confirmed the theft of user records and said payment information was stored separately and was not affected.",
+    "redressal": "Affected users were logged out and prompted to reset passwords.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Data_breaches_in_India"
+    ],
+    "note": "The data was listed for sale on a dark web marketplace before being withdrawn.",
+    "legacyId": null
+  },
+  {
+    "slug": "indian-debit-card-compromise-2016",
+    "org": "Indian debit card compromise (multi-bank)",
+    "date": "2016-10",
+    "affectedMn": 3.2,
+    "exposed": [
+      "Debit card credentials across multiple banks"
+    ],
+    "acknowledged": "yes",
+    "statement": "Banks acknowledged the compromise and began recalling and reissuing affected cards.",
+    "redressal": "Roughly 3.2 million cards were blocked or reissued and customers were asked to change PINs.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Data_breaches_in_India"
+    ],
+    "note": "Malware in shared payment switch infrastructure exposed cards across SBI, HDFC Bank, ICICI Bank, YES Bank and Axis Bank. Still the largest card compromise in Indian banking history.",
+    "legacyId": null
+  },
+  {
+    "slug": "23andme",
+    "legacyId": "rec0J5HjOm7QWcgcB",
+    "org": "23andMe",
+    "date": null,
+    "affectedMn": 6.9,
+    "exposed": [
+      "Names",
+      "Birth years",
+      "Relationship labels",
+      "DNA shared with relatives",
+      "Ancestry reports",
+      "Self-reported locations"
+    ],
+    "acknowledged": "yes",
+    "statement": "23andMe attempted to hinder legal actions by altering its terms of service",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2024/01/25/23andme-admits-it-didnt-detect-cyberattacks-for-months/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "imobile-icici-app",
+    "legacyId": "rec37sGhGMLRMkvIZ",
+    "org": "iMobile ICICI App",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Card Verification Values",
+      "Full card numbers",
+      "Card expiry date"
+    ],
+    "acknowledged": "yes",
+    "statement": "ICICI spokesperson shared that the glitch was due to “erroneously mapped” data of 17,000 new credit cards in their digital channels.",
+    "redressal": "ICICI blocked 17,000 affected credit cards and issued new ones to the customers",
+    "sources": [
+      "https://www.livemint.com/companies/news/icici-bank-imobile-glitch-online-portal-raises-alert-netizen-says-sensitive-card-information-visible-11714022513098.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "epfo-and-indian-pmo-datasets",
+    "legacyId": "rec527uN69czl5G7M",
+    "org": "EPFO and Indian PMO datasets",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Thousands of documents",
+      "Images",
+      "Chat messages associated with I-Soon — an alleged cybersecurity contractor with China's Ministry of Public Security (MPS) — were posted anonymously on GitHub"
+    ],
+    "acknowledged": "yes",
+    "statement": "Cert-in taking appropriate action",
+    "redressal": "",
+    "sources": [
+      "https://economictimes.indiatimes.com/tech/technology/epfo-pmo-data-breach-centre-says-aware-of-reports-cert-in-looking-into-details/articleshow/107870171.cms"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "aadhaar",
+    "legacyId": "rec93dyqpb7rO8SFE",
+    "org": "Aadhaar",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Passport information",
+      "Names",
+      "Phone number",
+      "Addresses"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.hindustantimes.com/technology/in-indias-biggest-data-breach-personal-information-of-81-5-crore-people-leaked-101698719306335.html https://www.medianama.com/2023/10/223-aadhaar-815-million-indian-data-breach/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "bharti-airtel",
+    "legacyId": "recB0n6lt7JIuyLAr",
+    "org": "Bharti Airtel",
+    "date": null,
+    "affectedMn": 375,
+    "exposed": [
+      "Name",
+      "Birth date",
+      "Aadhaar number",
+      "Father’s name",
+      "Local address",
+      "Permanent residential address",
+      "Alternate phone number",
+      "Email ID",
+      "Gender",
+      "Nationality",
+      "Cellular connection type (prepaid/postpaid)",
+      "SIM activation date",
+      "Photo ID proof",
+      "Address proof were leaked from the Airtel database"
+    ],
+    "acknowledged": "denied",
+    "statement": "\"There has been an ongoing report alleging that Airtel customer data has been compromised. This is nothing short of a desperate attempt to tarnish Airtel’s reputation by vested interests. We have done a thorough investigation and can confirm that there has been no breach whatsoever from Airtel systems.\"",
+    "redressal": "",
+    "sources": [
+      "https://www.deccanherald.com/technology/airtel-rubbishes-allegations-of-data-breach-says-user-data-of-customers-safe-3093904"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "rekhata",
+    "legacyId": "recBbi91mens29BQh",
+    "org": "Rekhata",
+    "date": null,
+    "affectedMn": 5,
+    "exposed": [
+      "Name",
+      "Phone number",
+      "Date of birth",
+      "Email address. Residence city"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [],
+    "note": ""
+  },
+  {
+    "slug": "states-department-of-public-health-and-preventive-medicines-dphpm-website",
+    "legacyId": "recCVXsmO4dA3LUdE",
+    "org": "State’s Department of Public Health and Preventive Medicine’s (DPHPM) website",
+    "date": null,
+    "affectedMn": 15,
+    "exposed": [
+      "Names",
+      "Vaccination dates",
+      "Beneficiary ID",
+      "Name",
+      "Beneficiary reference ID",
+      "COVID-19 vaccination centre",
+      "Vaccine name",
+      "Date of the first dose",
+      "Number of days a beneficiary was overdue for the second dose"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.medianama.com/2022/05/223-tamil-nadu-covid-vaccination-data-leak/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "bsnl",
+    "legacyId": "recI6bUMhEmvX8WJc",
+    "org": "BSNL",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [],
+    "note": ""
+  },
+  {
+    "slug": "dropbox-sign",
+    "legacyId": "recLGQLyYJy5Px6JE",
+    "org": "Dropbox Sign",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Customer information such as emails",
+      "Usernames",
+      "Phone numbers",
+      "Hashed passwords as well as general account settings and certain authentication information such as API keys",
+      "OAuth tokens",
+      "Multi-factor authentication"
+    ],
+    "acknowledged": "yes",
+    "statement": "Dropbox found no evidence suggesting access to the “contents of customers’ accounts (i.e. their documents or agreements), or their payment information” and have clarified that the “incident was isolated to Dropbox Sign infrastructure, and did not impact any other Dropbox products”.",
+    "redressal": "The Dropbox security team has “reset users’ passwords, logged users out of any devices they had connected to Dropbox Sign, and is coordinating the rotation of all API keys and OAuth tokens”. They state that they have reported this event to “data protection regulators and law enforcement” and are “in the process of reaching out to all users impacted by this incident who need to take action, with step-by-step instructions on how to further protect their data”.",
+    "sources": [
+      "https://sign.dropbox.com/blog/a-recent-security-incident-involving-dropbox-sign"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "smart-cards-of-the-telangana-transport-department",
+    "legacyId": "recMXbzVUqNJsGFHS",
+    "org": "Smart cards of the Telangana Transport Department",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.newindianexpress.com/states/telangana/2024/Sep/17/centres-test-reveals-driving-license-smart-cards-in-telangana-vulnerable-to-data-breach-ngo"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "air-india-gst-portal",
+    "legacyId": "recPalBgEAck9o8IZ",
+    "org": "Air India GST portal",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Login user IDs",
+      "Passwords"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "Yes, reached out to all their B2B clients and well as CERT-In",
+    "sources": [
+      "https://www.businesstoday.in/latest/trends/story/exclusive-if-you-flew-air-india-your-data-could-be-compromised-346626-2022-09-07"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "piramal-group",
+    "legacyId": "recTDVdgmoZnI8OpM",
+    "org": "Piramal Group",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Personal details such as names and email addresses of thousands of employees of Piramal group were allegedly leaked from its database"
+    ],
+    "acknowledged": "denied",
+    "statement": "“After a thorough investigation, we confirmed [to] CERT-In that no such data breach incident has occurred on our systems, and no information is compromised.”",
+    "redressal": "",
+    "sources": [
+      "https://techcrunch.com/2024/07/24/hacker-claims-theft-of-piramal-groups-employee-data/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "google-chrome",
+    "legacyId": "recYAote4X9iGrDsH",
+    "org": "Google Chrome",
+    "date": null,
+    "affectedMn": 2500,
+    "exposed": [
+      "Sensitive files",
+      "Such as Crypto wallets and cloud provider credentials"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.livemint.com/technology/tech-news/security-alert-data-of-2-5-billion-google-chrome-users-is-at-risk-11673762110571.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "freshmenu",
+    "legacyId": "recf7Rhy3cFdAPGAO",
+    "org": "FreshMenu",
+    "date": null,
+    "affectedMn": 3.5,
+    "exposed": [
+      "Phone numbers",
+      "Emails",
+      "Names",
+      "Billing and shipping addresses",
+      "IP addresses"
+    ],
+    "acknowledged": "no",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.techcircle.in/2024/01/25/bengaluru-based-freshmenu-exposes-data-of-3-5-mn-users-report"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "sparsh-system-for-pension-administration-portal",
+    "legacyId": "recfW8B5Z4L9vVljo",
+    "org": "SPARSH(System for pension administration) Portal",
+    "date": null,
+    "affectedMn": 3,
+    "exposed": [
+      "Usernames",
+      "Passwords",
+      "Pension numbers",
+      "URLs",
+      "More"
+    ],
+    "acknowledged": "yes",
+    "statement": "Cert-in taking appropriate action",
+    "redressal": "",
+    "sources": [
+      "https://thecyberexpress.com/sparsh-portal-data-leak-exposes-sensitive-info/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "signal",
+    "legacyId": "recm1znimMUHenKf6",
+    "org": "Signal",
+    "date": null,
+    "affectedMn": 0.0019,
+    "exposed": [
+      "Phone numbers"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://indianexpress.com/article/technology/tech-news-technology/1900-signal-accounts-hacked-after-twilio-attack-check-whether-youre-affected-8093355/"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "indian-mobile-network-database",
+    "legacyId": "recnzE9FQYhW1LR8E",
+    "org": "Indian mobile network database",
+    "date": null,
+    "affectedMn": 750,
+    "exposed": [
+      "Names",
+      "Mobile numbers",
+      "Addresses",
+      "Aadhaar details"
+    ],
+    "acknowledged": "denied",
+    "statement": "CERT-In was informed about the breach and elicited no response till the time of going to press.",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/companies/news/personal-information-of-750-mn-indians-up-for-sale-on-dark-web-cloudsek-124012500973_1.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "up-marriage-assistance-scheme-site",
+    "legacyId": "recom9RhSvQdtL6GR",
+    "org": "UP Marriage Assistance Scheme Site",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "FIR has been filed at the Cyber Crime Police Station Rail Bazar following a complaint by the Additional Labour Commissioner.",
+    "sources": [
+      "https://www.indiatoday.in/india/story/breach-of-up-marriage-scheme-site-results-in-fraud-of-over-rs-1-crore-2496980-2024-02-03"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "cowin",
+    "legacyId": "recpwKHmUkLZR8phE",
+    "org": "CoWIN",
+    "date": null,
+    "affectedMn": 1000,
+    "exposed": [
+      "Name",
+      "Birth Year",
+      "Aadhar",
+      "Mobile Numbers",
+      "PAN",
+      "Passport"
+    ],
+    "acknowledged": "unknown",
+    "statement": "",
+    "redressal": "",
+    "sources": [],
+    "note": ""
+  },
+  {
+    "slug": "boat",
+    "legacyId": "rect2RlGbsEYd6Xyy",
+    "org": "boAt",
+    "date": null,
+    "affectedMn": 7.5,
+    "exposed": [
+      "Names",
+      "Addresses",
+      "Phone numbers",
+      "Email addresses",
+      "Customer IDs"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.business-standard.com/companies/news/boat-suffers-data-breach-personal-data-of-75-lakh-users-leaked-on-dark-web-124040801022_1.html"
+    ],
+    "note": ""
+  },
+  {
+    "slug": "madhya-pradesh-government-app-sarthak",
+    "legacyId": "recut3sYJJ6nwH4WC",
+    "org": "Madhya Pradesh government app- Sarthak",
+    "date": null,
+    "affectedMn": null,
+    "exposed": [
+      "Names of people who are meant to be quarantined",
+      "Type of phone used",
+      "Last known location"
+    ],
+    "acknowledged": "yes",
+    "statement": "",
+    "redressal": "",
+    "sources": [
+      "https://www.hindustantimes.com/india-news/mp-app-to-track-patients-leaks-personal-data-taken-offline/story-WO7ATpaxOMDTsmUxSKduUO.html"
+    ],
+    "note": ""
+  }
+]

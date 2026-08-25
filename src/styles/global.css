@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Light is the default. Dark only redefines tokens, so every colour has a
+   definition outside the theme blocks. */
+:root {
+  --ptb-bg: #fbfbfa;
+  --ptb-surface: #ffffff;
+  --ptb-fg: #16181d;
+  --ptb-muted: #5f6672;
+  --ptb-faint: #8b929d;
+  --ptb-line: #e0e2e6;
+  --ptb-line-strong: #c7cad0;
+  --ptb-accent: #7a1420;
+  --ptb-accent-soft: #f3e6e7;
+  --ptb-focus: #16181d;
+}
+
+:root[data-theme="dark"] {
+  --ptb-bg: #101114;
+  --ptb-surface: #16181c;
+  --ptb-fg: #e8e9ec;
+  --ptb-muted: #9aa1ac;
+  --ptb-faint: #6e7681;
+  --ptb-line: #26292f;
+  --ptb-line-strong: #3a3e46;
+  --ptb-accent: #e98b95;
+  --ptb-accent-soft: #2a1a1d;
+  --ptb-focus: #e8e9ec;
+}
+
+@theme inline {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: var(--ptb-bg);
+  --color-surface: var(--ptb-surface);
+  --color-fg: var(--ptb-fg);
+  --color-muted: var(--ptb-muted);
+  --color-faint: var(--ptb-faint);
+  --color-line: var(--ptb-line);
+  --color-line-strong: var(--ptb-line-strong);
+  --color-accent: var(--ptb-accent);
+  --color-accent-soft: var(--ptb-accent-soft);
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk/SpaceGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk/SpaceGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk/SpaceGrotesk-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+html {
+  background-color: var(--ptb-bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+/*
+ * Colour transitions are opt-in, applied only while `.theme-switching` is on the
+ * root. Transitioning by default would make the very first paint fade in, and
+ * would also drag every unrelated colour change (hover, focus) along with it.
+ */
+:root.theme-switching,
+:root.theme-switching *,
+:root.theme-switching *::before,
+:root.theme-switching *::after {
+  transition:
+    background-color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 260ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 260ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-delay: 0s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root.theme-switching,
+  :root.theme-switching *,
+  :root.theme-switching *::before,
+  :root.theme-switching *::after {
+    transition: none !important;
+  }
+}
+
+body {
+  background-color: var(--ptb-bg);
+  color: var(--ptb-fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:where(a):focus-visible,
+:where(button):focus-visible,
+:where(input):focus-visible,
+:where(select):focus-visible,
+:where(summary):focus-visible {
+  outline: 2px solid var(--ptb-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Numbers in tables should line up. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Long-form prose (blog posts, the methodology note). */
+.prose {
+  max-width: 68ch;
+}
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  margin-block: 1.1em;
+}
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-block: 1.9em 0.6em;
+}
+.prose h2 { font-size: 1.4rem; }
+.prose h3 { font-size: 1.13rem; }
+.prose a {
+  color: var(--ptb-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--ptb-line-strong);
+}
+.prose a:hover { text-decoration-color: currentColor; }
+.prose ul { list-style: disc; padding-left: 1.3em; }
+.prose ol { list-style: decimal; padding-left: 1.3em; }
+.prose li { margin-block: 0.35em; }
+.prose blockquote {
+  border-left: 2px solid var(--ptb-line-strong);
+  padding-left: 1em;
+  color: var(--ptb-muted);
+}
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--ptb-line);
+  margin-block: 2.4em;
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--ptb-accent-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.prose th,
+.prose td {
+  border: 1px solid var(--ptb-line);
+  padding: 0.5em 0.7em;
+  text-align: left;
+}

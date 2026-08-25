@@ -1,0 +1,42 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export const getStaticPaths = (async () => {
+  const posts = (await getCollection('blog')).filter(
+    // `about-the-initiative` is surfaced at /about; publishing it here too would
+    // duplicate it under a second URL.
+    (p) => p.data.published && p.id !== 'about-the-initiative',
+  );
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const published = post.data.date_published.toLocaleDateString('en-IN', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Base title={post.data.title} description={post.data.description}>
+  <article>
+    <h1 class="max-w-prose font-display text-[1.7rem] leading-tight tracking-tight sm:text-[2rem]">
+      {post.data.title}
+    </h1>
+    <p class="mt-3 text-[0.88rem] text-faint">
+      {post.data.author && <span>{post.data.author} · </span>}
+      <time datetime={post.data.date_published.toISOString()}>{published}</time>
+    </p>
+    <div class="prose mt-8 text-[1rem] leading-relaxed text-muted">
+      <Content />
+    </div>
+  </article>
+  <p class="mt-14 text-sm">
+    <a href="/about" class="text-muted underline underline-offset-[4px] hover:text-fg">
+      &larr; About the initiative
+    </a>
+  </p>
+</Base>

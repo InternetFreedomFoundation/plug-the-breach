@@ -1,0 +1,19 @@
+---
+import { ACK_LABELS, ACK_DESCRIPTIONS, type Breach } from '../lib/breaches';
+
+interface Props {
+  value: Breach['acknowledged'];
+}
+const { value } = Astro.props;
+const negative = value === 'no' || value === 'denied';
+---
+
+<span
+  class:list={[
+    'text-[0.78rem] leading-tight',
+    negative ? 'text-accent' : 'text-muted',
+  ]}
+  title={ACK_DESCRIPTIONS[value]}
+>
+  {ACK_LABELS[value]}
+</span>

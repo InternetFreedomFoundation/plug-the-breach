@@ -1,0 +1,97 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { ACK_DESCRIPTIONS, ACK_LABELS } from '../lib/breaches';
+
+const posts = (await getCollection('blog')).filter((p) => p.data.published);
+const about = posts.find((p) => p.id === 'about-the-initiative');
+const { Content } = about ? await render(about) : { Content: null };
+const others = posts
+  .filter((p) => p.id !== 'about-the-initiative')
+  .sort((a, b) => b.data.date_published.getTime() - a.data.date_published.getTime());
+
+const statuses = ['yes', 'partial', 'no', 'denied', 'unknown'] as const;
+---
+
+<Base
+  title="About"
+  description="How PlugTheBreach collects, verifies and classifies data breach records."
+>
+  <h1 class="font-display text-2xl tracking-tight">About the initiative</h1>
+
+  {
+    Content && (
+      <div class="prose mt-7 text-[1rem] leading-relaxed text-muted">
+        <Content />
+      </div>
+    )
+  }
+
+  <section class="mt-11 max-w-prose">
+    <h2 class="font-display text-lg">How records are classified</h2>
+    <p class="mt-3 text-[0.97rem] leading-relaxed text-muted">
+      Whether an organisation admitted to a breach is often more revealing than the breach
+      itself, so every record carries one of five statuses. A claim circulating on a
+      dark-web forum is not treated as equivalent to a confirmed incident.
+    </p>
+    <dl class="mt-6 border-t border-line">
+      {
+        statuses.map((status) => (
+          <div class="grid gap-x-6 gap-y-1 border-b border-line py-3.5 sm:grid-cols-[10rem_1fr]">
+            <dt
+              class:list={[
+                'text-[0.95rem]',
+                (status === 'no' || status === 'denied') && 'text-accent',
+              ]}
+            >
+              {ACK_LABELS[status]}
+            </dt>
+            <dd class="text-[0.92rem] leading-relaxed text-muted">
+              {ACK_DESCRIPTIONS[status]}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="mt-5 text-[0.92rem] leading-relaxed text-faint">
+      Scale figures are recorded as reported and are frequently disputed by the affected
+      organisation. Where no figure was ever reported, the field is left blank rather than
+      estimated. Dates are stored at the precision we can source — sometimes only a year.
+      Nothing in this database is derived from breached data itself; every record is built
+      from public reporting and cited.
+    </p>
+  </section>
+
+  {
+    others.length > 0 && (
+      <section class="mt-11 max-w-prose">
+        <h2 class="font-display text-lg">Writing</h2>
+        <ul class="mt-4 border-t border-line">
+          {others.map((post) => (
+            <li class="border-b border-line py-3.5">
+              <a href={`/blog/${post.id}`} class="hover:text-accent">
+                <span class="font-display text-[1.02rem]">{post.data.title}</span>
+                {post.data.description && (
+                  <span class="mt-1 block text-[0.9rem] text-muted">
+                    {post.data.description}
+                  </span>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="mt-11 max-w-prose">
+    <h2 class="font-display text-lg">What a useful contribution looks like</h2>
+    <p class="mt-3 text-[0.97rem] leading-relaxed text-muted">
+      Records live in a single JSON file in the repository, so a correction or a new
+      incident is an ordinary pull request — no CMS account and no credentials needed.
+      Please include at least one link to published reporting, and prefer established
+      outlets over aggregator blogs. If the only evidence is a dark-web listing, the
+      record belongs under <span class="text-fg">Unverified</span>, and should say so.
+    </p>
+  </section>
+</Base>
