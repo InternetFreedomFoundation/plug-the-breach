@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
-import { file, glob } from 'astro/loaders';
+import { glob } from 'astro/loaders';
+import { pbBreaches } from './lib/pocketbase-loader';
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
@@ -15,14 +16,9 @@ const blog = defineCollection({
 });
 
 const breaches = defineCollection({
-  loader: file('./src/data/breaches.json', {
-    // Records are keyed by their URL slug rather than a separate id column.
-    parser: (text) =>
-      JSON.parse(text).map((record: Record<string, unknown>) => ({
-        ...record,
-        id: record.slug,
-      })),
-  }),
+  // Records are keyed by their URL slug; the loader fetches from PocketBase
+  // and maps each record into the shape below, which this schema enforces.
+  loader: pbBreaches({ url: import.meta.env.POCKETBASE_URL }),
   schema: z.object({
     slug: z.string(),
     legacyId: z.string().nullable().default(null),
@@ -35,7 +31,7 @@ const breaches = defineCollection({
     statement: z.string().default(''),
     redressal: z.string().default(''),
     sources: z.array(z.string()).default([]),
-    note: z.string().default(''),
+    notes: z.string().default(''),
   }),
 });
 

@@ -80,10 +80,13 @@ function hostOf(url: string): string {
     }
 
     {
-      breach.note && (
+      breach.notes && (
         <section>
           <h2 class="font-display text-[1.05rem]">What happened</h2>
-          <p class="mt-3 text-[0.97rem] leading-relaxed text-muted">{breach.note}</p>
+          <div
+            class="richtext mt-3 text-[0.97rem] leading-relaxed text-muted"
+            set:html={breach.notes}
+          />
         </section>
       )
     }
@@ -92,7 +95,10 @@ function hostOf(url: string): string {
       breach.statement && (
         <section>
           <h2 class="font-display text-[1.05rem]">Notice or statement</h2>
-          <p class="mt-3 text-[0.97rem] leading-relaxed text-muted">{breach.statement}</p>
+          <div
+            class="richtext mt-3 text-[0.97rem] leading-relaxed text-muted"
+            set:html={breach.statement}
+          />
         </section>
       )
     }
@@ -101,7 +107,10 @@ function hostOf(url: string): string {
       breach.redressal && (
         <section>
           <h2 class="font-display text-[1.05rem]">Grievance redressal</h2>
-          <p class="mt-3 text-[0.97rem] leading-relaxed text-muted">{breach.redressal}</p>
+          <div
+            class="richtext mt-3 text-[0.97rem] leading-relaxed text-muted"
+            set:html={breach.redressal}
+          />
         </section>
       )
     }
@@ -156,3 +165,34 @@ function hostOf(url: string): string {
     </section>
   </div>
 </Base>
+
+<style>
+  /* Editor fields may contain basic HTML; legacy values are plain text.
+     Tailwind's preflight strips list styling, so restore it for the injected
+     markup only (:global — set:html children carry no scope attribute). */
+  .richtext :global(:where(p, ul, ol, blockquote)) {
+    margin-block: 0.75rem;
+  }
+  .richtext :global(:where(p, ul, ol, blockquote):first-child) {
+    margin-top: 0;
+  }
+  .richtext :global(:where(p, ul, ol, blockquote):last-child) {
+    margin-bottom: 0;
+  }
+  .richtext :global(:where(ul)) {
+    list-style: disc;
+  }
+  .richtext :global(:where(ol)) {
+    list-style: decimal;
+  }
+  .richtext :global(:where(ul, ol)) {
+    padding-left: 1.4rem;
+  }
+  .richtext :global(:where(li)) {
+    margin-block: 0.25rem;
+  }
+  .richtext :global(:where(a)) {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

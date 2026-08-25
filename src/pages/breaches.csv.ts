@@ -10,7 +10,7 @@ const COLUMNS = [
   'exposed',
   'statement',
   'redressal',
-  'note',
+  'notes',
   'sources',
 ] as const;
 
